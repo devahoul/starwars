@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"imp_fusioncutter_icon"
+	}
+	REQN
+	{
+		"zaabin"
+		"tool"
+	}
+	REQN
+	{
+		"zafbin"
+		"tool"
+	}
+}

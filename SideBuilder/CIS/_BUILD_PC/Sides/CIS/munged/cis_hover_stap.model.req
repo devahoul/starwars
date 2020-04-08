@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_hover_stap2_lowrez"
+		"cis_hover_stap_lowrez"
+		"cis_hover_stap"
+		"cis_hover_stap_bump"
+		"cis_hover_stap2"
+		"cis_hover_stap2_bump"
+	}
+}

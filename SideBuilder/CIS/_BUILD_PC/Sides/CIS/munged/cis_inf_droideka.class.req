@@ -1,0 +1,48 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"deathdustcloud_brown"
+		"hailfire_wake"
+		"smokeplume"
+		"dirtspray"
+	}
+	REQN
+	{
+		"class"
+		"com_inf_droideka_exp"
+		"cis_weap_inf_repeater"
+		"cis_weap_walk_droideka_shield"
+		"p_rollsphere"
+		"p_ord"
+	}
+	REQN
+	{
+		"texture"
+		"troop_icon"
+		"hud_cis_droideka_icon"
+	}
+	REQN
+	{
+		"model"
+		"cis_walk_droideka"
+		"cis_droideka_idle_low1"
+		"cis_droideka_roll_low1"
+		"droideka_chunk1"
+		"droideka_chunk3"
+		"droideka_chunk4"
+		"droideka_chunk5"
+	}
+	REQN
+	{
+		"zaabin"
+		"cis_walk_droideka"
+	}
+	REQN
+	{
+		"zafbin"
+		"cis_walk_droideka"
+	}
+}

@@ -1,0 +1,66 @@
+ucft
+{
+	REQN
+	{
+		"config"
+	}
+
+	REQN
+	{
+		"texture"
+		"bespin2_map"
+		"bird"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=ps2"
+	}
+
+	REQN
+	{
+		"path"
+		"bespin2"
+	}
+	REQN
+	{
+		"congraph"
+		"bespin2"
+	}
+	REQN
+	{
+		"envfx"
+		"bespin2"
+	}
+	REQN
+	{
+		"world"
+		"bespin2"
+	}
+	REQN
+	{
+		"prop"
+		"bespin2"
+	}
+	REQN
+	{
+		"boundary"
+		"bespin2"
+	}
+	REQN
+	{
+		"class"
+		"bluelight"
+		"redlight"
+		"greenlight"
+		"whitelight"
+	}
+	REQN
+	{
+		"config"
+		"flyerspray"
+		"walkerstomp"
+		"hailfire_wake"
+	}
+}

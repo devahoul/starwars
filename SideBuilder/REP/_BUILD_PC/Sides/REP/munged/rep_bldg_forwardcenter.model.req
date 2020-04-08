@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rep_prop_console_fx"
+		"geo_bld_forwardcenter_lowrez"
+		"console_6"
+		"geo_bld_forwardcenter"
+	}
+}

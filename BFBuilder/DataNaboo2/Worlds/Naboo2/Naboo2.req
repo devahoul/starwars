@@ -1,0 +1,67 @@
+ucft
+{
+    REQN
+    {
+        "config"
+    }
+
+    REQN
+    {
+        "class"
+    }
+
+    REQN
+    {
+        "texture"
+        "Naboo2_map"
+    }
+
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+
+    }
+
+    REQN
+    {
+        "path"
+        "Naboo2"
+    }
+    REQN
+    {
+        "congraph"
+        "Naboo2"
+    }
+    REQN
+    {
+        "envfx"
+      --  "Naboo2"
+    }
+    REQN
+    {
+        "world"
+        "Naboo2"
+    }
+    REQN
+    {
+        "prop"
+     --   "Naboo2"
+    }
+    REQN
+    {
+        "boundary"
+        "Naboo2"
+    }
+    REQN
+    {
+        "config"
+    --    "flyerspray"
+    --    "walkerstomp"
+    --    "hailfire_wake"
+    --    "dustwake"
+    }
+
+}
+

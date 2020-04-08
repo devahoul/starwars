@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"smoketrail"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_fly_kwing_miss_exp"
+		"com_weap_inf_ord_hum_rocket"
+	}
+}

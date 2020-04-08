@@ -1,0 +1,30 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"troop_icon"
+	}
+	REQN
+	{
+		"model"
+		"all_inf_luke"
+		"all_inf_luke_low1"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_inf_snowtrooper"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_inf_snowtrooper"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_lightsaber"
+	}
+}

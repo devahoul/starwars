@@ -1,0 +1,33 @@
+
+ucft
+{
+	REQN
+	{
+		"zaabin"
+		"grenade"
+	}
+	REQN
+	{
+		"zafbin"
+		"grenade"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal"
+		"com_1st_weap_inf_grenadethermal"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_thermaldetonator_ord"
+		"cis_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"texture"
+		"hud_weap_bounce"
+		"reticule_00"
+		"hud_com_grenade_icon"
+	}
+}

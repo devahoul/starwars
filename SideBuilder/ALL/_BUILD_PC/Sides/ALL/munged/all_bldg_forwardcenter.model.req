@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"all_prop_console_fx"
+		"all_command_center02"
+		"all_command_center02_lowrez"
+		"all_command_center01_lowrez"
+		"all_command_center01"
+	}
+}

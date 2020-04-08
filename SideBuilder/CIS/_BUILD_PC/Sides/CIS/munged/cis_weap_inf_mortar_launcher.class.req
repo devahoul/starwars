@@ -1,0 +1,34 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_torpedo"
+		"com_1st_weap_inf_torpedo"
+	}
+	REQN
+	{
+		"texture"
+		"hud_all_lascannon_icon"
+		"hud_weap_impact"
+		"reticule_rocket"
+	}
+	REQN
+	{
+		"zaabin"
+		"bdroid"
+	}
+	REQN
+	{
+		"zafbin"
+		"bdroid"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_mortar_launcher_ord1"
+		"cis_weap_inf_equip_med"
+		"cis_weap_inf_mortar_launcher_ord"
+	}
+}

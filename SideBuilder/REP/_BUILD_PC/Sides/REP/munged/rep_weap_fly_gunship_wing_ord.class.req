@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"med_cannon_impacts"
+		"spiderdroid_ord_exp"
+	}
+	REQN
+	{
+		"texture"
+		"greenlaser_d"
+	}
+}

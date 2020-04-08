@@ -1,0 +1,47 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"aat_icon"
+		"hud_cis_maf_icon"
+	}
+	REQN
+	{
+		"model"
+		"cis_fly_maf"
+		"cis_fly_maf_chunk1"
+		"cis_fly_maf_chunk2"
+		"cis_fly_maf_chunk3"
+	}
+	REQN
+	{
+		"zaabin"
+		"cis_fly_maf"
+	}
+	REQN
+	{
+		"zafbin"
+		"cis_fly_maf"
+	}
+	REQN
+	{
+		"class"
+		"cis_fly_droidfighter_exp"
+		"cis_weap_fly_maf_cannon"
+		"cis_weap_fly_maf_torpedo"
+		"cis_weap_fly_maf_laser"
+		"p_wingl"
+		"p_cannonl"
+		"p_wingr"
+		"p_cannonr"
+		"p_gear"
+	}
+	REQN
+	{
+		"config"
+		"dirtspray"
+		"explosion"
+	}
+}

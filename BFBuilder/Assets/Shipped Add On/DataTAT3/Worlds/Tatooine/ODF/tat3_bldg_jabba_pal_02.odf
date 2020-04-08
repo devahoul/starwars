@@ -1,0 +1,45 @@
+[GameObjectClass]       
+
+ClassLabel      =   "prop"
+GeometryName    =   "tat3_bldg_jabba_pal_02.msh"
+
+
+[Properties]        
+
+GeometryName    =   "tat3_bldg_jabba_pal_02"
+
+AttachOdf = "tat3_prop_static_light"
+AttachToHardPoint = "hp_light_a"
+AttachToHardPoint = "hp_light_b"
+AttachToHardPoint = "hp_light_c"
+
+AttachOdf = "tat3_prop_flare02_light"
+AttachToHardPoint = "hp_light_d"
+AttachToHardPoint = "hp_light_e"
+AttachToHardPoint = "hp_light_f"
+AttachToHardPoint = "hp_light_g"
+AttachToHardPoint = "hp_light_h"
+AttachToHardPoint = "hp_light_i"
+AttachToHardPoint = "hp_light_j"
+AttachToHardPoint = "hp_light_k"
+
+AttachOdf = "tat3_light_reservoir_02"
+AttachToHardPoint = "hp_light_5"
+AttachToHardPoint = "hp_light_6"
+AttachToHardPoint = "hp_light_7"
+AttachToHardPoint = "hp_light_8"
+AttachToHardPoint = "hp_light_9"
+AttachToHardPoint = "hp_light_10"
+AttachToHardPoint = "hp_light_11"
+AttachToHardPoint = "hp_light_12"
+AttachToHardPoint = "hp_light_13"
+AttachToHardPoint = "hp_light_14"
+AttachToHardPoint = "hp_light_15"
+AttachToHardPoint = "hp_light_16"
+
+AttachOdf = "tat3_light_l_blue"
+AttachToHardPoint = "hp_light_1"
+AttachToHardPoint = "hp_light_3"
+AttachToHardPoint = "hp_light_4"
+
+

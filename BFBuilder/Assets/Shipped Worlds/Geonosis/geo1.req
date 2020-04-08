@@ -1,0 +1,74 @@
+ucft
+{
+
+	REQN
+	{
+		"config"
+	}
+
+	
+	REQN
+	{
+		"texture"
+		"geo1_map"
+
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=xbox"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=pc"
+	}
+
+	REQN
+	{
+		"path"
+		"geo1"
+	}
+	REQN
+	{
+		"congraph"
+		"geo1"
+	}
+	REQN
+	{
+		"envfx"
+		"geo1"
+	}
+	REQN
+	{
+		"world"
+		"geo1"
+	}
+	REQN
+	{
+		"prop"
+		"geo1"
+	}
+	REQN
+	{
+		"boundary"
+		"geo1"
+	}
+	REQN
+	{
+		"class"
+		"bluelight"
+		"redlight"
+		"greenlight"
+		"whitelight"
+	}
+	REQN
+	{
+		"config"
+		"flyerspray"
+		"walkerstomp"
+		"hailfire_wake"
+	}
+}

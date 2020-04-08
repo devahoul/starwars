@@ -1,0 +1,20 @@
+[ExplosionClass]
+ClassLabel 	= "explosion"
+
+[Properties]
+//Damage 		= "400.0"
+//DamageRadius 	= "9.0"
+//Shake 		= "4.0"
+//ShakeRadius 	= "25.0"
+//Push 		= "10.0"
+//PushRadius 	= "13.0"
+//Effect 		= "com_sfx_weap_grenade_schrap_exp"
+Effect 		= "smaller_explosion"
+Decal		= "decal_explosion"
+LightColor = "16 32 242"
+
+LightRadius = "10.0"
+
+LightDuration = "0.5"
+
+SoundProperty	= "com_weap_obj_med_exp defer"

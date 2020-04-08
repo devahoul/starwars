@@ -1,0 +1,31 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_landmine"
+		"com_1st_weap_inf_landmine"
+	}
+	REQN
+	{
+		"zaabin"
+		"grenade"
+	}
+	REQN
+	{
+		"zafbin"
+		"grenade"
+	}
+	REQN
+	{
+		"texture"
+		"hud_com_landmine_icon"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_landmine"
+		"all_weap_inf_equip_med"
+	}
+}

@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"all_fly_speeder_lowrez"
+		"all_fly_snowspeeder_windscreen"
+		"all_fly_speeder"
+		"all_fly_speeder_bump"
+	}
+}

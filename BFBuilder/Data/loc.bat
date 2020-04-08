@@ -1,0 +1,2 @@
+cd BFBuilder\data
+start edit_pc_addon_localize.bat

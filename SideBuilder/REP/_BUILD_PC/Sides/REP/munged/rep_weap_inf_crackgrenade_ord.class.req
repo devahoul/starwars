@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"medium_explosion"
+		"com_sfx_weap_grenade_gold"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal_ord"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_inf_crackgrenade_exp"
+	}
+}

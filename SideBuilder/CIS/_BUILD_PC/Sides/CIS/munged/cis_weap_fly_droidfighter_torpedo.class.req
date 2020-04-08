@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_weap_fly_droidfighter_torpedo_ord"
+	}
+	REQN
+	{
+		"texture"
+		"reticule_03"
+	}
+}

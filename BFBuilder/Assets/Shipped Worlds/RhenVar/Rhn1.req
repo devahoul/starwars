@@ -1,0 +1,82 @@
+ucft
+{
+	REQN
+	{
+		"class"
+
+	}
+
+	REQN
+	{
+		"config"
+	}
+
+	REQN
+	{
+		"texture"
+		"RhenVar1_map"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=ps2"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=xbox"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=pc"
+
+	}
+
+
+	REQN
+	{
+		"path"
+		"RhenVar1"
+	}
+	REQN
+	{
+		"congraph"
+		"RhenVar1"
+	}
+	REQN
+	{
+		"envfx"
+		"RhenVar1"
+	}
+	REQN
+	{
+		"world"
+		"RhenVar1"
+	}
+	REQN
+	{
+		"prop"
+		"RhenVar1"
+	}
+	REQN
+	{
+		"boundary"
+		"RhenVar1"
+	}	
+	REQN
+	{
+		"class"
+	}
+	REQN
+	{
+		"config"
+		"flyerspray"
+		"walkerstomp"
+		"bigwalkerstomp"
+		"hailfire_wake"
+	}
+}

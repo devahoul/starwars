@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_md"
+		"com_sfx_weap_grenade_blue"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal_ord"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_haywiredetonator_exp"
+		"thermal_detonator"
+	}
+}

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"rep_weap_hover_fightertank_launcher_ord"
+	}
+	REQN
+	{
+		"texture"
+		"hud_weap_impact"
+	}
+}

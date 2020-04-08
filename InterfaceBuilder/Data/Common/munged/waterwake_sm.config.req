@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"geo_rainwash"
+	}
+	REQN
+	{
+		"texture"
+		"whitesmoke"
+	}
+}

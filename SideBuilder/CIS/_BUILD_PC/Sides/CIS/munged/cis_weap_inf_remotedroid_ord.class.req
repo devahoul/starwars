@@ -1,0 +1,28 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_ord"
+	}
+	REQN
+	{
+		"texture"
+		"troop_icon"
+		"hud_com_probedroid_health_icon"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_remotedroid_exp2"
+		"cis_weap_inf_remotedroid_blaster"
+		"cis_weap_inf_remotedroid_destruct"
+		"p_sphere"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_probedroid"
+	}
+}

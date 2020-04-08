@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"turret_icon"
+	}
+	REQN
+	{
+		"model"
+		"com_prop_barrier_02"
+		"com_prop_buildzone"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_bldg_gunturret_exp"
+		"com_holo_wall"
+	}
+}

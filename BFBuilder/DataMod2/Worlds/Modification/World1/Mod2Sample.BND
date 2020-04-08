@@ -1,0 +1,4 @@
+Boundary()
+{
+	Path("Boundary1");
+}

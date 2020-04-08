@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_ord"
+	}
+	REQN
+	{
+		"texture"
+		"greenlaser_d"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_fly_gunship_cannon_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+}

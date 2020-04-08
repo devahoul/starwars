@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_proton_torpedo"
+		"all_weap_fly_xwing_ptorpedo_exp"
+		"com_weap_inf_ord_hum_rocket"
+	}
+	REQN
+	{
+		"config"
+		"watersplash_lg"
+		"protontorpedo"
+	}
+}

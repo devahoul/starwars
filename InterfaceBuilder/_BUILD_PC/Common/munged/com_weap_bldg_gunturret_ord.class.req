@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"redlaser_d"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_bldg_gunturret_exp"
+	}
+}

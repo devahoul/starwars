@@ -1,0 +1,22 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"smoketrail"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_hover_fightertank_launcher_exp"
+		"thermal_detonator"
+		"com_weap_inf_ord_hum_rocket"
+	}
+}

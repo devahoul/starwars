@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"terrain"
+		"endor"
+	}
+	REQN
+	{
+		"config"
+		"endor"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+	}
+}

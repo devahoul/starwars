@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_weap_fly_kwing_miss_ord"
+	}
+	REQN
+	{
+		"texture"
+		"reticule_02"
+		"hud_weap_scope"
+	}
+}

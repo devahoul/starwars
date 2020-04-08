@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_hover_mtt_repulsor_lowrez"
+		"cis_hover_mtt_body_lowrez"
+		"cis_hover_mtt_repulsor"
+		"cis_hover_mtt_hatch"
+		"cis_hover_mtt_body"
+	}
+}

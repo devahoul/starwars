@@ -1,0 +1,68 @@
+ucft
+{
+
+	REQN
+	{
+		"class"
+
+	}
+
+	REQN
+	{
+		"config"
+	}
+
+	REQN
+	{
+		"texture"
+		"RhenVar2_map"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=ps2"
+	}
+
+	REQN
+	{
+		"path"
+		"RhenVar2"
+	}
+	REQN
+	{
+		"congraph"
+		"RhenVar2"
+	}
+	REQN
+	{
+		"envfx"
+		"RhenVar2"
+	}
+	REQN
+	{
+		"world"
+		"RhenVar2"
+	}
+	REQN
+	{
+		"prop"
+		"RhenVar2"
+	}
+	REQN
+	{
+		"boundary"
+		"RhenVar2"
+	}	
+	REQN
+	{
+		"class"
+	}
+	REQN
+	{
+		"config"
+		"flyerspray"
+		"walkerstomp"
+		"hailfire_wake"
+	}
+}

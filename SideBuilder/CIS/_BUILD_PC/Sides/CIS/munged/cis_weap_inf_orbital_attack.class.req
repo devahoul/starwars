@@ -1,0 +1,32 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"imp_blasterrifle_icon"
+		"reticule_01"
+		"hud_weap_detonate"
+		"reticule_00"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_binoculars"
+	}
+	REQN
+	{
+		"zaabin"
+		"pistol"
+	}
+	REQN
+	{
+		"zafbin"
+		"pistol"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_orbital_attack_ord"
+	}
+}

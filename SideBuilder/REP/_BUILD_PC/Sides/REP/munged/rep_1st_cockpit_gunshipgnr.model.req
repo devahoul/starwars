@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rep_cockpit_fx"
+		"rep_1st_cockpit_gunship"
+		"rep_cockpit_win"
+	}
+}

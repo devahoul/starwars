@@ -1,0 +1,1 @@
+-keep ball_turret1 ball_turret2 aimer_l barrel1_l barrel2_l aimer_r barrel1_r barrel2_r -lodgroup bigmodel -shadowOn

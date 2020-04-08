@@ -1,0 +1,64 @@
+ucft
+{
+
+	REQN
+	{
+		"texture"
+		"kamino1_map"
+		"kam1_water"
+		"kam1_water_2"
+		"geo_rainwash"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=ps2"
+	}
+
+	REQN
+	{
+		"path"
+		"kamino1"
+	}
+	REQN
+	{
+		"congraph"
+		"kamino1"
+	}
+	REQN
+	{
+		"envfx"
+		"kamino1"
+	}
+	REQN
+	{
+		"world"
+		"kamino1"
+	}
+	REQN
+	{
+		"prop"
+		"kamino1"
+	}
+	REQN
+	{
+		"boundary"
+		"kamino1"
+	}
+	REQN
+	{
+		"class"
+		"bluelight"
+		"redlight"
+		"greenlight"
+		"whitelight"
+	}
+	REQN
+	{
+		"config"
+		"flyerspray"
+		"walkerstomp"
+		"hailfire_wake"
+	}
+}

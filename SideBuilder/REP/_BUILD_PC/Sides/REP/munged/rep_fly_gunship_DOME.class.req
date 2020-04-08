@@ -1,0 +1,33 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"speeder_icon"
+		"hud_rep_gunship_icon"
+	}
+	REQN
+	{
+		"model"
+		"rep_fly_gunship_dome"
+		"gunship_chunk1"
+		"gunship_chunk2"
+		"rep_la_at_gunship_hulk"
+	}
+	REQN
+	{
+		"config"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+		"walkerstomp"
+		"explosion"
+		"smokeplume"
+	}
+	REQN
+	{
+		"class"
+		"rep_fly_gunship_exp"
+	}
+}

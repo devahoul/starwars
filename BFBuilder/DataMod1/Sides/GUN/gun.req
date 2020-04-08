@@ -1,0 +1,11 @@
+ucft
+{
+	REQN
+	{
+		"lvl"
+		"gun_inf_basic"
+		"gun_walk_kaadu"
+		"nab_bldg_fambaa_shield"
+		"nab_bldg_fambaa_generator"
+	}
+}

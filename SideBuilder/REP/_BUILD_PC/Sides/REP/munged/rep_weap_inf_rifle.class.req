@@ -1,0 +1,34 @@
+
+ucft
+{
+	REQN
+	{
+		"zaabin"
+		"rifle"
+	}
+	REQN
+	{
+		"zafbin"
+		"rifle"
+	}
+	REQN
+	{
+		"model"
+		"rep_weap_inf_rifle"
+		"rep_1st_weap_inf_rifle"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_inf_rifle_ord"
+		"rep_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"texture"
+		"imp_blasterrifle_icon"
+		"hud_weap_fullauto"
+		"reticule_rifle"
+		"weapon_scope2"
+	}
+}

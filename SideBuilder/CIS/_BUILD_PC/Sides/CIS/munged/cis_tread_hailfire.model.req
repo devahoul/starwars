@@ -1,0 +1,13 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_tread_hailfire_wheel"
+		"cis_tread_hailfire_lowrez"
+		"cis_tread_hailfire"
+		"cis_tread_hailfire_bump"
+		"noicon"
+	}
+}

@@ -1,0 +1,21 @@
+ucft
+{
+	REQN
+	{
+		"zafbin"
+		"end_inf_ewok"
+		"end_inf_ewok_lowres"
+	}
+	REQN
+	{
+		"zaabin"
+		"end_inf_ewok"
+	}
+	REQN
+	{
+		"class"
+		"ewk_inf_scout"
+		"ewk_inf_repair"
+		"ewk_inf_trooper"
+	}
+}

@@ -1,0 +1,17 @@
+ucft
+{
+    REQN
+    {
+        "str"
+        "align=2048"
+        "tat3"
+        "tat3_emt"
+    }
+    REQN
+    {
+        "lvl"
+    "tat3cw"
+    "tat3gcw"
+    }
+
+ }

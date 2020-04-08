@@ -1,0 +1,11 @@
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_inf_soldierdesert"
+		"all_inf_vanguard"
+		"all_inf_marksman"
+		"all_inf_pilot"
+	}
+}

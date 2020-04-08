@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"flare4"
+		"explode3"
+		"thicksmoke1"
+		"thicksmoke3"
+		"boom5"
+		"underlitesmoke2"
+		"thicksmoke2"
+		"starburst"
+		"dirt"
+	}
+}

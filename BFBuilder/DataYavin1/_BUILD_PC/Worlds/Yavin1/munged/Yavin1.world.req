@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"terrain"
+		"yavin1"
+	}
+	REQN
+	{
+		"config"
+		"yavin1"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+	}
+}

@@ -1,0 +1,40 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"imp_blasterrifle_icon"
+		"hud_weap_charge"
+		"reticule_rifle"
+		"weapon_scope2"
+	}
+	REQN
+	{
+		"config"
+		"chargeup"
+	}
+	REQN
+	{
+		"model"
+		"all_weap_inf_sniperrifle"
+		"all_1st_weap_inf_sniperrifle"
+	}
+	REQN
+	{
+		"zaabin"
+		"rifle"
+	}
+	REQN
+	{
+		"zafbin"
+		"rifle"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_inf_bowcaster_ord"
+		"all_weap_inf_equip_med"
+		"all_weap_inf_bowcaster_ord_high"
+	}
+}

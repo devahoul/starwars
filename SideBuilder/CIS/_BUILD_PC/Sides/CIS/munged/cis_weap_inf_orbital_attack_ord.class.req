@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal_ord"
+	}
+	REQN
+	{
+		"class"
+		"thermal_detonator"
+		"cis_weap_inf_orbital_attack_salvo_ord"
+	}
+}

@@ -1,0 +1,51 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"snowspeeder_icon"
+		"hud_all_snowspeeder_icon"
+	}
+	REQN
+	{
+		"model"
+		"all_fly_snowspeeder"
+		"all_fly_snowspeeder_chunk1"
+		"all_fly_snowspeeder_chunk2"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_fly_snowspeeder"
+		"all_snowspeeder_9pose"
+		"drivesnowspeeder"
+		"drivesnowspeedergunner"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_fly_snowspeeder"
+		"all_snowspeeder_9pose"
+		"drivesnowspeeder"
+		"drivesnowspeedergunner"
+	}
+	REQN
+	{
+		"config"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+		"explosion"
+		"mediumsmoketrail"
+		"smokeplume"
+		"walkerstomp"
+	}
+	REQN
+	{
+		"class"
+		"all_fly_snowspeeder_exp"
+		"all_weap_fly_snowspeeder_cannon"
+		"all_weap_fly_snowspeeder_reargun"
+	}
+}

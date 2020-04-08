@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_weap_fly_geofighter_cannon_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+	REQN
+	{
+		"texture"
+		"orangelaser_d"
+	}
+	REQN
+	{
+		"config"
+		"med_cannon_impacts"
+	}
+}

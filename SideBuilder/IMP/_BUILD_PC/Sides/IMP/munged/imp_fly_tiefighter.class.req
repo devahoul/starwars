@@ -1,0 +1,37 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"tie-fighter_icon"
+		"hud_imp_tiefighter_icon"
+	}
+	REQN
+	{
+		"model"
+		"imp_fly_tiefighter"
+		"imp_fly_tiefighter_chunk1"
+		"imp_fly_tiefighter_chunk2"
+	}
+	REQN
+	{
+		"class"
+		"imp_weap_fly_tiefighter_cannon"
+		"p_collision_wingr"
+		"p_collision_wingl"
+		"p_collision_arms"
+		"p_collision_cockpit"
+		"imp_fly_tiefighter_exp"
+	}
+	REQN
+	{
+		"config"
+		"explosion"
+		"mediumsmoketrail"
+		"smokeplume"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+	}
+}

@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rechargedroid_icon"
+	}
+	REQN
+	{
+		"model"
+		"com_item_vehicalrecharge"
+		"com_item_vehicalrecharge_dst"
+	}
+	REQN
+	{
+		"class"
+		"com_inf_rechargedroid_exp"
+		"ordncylinder aacylinder null 0.0 0.75 0.0 0.5 1.5 0.0"
+	}
+}

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<shader rendertype="refraction" skinned="yes" debuginfo="no">
+	<vertexshader name="vs1_far" target="vs_1_1">
+		#include "pcRedVertexShaderMacros.h"
+
+		; project the position into screen space		
+		POS_PROJECT(oPos)
+		
+		; decompress texcoords
+		mul R_TEMP, V_TEXCOORDS, c[C_NORMALTEX_DECOMPRESS].zzzw
+
+		; transform texture coordinates
+		dp4 oT0.x, R_TEMP, c[C_CUSTOM_MIN+0]
+		dp4 oT0.y, R_TEMP, c[C_CUSTOM_MIN+1]
+		mov oT0.zw, c[C_CONST0].xz
+
+		; output color (with lighting)
+		mov oD0, R_DIFFUSE_COLOR
+
+		; output fog value in oFog
+		dp4 R_TEMP.z, R_WORLD_POS, c[C_WORLD_PROJ_M3]
+		mad oFog, R_TEMP.z, c[C_FOG].x, c[C_FOG].y
+	</vertexshader>
+
+	<vertexshader name="vs1_near_transparent_fade" target="vs_1_1">
+		#include "pcRedVertexShaderMacros.h"
+
+		; project the position into screen space		
+		POS_PROJECT(R_TEMP)
+		mov oPos, R_TEMP
+
+		// compute normalized [-1..1] screen coordinates
+		rcp R_TEMP1.x, R_TEMP.w
+		mad R_TEMP1.x, R_TEMP1.x, c[C_CUSTOM_MIN+5].x, c[C_CUSTOM_MIN+5].y
+		mul R_TEMP.xyzw, R_TEMP.xyzw, R_TEMP1.x
+		dp3 oT1.x, R_TEMP.xyw, c[C_CUSTOM_MIN+4].xzx
+		dp3 oT1.y, R_TEMP.xyw, c[C_CUSTOM_MIN+4].zyx
+		mov oT1.zw, R_TEMP.zw
+
+		; decompress texcoords
+		mul R_TEMP, V_TEXCOORDS, c[C_NORMALTEX_DECOMPRESS].zzzw
+
+		; transform diffuse texture coordinates
+		dp4 oT2.x, R_TEMP, c[C_CUSTOM_MIN+0]
+		dp4 oT2.y, R_TEMP, c[C_CUSTOM_MIN+1]
+		mov oT2.zw, c[C_CONST0].xz
+		
+		; transform bump texture coordinates
+		dp4 oT0.x, R_TEMP, c[C_CUSTOM_MIN+2]
+		dp4 oT0.y, R_TEMP, c[C_CUSTOM_MIN+3]
+		mov oT0.zw, c[C_CONST0].xz
+
+		; calculate near scene fade factor in R_TEMP.w
+		NEARSCENEFADE(R_TEMP)
+		; clamp to [0.0,1.0] and square it to fade transparent objects faster
+		max R_TEMP.w, R_TEMP.w, c[C_CONST0].x
+		min R_TEMP.w, R_TEMP.w, c[C_CONST0].z
+		mul R_TEMP.w, R_TEMP.w, R_TEMP.w
+		; output color with lighting and near scene fade
+		mov oD0.xyz, R_DIFFUSE_COLOR.xyz
+		mul oD0.w, R_DIFFUSE_COLOR.w, R_TEMP.w
+	</vertexshader>
+
+	<vertexshader name="vs1_near_transparent_fade_nobumpmap" target="vs_1_1">
+		#include "pcRedVertexShaderMacros.h"
+
+		; project the position into screen space		
+		POS_PROJECT(R_TEMP)
+		mov oPos, R_TEMP
+
+		; decompress texcoords
+		mul R_TEMP, V_TEXCOORDS, c[C_NORMALTEX_DECOMPRESS].zzzw
+
+		; transform diffuse texture coordinates
+		dp4 oT0.x, R_TEMP, c[C_CUSTOM_MIN+0]
+		dp4 oT0.y, R_TEMP, c[C_CUSTOM_MIN+1]
+		mov oT0.zw, c[C_CONST0].xz
+		
+		; calculate near scene fade factor in R_TEMP.w
+		NEARSCENEFADE(R_TEMP)
+		; clamp to [0.0,1.0] and square it to fade transparent objects faster
+		max R_TEMP.w, R_TEMP.w, c[C_CONST0].x
+		min R_TEMP.w, R_TEMP.w, c[C_CONST0].z
+		mul R_TEMP.w, R_TEMP.w, R_TEMP.w
+		; output color with lighting and near scene fade
+		mov oD0.xyz, R_DIFFUSE_COLOR.xyz
+		mul oD0.w, R_DIFFUSE_COLOR.w, R_TEMP.w
+	</vertexshader>
+
+	<vertexshader name="vs1_near_transparent_nofade" target="vs_1_1">
+		#include "pcRedVertexShaderMacros.h"
+
+		; project the position into screen space		
+		POS_PROJECT(R_TEMP)
+		mov oPos, R_TEMP
+
+		// compute normalized [-1..1] screen coordinates
+		rcp R_TEMP1.x, R_TEMP.w
+		mad R_TEMP1.x, R_TEMP1.x, c[C_CUSTOM_MIN+5].x, c[C_CUSTOM_MIN+5].y
+		mul R_TEMP.xyzw, R_TEMP.xyzw, R_TEMP1.x
+		dp3 oT1.x, R_TEMP.xyw, c[C_CUSTOM_MIN+4].xzx
+		dp3 oT1.y, R_TEMP.xyw, c[C_CUSTOM_MIN+4].zyx
+		mov oT1.zw, R_TEMP.zw
+
+		; decompress texcoords
+		mul R_TEMP, V_TEXCOORDS, c[C_NORMALTEX_DECOMPRESS].zzzw
+
+		; transform diffuse texture coordinates
+		dp4 oT2.x, R_TEMP, c[C_CUSTOM_MIN+0]
+		dp4 oT2.y, R_TEMP, c[C_CUSTOM_MIN+1]
+		mov oT2.zw, c[C_CONST0].xz
+		
+		; transform bump texture coordinates
+		dp4 oT0.x, R_TEMP, c[C_CUSTOM_MIN+2]
+		dp4 oT0.y, R_TEMP, c[C_CUSTOM_MIN+3]
+		mov oT0.zw, c[C_CONST0].xz
+
+		; output color with lighting and near scene fade
+		mov oD0.xyzw, R_DIFFUSE_COLOR.xyzw
+	</vertexshader>
+
+	<pixelshader name="ps1_far" target="ps_1_1">
+		tex t0	// diffuse map
+
+		mul r0, t0, v0
+	</pixelshader>
+
+	<pixelshader name="ps1_near_transparent" target="ps_1_1">
+		tex t0
+		texbem t1, t0
+		tex t2
+
+		// r0.rgb = main * lighting
+		mul r0, t2, v0
+		
+		// r0.rgb = diffuse*(alpha) + refraction*(1-alpha)
+		lrp r0.rgb, r0.a, r0, t1
+	</pixelshader>
+
+	<pixelshader name="ps1_near_transparent_nodiffusetex" target="ps_1_1">
+		tex t0
+		texbem t1, t0
+
+		mul r0.rgb, v0, t1
+		+mov r0.a, v0.a			
+	</pixelshader>
+
+	<pipeline id="1">
+		<state id="0">
+			<pass transform="normals" lighting="diffuse">
+				<vertexshader use="vs1_far"/>
+				<pixelshader use="ps1_far"/>
+			</pass>
+		</state>
+		<state id="1">
+			<pass transform="normals" lighting="diffuse">
+				<vertexshader use="vs1_near_transparent_fade"/>
+				<pixelshader use="ps1_near_transparent"/>
+			</pass>
+		</state>
+		<state id="2">
+			<pass transform="position" lighting="none">
+				<vertexshader use="vs1_near_transparent_fade_nobumpmap"/>
+				<pixelshader use="ps1_far"/>
+			</pass>	
+		</state>
+		<state id="3">
+			<pass transform="position" lighting="none">
+				<vertexshader use="vs1_near_transparent_nofade"/>
+				<pixelshader use="ps1_near_transparent_nodiffusetex"/>
+			</pass>	
+		</state>
+	</pipeline>
+</shader>

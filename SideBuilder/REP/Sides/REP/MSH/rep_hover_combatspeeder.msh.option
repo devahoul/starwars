@@ -1,0 +1,1 @@
+-keep gun side_gun_base side_gun_barrel side_gun_base1 side_gun_barrel1 turret turret_base turret_rail turret_gun_pivot turret_gun_barrel -lodgroup bigmodel -nocollision -shadowOn

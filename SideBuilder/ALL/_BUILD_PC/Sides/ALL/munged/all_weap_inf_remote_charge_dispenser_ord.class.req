@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_seismic_mine"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_inf_remote_charge_dispenser_exp"
+		"com_weap_inf_landmine_destroyed_exp"
+	}
+	REQN
+	{
+		"config"
+		"com_sfx_weap_grenade_gold"
+	}
+}

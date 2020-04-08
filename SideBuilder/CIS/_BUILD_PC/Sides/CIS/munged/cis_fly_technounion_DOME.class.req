@@ -1,0 +1,38 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"speeder_icon"
+		"hud_rep_jedistarfighter_icon"
+	}
+	REQN
+	{
+		"model"
+		"cis_fly_technounion_dome"
+	}
+	REQN
+	{
+		"class"
+		"cis_fly_geofighter_exp"
+		"cis_weap_fly_geofighter_cannon"
+	}
+	REQN
+	{
+		"config"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+	}
+	REQN
+	{
+		"zaabin"
+		"drive"
+	}
+	REQN
+	{
+		"zafbin"
+		"drive"
+	}
+}

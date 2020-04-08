@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"all_droid_r2d2"
+	}
+	REQN
+	{
+		"class"
+		"all_droid_r2d2_exp"
+		"all_weap_inf_fusioncutter"
+	}
+}

@@ -1,0 +1,22 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"med_cannon_impacts"
+		"ord_explosion"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_fly_droidfighter_cannon_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+	REQN
+	{
+		"texture"
+		"orangelaser_d"
+	}
+}

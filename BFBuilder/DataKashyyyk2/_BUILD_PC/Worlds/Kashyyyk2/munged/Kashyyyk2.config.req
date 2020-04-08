@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"sky_geonosis"
+		"geo1_bump"
+		"geo1"
+		"geo1_far_detail"
+	}
+	REQN
+	{
+		"model"
+		"geo_sky_dome"
+		"geo_sky_arena"
+		"geo_sky_spire"
+		"geo_sky_dome_rim"
+		"rep_fly_assault_dome"
+		"rep_fly_gunship_dome"
+		"cis_fly_droidfighter_dome"
+		"cis_fly_techounion_dome"
+	}
+}

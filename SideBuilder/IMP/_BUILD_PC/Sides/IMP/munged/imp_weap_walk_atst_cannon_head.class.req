@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"imp_blasterrifle_icon"
+		"reticule_rifle"
+		"hud_weap_fullauto"
+	}
+	REQN
+	{
+		"class"
+		"imp_weap_walk_atst_cannon_head_ord"
+	}
+}

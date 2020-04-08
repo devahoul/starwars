@@ -1,0 +1,20 @@
+ucft
+{
+	REQN
+	{
+		"zafbin"
+		"gen_inf_geonosian"
+		"gen_inf_geonosianwings"
+		"geo_inf_geonosian_lowres"
+	}
+	REQN
+	{
+		"zaabin"
+		"gen_inf_geonosianwings"
+	}
+    REQN
+    {
+        "class"
+        "geo_inf_geonosian"
+	}
+ }

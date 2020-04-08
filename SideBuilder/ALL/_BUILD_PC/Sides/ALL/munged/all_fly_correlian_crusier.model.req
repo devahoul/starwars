@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"all_lander_01_lowrez"
+		"all_lander_02_lowrez"
+		"all_fly_trooptrans_02"
+		"all_fly_trooptrans_01"
+	}
+}

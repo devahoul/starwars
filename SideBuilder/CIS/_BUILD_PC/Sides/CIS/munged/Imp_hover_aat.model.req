@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_hover_aat_lowrez"
+		"cis_hover_aat"
+		"imp_hover_aat"
+	}
+}

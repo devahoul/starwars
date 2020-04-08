@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rep_hover_fightertank_lowrez"
+		"noicon"
+		"rep_hover_fightertank"
+		"rep_hover_fightertank_bump"
+	}
+}

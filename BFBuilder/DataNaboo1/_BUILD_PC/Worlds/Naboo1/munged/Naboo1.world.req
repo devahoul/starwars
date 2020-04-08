@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"terrain"
+		"naboo1"
+	}
+	REQN
+	{
+		"config"
+		"naboo1"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+	}
+}

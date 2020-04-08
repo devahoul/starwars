@@ -1,0 +1,2336 @@
+<HTML XMLNS:t ="urn:schemas-microsoft-com:time">
+<head>
+<?IMPORT namespace="t" implementation="#default#time2">
+<TITLE>Star Wars Battlefront World Builder</TITLE>
+<HTA:APPLICATION ID="HTAEx" APPLICATIONNAME="Custom Browser"
+     ICON="DataTEMPLATE\Editor\Data\Interface\buildericon.bmp"
+     BORDER="thick"
+     innerBorder="no"
+     navigable="yes"
+     scroll="no"
+     scrollFlat="no"
+     selection="yes"
+     BORDERSTYLE="normal"
+     CAPTION="yes"
+     MAXIMIZEBUTTON="no"
+     MINIMIZEBUTTON="yes"
+     SHOWINTASKBAR="yes"
+     SINGLEINSTANCE="yes"
+     SYSMENU="yes"
+     VERSION="1.5"
+     WINDOWSTATE="normal"/>
+<SCRIPT language="JScript">
+function window.onload()
+{
+ window.resizeTo(640,480);
+}
+</script>
+<STYLE TYPE="text/css">
+<!--
+BUTTON      {font-family:Tahoma;
+            font-size:8pt;
+            line-height:8pt;
+            vertical-align:middle;}
+.time   {background-color:activecaption;behavior:url(#default#time2);}
+.SmallButton{height:21px;
+            font-family:Tahoma;
+            font-size:8pt;
+            line-height:10pt;
+            color:menutext;
+            padding:0px;
+            margin:0px;
+            vertical-align:middle;
+            background-color:Menu;}
+.MenuBtnDis {cursor:default;
+            height:18px;
+            font-family:Tahoma;
+            font-size:8pt;
+            line-height:8pt;
+            vertical-align:middle;
+            color:graytext;
+            border:1px;
+            border-style:solid;
+            border-color:inactiveborder;
+            background-color:Menu;}
+.MenuBtn    {cursor:default;
+            height:18px;
+            font-family:Tahoma;
+            font-size:8pt;
+            line-height:8pt;
+            vertical-align:middle;
+            color:menutext;
+            border:1px;
+            border-style:solid;
+            border-color:inactiveborder;
+            background-color:Menu;}
+.MenuBtnOvr {cursor:default;
+            height:18px;
+            font-family:Tahoma;
+            font-size:8pt;
+            line-height:8pt;
+            vertical-align:middle;
+            color:menutext;
+            border:1px;
+            border-style:solid;
+            border-top-color:threedhighlight;
+            border-right-color:threedshadow;
+            border-bottom-color:threedshadow;
+            border-left-color:threedhighlight;}
+.MenuBtnDwn {cursor:default;
+            height:18px;
+            font-family:Tahoma;
+            font-size:8pt;
+            line-height:8pt;
+            vertical-align:middle;
+            color:menutext;
+            border:1px;
+            border-style:solid;
+            border-top-color:threedshadow;
+            border-right-color:threedhighlight;
+            border-bottom-color:threedhighlight;
+            border-left-color:threedshadow;}
+.MenuOptns{cursor:default;
+            height:16px;
+            font-family:Tahoma;
+            font-size:8pt;
+            line-height:8pt;
+            vertical-align:middle;
+            color:menutext;
+            border:2px;
+            border-style:outset;
+            background-color:menu;}
+.MenuOptn{cursor:default;
+            height:16px;
+            font-family:Tahoma;
+            font-size:8pt;
+            line-height:8pt;
+            vertical-align:middle;
+            border:1px;
+            color:menutext;
+            background-color:menu;}
+.MenuOptnOvr{cursor:default;
+            height:16px;
+            font-family:Tahoma;
+            font-size:8pt;
+            line-height:8pt;
+            vertical-align:middle;
+            color:highlighttext;
+            background-color:highlight;}
+-->
+</STYLE>
+<SCRIPT language="VBScript">
+
+Sub MenuButtonOver(this)
+    If this.className="MenuBtnDwn" then    
+    Elseif ProjectMenuButton.className="MenuBtnDwn" then
+        MenuButtonDown(this)
+    Elseif SidesMenuButton.className="MenuBtnDwn" then
+        MenuButtonDown(this)
+    Elseif EditMenuButton.className="MenuBtnDwn" then
+        MenuButtonDown(this)
+    Elseif SoundMenuButton.className="MenuBtnDwn" then
+        MenuButtonDown(this)
+    Else               
+        this.className="MenuBtnOvr"
+    End if
+End Sub
+
+Sub MenuButtonOut(this)
+    If this.className="MenuBtnDwn" then
+    Else
+        this.className="MenuBtn"
+    End if
+End Sub
+
+Sub MenuButtonDown(this)
+    elementid=this.id
+    If this.className="MenuBtnDwn" then
+        If elementid = "ProjectMenuButton" then
+            ProjectMenu.style.visibility="hidden"
+            EditMenuOptions.style.visibility="hidden"
+            SidesMenu.style.visibility="hidden"
+            assetssides.style.visibility="hidden"
+            currentsides.style.visibility="hidden"
+            SoundMenu.style.visibility="hidden"
+            this.className="MenuBtn"
+        Elseif elementid = "EditMenuButton" then
+            ProjectMenu.style.visibility="hidden"
+            EditMenuOptions.style.visibility="hidden"
+            SidesMenu.style.visibility="hidden"
+            assetssides.style.visibility="hidden"
+            currentsides.style.visibility="hidden"
+            SoundMenu.style.visibility="hidden"
+            this.className="MenuBtn"
+        Elseif elementid = "SidesMenuButton" then
+            ProjectMenu.style.visibility="hidden"
+            EditMenuOptions.style.visibility="hidden"
+            SidesMenu.style.visibility="hidden"
+            assetssides.style.visibility="hidden"
+            currentsides.style.visibility="hidden"
+            SoundMenu.style.visibility="hidden"
+            this.className="MenuBtn" 
+        Elseif elementid = "SoundMenuButton" then
+            ProjectMenu.style.visibility="hidden"
+            EditMenuOptions.style.visibility="hidden"
+            SidesMenu.style.visibility="hidden"
+            assetssides.style.visibility="hidden"
+            currentsides.style.visibility="hidden"
+            SoundMenu.style.visibility="hidden"
+            this.className="MenuBtn" 
+        Else    
+            this.className="MenuBtn"
+
+        End if
+    Else    
+        ProjectMenuButton.className="MenuBtn"
+        EditMenuButton.className="MenuBtn"
+        SidesMenuButton.className="MenuBtn"
+        SoundMenuButton.className="MenuBtn"
+        this.className="MenuBtnDwn"
+        If elementid = "ProjectMenuButton" then
+            ProjectMenu.style.visibility="visible"
+            EditMenuOptions.style.visibility="hidden"
+            SidesMenu.style.visibility="hidden"
+            assetssides.style.visibility="hidden"
+            currentsides.style.visibility="hidden"
+            SoundMenu.style.visibility="hidden"
+        Elseif elementid = "EditMenuButton" then
+            ProjectMenu.style.visibility="hidden"
+            Projects.style.visibility="hidden"
+            EditMenuOptions.style.visibility="visible"
+            SidesMenu.style.visibility="hidden"
+            assetssides.style.visibility="hidden"
+            currentsides.style.visibility="hidden"
+            SoundMenu.style.visibility="hidden"
+        Elseif elementid = "SidesMenuButton" then
+            ProjectMenu.style.visibility="hidden"
+            Projects.style.visibility="hidden"
+            EditMenuOptions.style.visibility="hidden"
+            SidesMenu.style.visibility="visible"
+            SoundMenu.style.visibility="hidden"
+        Elseif elementid = "SoundMenuButton" then
+            ProjectMenu.style.visibility="hidden"
+            Projects.style.visibility="hidden"
+            EditMenuOptions.style.visibility="hidden"
+            SidesMenu.style.visibility="hidden"
+            assetssides.style.visibility="hidden"
+            currentsides.style.visibility="hidden"
+            SoundMenu.style.visibility="visible"
+            
+        Else
+        End if    
+    End if
+End Sub
+
+
+
+Sub MenuOptionsOut(this)
+    this.className="MenuOptn"  
+End Sub
+
+Sub MenuOptionOver(this)
+    this.className="MenuOptnOvr"
+End Sub
+
+Sub MenuOptionOut(this)
+    this.className="MenuOptn"  
+End Sub
+
+
+
+
+'Start Read, Search, and Write Files ---------------------------------
+dim filecontentz
+Function ObtainFile(filepath)
+    dim editfile
+    filecontentz = ""
+    Const ForReading=1, ForWriting=2, ForAppending=8
+    set fso=CreateObject("Scripting.FileSystemObject")
+    set editfile = fso.OpenTextFile(filepath, 1, True)
+    filecontentz = editfile.ReadAll
+    editfile.close
+End Function
+
+dim sidefolderlist
+dim sidefoldercount
+
+dim sfoldername, sfolderpath, modsidespath
+Function FindFolder(findfolderpath,modnameshortdata)
+    Set filesys = CreateObject("Scripting.FileSystemObject")
+    Set appfile = filesys.GetFile("bfbuilder.hta")
+    modsidespath = appfile.ParentFolder & "\"&modnameshortdata & "\Sides\"
+    Set SidesFolder = filesys.GetFolder(modsidespath)
+    sidefoldercount = SidesFolder.SubFolders.Count
+
+    'msgbox findfolderpath
+    action = findfolderpath
+    Select Case action
+        Case "editside" 
+            findfolderpath = appfile.ParentFolder & "\" & modnameshortdata & "\sides\"
+        Case "importretailside"
+            findfolderpath = appfile.ParentFolder & "\Assets\Sides\"
+        Case Else            
+    End Select
+   'MsgBox findfolderpath
+    Set Folder = filesys.GetFolder(findfolderpath)
+    'MsgBox sidefoldercount
+    If Folder.SubFolders.Count > 0 Then
+        For Each Folder In Folder.SubFolders
+            sfoldername = Folder.Name
+            sfolderpath = action
+            sidefolderlist = sidefolderlist & "<table id="& sfoldername &" name="& sfoldername &" class=MenuOptn onmouseover="& Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "ActivateSide('"&sfoldername&"','"&sfolderpath&"',modsidespath)" & Chr(34) & "  border=0 cellpadding=0 cellspacing=0 margin=0 height=16 width=130><tr><td height=16> &nbsp;" & sFoldername & "</td></tr></table>"
+            
+        Next
+        'msgbox sidefolderlist
+        Select Case action
+            Case "editside"
+            ActivateEditSides(sidefolderlist)
+            sidefolderlist = ""
+            'MsgBox sidefolderlist
+            Case "importretailside"
+            ActivateImportSides(sidefolderlist)
+            sidefolderlist = ""
+            'MsgBox "import"
+            Case Else
+            'MsgBox "else"
+        End Select
+        'MsgBox sidefolderlist
+    Else
+        
+        MsgBox "No Folders Found"
+    End If
+    
+End Function
+
+Function ConformFolderWrite(folderpath)
+    set fso=CreateObject("Scripting.FileSystemObject")
+    set readfolder = fso.GetFolder(folderpath)
+    If Not readfolder.Attributes And 1 Then 
+        'Response.Write "The file is Read/Write
+    Else
+        'Make it writable
+        readfolder.Attributes = readfolder.Attributes + 31
+    End If
+    Set readfile = nothing
+End Function
+
+Function DeleteFile(filepath)
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    Set f1 = fso.GetFile(filepath)
+    f1.Delete
+End Function
+
+Function RenameFile(filepath,newnamepath)
+    set fso=CreateObject("Scripting.FileSystemObject")
+    set readfile = fso.GetFile(filepath)
+    If Not readfile.Attributes And 1 Then 
+        'Response.Write "The file is Read/Write
+        'MsgBox readfile & readfile.Attributes
+    Else
+        'Make it writable
+        readfile.Attributes = readfile.Attributes + 31
+    End If
+    readfile.Name = newnamepath
+    Set readfile = nothing
+End Function
+
+dim newstr
+Function SearchReg(srchstr,srchpattern,srchglobal,replacestr)
+Dim objRE, objMatches, objMatch
+'Dim srchstr
+Set objRE = New RegExp
+objRE.Pattern = srchpattern
+objRE.Global = srchglobal
+strExample = srchstr
+Set objMatches = objRE.Execute(srchstr)
+If objMatches.Count > 0 Then
+    For Each objMatch In objMatches
+        'MsgBox objMatch.Value & " found at position " 
+        'MsgBox objMatch.FirstIndex & "<br>"
+        repstr = objMatch.value
+        srchstr = Replace(srchstr,repstr,replacestr)
+        newstr= srchstr
+    Next
+
+Else
+    MsgBox "The expression was not found"
+End If
+Set objMatches = Nothing
+Set objRE = Nothing
+End Function
+
+
+Function SearchLuaPrp(srchstr,srchpattern,srchglobal,replacestr)
+Dim objRE, objMatches, objMatch
+'Dim srchstr
+Set objRE = New RegExp
+objRE.Pattern = srchpattern
+objRE.Global = srchglobal
+strExample = srchstr
+Set objMatches = objRE.Execute(srchstr)
+If objMatches.Count > 0 Then
+    For Each objMatch In objMatches
+        'MsgBox objMatch.Value & " found at position " 
+        'MsgBox objMatch.FirstIndex & "<br>"
+        'repstr = objMatch.value
+        'srchstr = Replace(srchstr,repstr,replacestr)
+        'newstr= srchstr
+        
+    Next
+    'MsgBox 
+Else
+    MsgBox "The expression was not found"
+End If
+Set objMatches = Nothing
+Set objRE = Nothing
+End Function
+
+Function SearchLuaComment(srchstr,luaera,srchglobal,luapath,modid)
+    Dim objRE, objMatches, objMatch
+    'Dim srchstr
+    srchpattern = "--start (\w+)(.*)\n(((.*)\n)*)--end(.*)\1"
+    Set objRE = New RegExp
+    objRE.Pattern = srchpattern
+    objRE.Global = True
+    strExample = srchstr
+    sms=""
+    oi=0
+    Set objMatches = objRE.Execute(srchstr)
+    cfgctrlcount = objMatches.Count
+    If objMatches.Count > 0 Then
+        For Each objMatch In objMatches
+            cfgprps = cfgprps & objMatch.value     & "|"
+            'oi=oi+1
+            'MsgBox objMatch.value & " " & objMatches.Count &vbCrLf
+            'sms = Replace(srchstr,objMatch,"")
+        Next
+        'MsgBox cfgprps
+            dim sTempsMsg
+            cfgprps = Replace(cfgprps,vbCrLf,"<br>")
+            sTempsMsg = cfgprps
+            dim dividedarray
+            dividedarray = Split(sTempsMsg,"|")
+            luaheaderprp = dividedarray(0)
+            luaobjectiveprp = dividedarray(1)
+            luasoundlvlprp =  dividedarray(2)
+            luasideslvlprp = dividedarray(3)
+            lualoadoutprp = dividedarray(4)
+            luateamstatsprp = dividedarray(5)
+            luaalliesprp = dividedarray(6)
+            luamemorypoolprp = dividedarray(7)
+            luaworldlvlprp = dividedarray(8)
+            luaspawndelayprp = dividedarray(9)
+            luaflyheightprp = dividedarray(10)
+            luaainotifyprp = dividedarray(11)
+            luastayinturretprp = dividedarray(12)
+            luadenseenvironmentprp = dividedarray(13)
+            luabirdsandfishprp = dividedarray(14)
+            luadeathregionsprp = dividedarray(15)
+            luasoundconfigprp = dividedarray(16)
+            luaactivebonusprp = dividedarray(17)
+            luacarmerashotprp = dividedarray(18)
+            luafooterprp = dividedarray(19)      
+            
+            'luaheaderprp = Replace(luaheaderprp,vbCrLf,"<br>")
+
+    Else 
+       ' MsgBox "The mission lua is not" &vbCrLf& "formatted for BFBuilder editing "&vbCrLf&"attempting to recreate..."
+        CreateMsgBox = MsgBox("The mission lua located in "&vbCrLf& luapath & vbCrLf & "is not formatted for BFBuilder editing."&vbCrLf& "This file must be deleted and reformatted or edited manually." &vbCrLf&vbCrLf&" Delete this file and recreate LUA using default values?"&vbCrLf&vbCrLf&" Yes - This will erase all of your lua settings"&vbCrLf&" No - will not change the lua file", vbQuestion + vbYesNo)
+        If CreateMsgBox = 6 Then
+            Select Case luaera
+            Case "cw"
+                DeleteFile(luapath)
+                Call WriteLuaC(luapath,modid)
+            Case "gcw"
+                DeleteFile(luapath)
+                Call WriteLuaA(luapath,modid)
+            Case Else
+            MsgBox "Lua case else - error"
+            End Select
+        Else
+        End If
+    End If
+    Select Case luaera
+    Case "cw"
+        'msgbox luasoundlvlprp
+        'GetCommentContent
+        
+'        activecwlua.innerHTML = dividedarray(0) & dividedarray(1) &dividedarray(2) &dividedarray(3) &dividedarray(4) &dividedarray(5) &dividedarray(6) 
+        'activecwlua.innerHTML = ""
+        'activecwlua.style.visibility = "visible"
+        'activeworld.style.visibility = "visible"
+        'activeluas.style.visibility = "visible"
+
+    Case "gcw"
+        'activegcwlua.innerHTML = luaheaderprp
+        'activegcwlua.innerHTML = ""
+        'activegcwlua.style.visibility = "visible"
+        'activeworld.style.visibility = "visible"
+        'activeluas.style.visibility = "visible"
+
+    Case Else
+        MsgBox "Lua case else - error"
+    End Select                       
+
+    Set objMatches = Nothing
+    Set objRE = Nothing
+End Function
+
+Function ConformFileWrite(filepath)
+    set fso=CreateObject("Scripting.FileSystemObject")
+    set readfile = fso.GetFile(filepath)
+    If Not readfile.Attributes And 1 Then 
+        'Response.Write "The file is Read/Write
+    Else
+        'Make it writable
+        readfile.Attributes = readfile.Attributes + 31
+    End If
+    Set readfile = nothing
+End Function
+
+Function WriteNewFile(strFileName, strContent)
+    'On Error Resume Next
+    Set objFSO = CreateObject("Scripting.FileSystemObject")
+    If Err.Number = 0 Then
+        Set objFile = objFSO.CreateTextFile(strFileName, True)
+    End If
+    If Err.Number = 0 Then objFile.WriteLine strContent
+    If Err.Number = 0 Then objFile.Close
+    If Err.Number = 0 Then WriteNewFile = True
+End Function
+'End Read Search and Write Files ------------------------------------
+
+
+'Start Project Menu Functions ---------------------------------------
+
+Sub ActivateProjectList() 
+    if Projects.style.visibility = "hidden" Then
+        Projects.style.visibility = "visible"
+    else
+        Projects.style.visibility = "hidden"
+    End if
+End Sub
+
+Sub ActivateCreateNewProject() 
+    If CreateNew.style.visibility = "hidden" then
+        CreateNew.style.visibility = "visible"
+        ProjectMenu.style.visibility = "hidden"
+        ProjectMenuButton.className = "MenuBtn"
+        ProjectMenuButtonDisabled.style.visibility = "visible"
+    Else
+        CreateNew.style.visibility = "hidden"
+        ProjectMenuButton.className = "MenuBtn"
+        ProjectMenuButtonDisabled.style.visibility = "hidden"
+    End if
+End Sub
+
+Function ActivateSearchProjects()
+    Dim filesys, appfile, bfbuilderfolder
+    Set filesys = CreateObject("Scripting.FileSystemObject")
+    Set appfile = filesys.GetFile("bfbuilder.hta")
+    bfbuilderfolder = appfile.ParentFolder & "\"
+    'MsgBox bfbuilderfolder
+
+    Dim demofolder, subfol, folcoll, folist
+    Set demofolder = filesys.GetFolder(bfbuilderfolder)
+    Set folcoll = demofolder.SubFolders
+    For Each subfol in folcoll
+        folist = folist & subfol.Name & vbCr
+    Next
+    'MsgBox folist
+
+    Dim re, s
+    Set re = New RegExp
+    re.IgnoreCase=True
+    re.Pattern = "Data\w.*\rD[^a]"
+    s = folist
+    Set colMatches = re.Execute(s)
+    sMsg=""
+    For Each ObjMatch in colMatches
+        sMsg = sMsg & objMatch.Value
+    Next
+
+    toremove = Right(sMsg, 2)
+    'MsgBox sMsg
+    'sMsg = Replace(sMsg, sMsg, sMsg&";")
+    sMsg = Replace(sMsg,vbCr&toremove, "")
+    sMsg = Replace(sMsg,vbCr&"DataTEMPLATE", "")
+    sMsg = Replace(sMsg,vbCr&"dataTEMPLATE", "")
+    sMsg = Replace(sMsg,vbCr&"DataTemplate", "")
+    sMsg = Replace(sMsg,vbCr&"Datatemplate", "")
+    sMsg = Replace(sMsg,vbCr, ",")
+        
+    dim aryProjects
+    'dim aryProjectFiles
+    aryProjects = Split(sMsg,",")
+    'aryProjectFiles =
+    'MsgBox IsArray(aryProjects)
+    aryProjectsUB = UBOUND(aryProjects)
+    'MsgBox aryProjectsUB
+
+    dim rei, orei, MProject, NProject
+    rei=0    
+    Projects.innerHTML = ""
+    Do While rei <= aryProjectsUB
+        MProject = aryProjects(rei)
+        NProject = Replace(Mproject, "Data","")
+        Projects.innerHTML = Projects.innerHTML & "<table border=0 cellpadding=1 margin=0 cellspacing=0 height=18 width=140><tr><td id="& MProject &" name="& MProject &" class=MenuOptn value="& MProject &"  onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "ActivateOpenProject("& MProject &".value)" & Chr(34) & " onselectstart=" & Chr(34) & " return false" & Chr(34) & ">&nbsp;"& NProject &"&nbsp;</td></tr></table>"
+        'MsgBox Projects.innerHTML
+        'MsgBox MProject
+        'MsgBox aryProjects(rei)
+        rei=rei+1
+    Loop
+        ActivateProjectList()
+End Function
+
+
+
+
+Function ActivateOpenProject(project)
+    ProjectMenuButton.className = "MenuBtn"
+    EditMenuButtonDisabled.style.visibility = "hidden"
+    SidesMenuButtonDisabled.style.visibility = "hidden"
+    SoundMenuButtonDisabled.style.visibility = "hidden"
+    Projects.style.visibility = "hidden"
+    ProjectMenu.style.visibility = "hidden"
+
+    dim openprojectname, modid
+    openprojectname = project
+    modid=Replace(openprojectname, "Data","")
+    document.title = "Project: "& modid
+
+    'Get LUAs to include
+    '==========\addme\addme.lua
+    addmeluapath = project &"\addme\addme.lua"
+    dim editfile
+    Const ForReading=1, ForWriting=2, ForAppending=8
+    set fso=CreateObject("Scripting.FileSystemObject")
+    set editfile = fso.OpenTextFile(addmeluapath, 1, True)
+    filecontents = editfile.ReadAll
+    editfile.close
+        
+    Dim objRE, objMatches, objMatch
+    Dim strExample
+        
+    Set objRE = New RegExp
+    objRE.Pattern = "side_"
+    objRE.Global = True
+    strExample = filecontents
+    Set objMatches = objRE.Execute(strExample)
+    If objMatches.Count > 1 Then
+        'cwmissionproperties.style.visibility = "visible"
+        'gcwmissionproperties.style.visibility = "visible"
+        erastoinclude = "both"
+    Else
+        Dim objRE2, objMatches2, objMatch2
+        Dim strExample2
+                      
+        Set objRE2 = New RegExp
+        objRE2.Pattern = "side_c ="
+        objRE2.Global = True
+        strExample2 = filecontents
+        Set objMatches2 = objRE2.Execute(strExample2)
+            If objMatches2.Count > 0 Then
+                'cwmissionproperties.style.visibility = "visible"
+                'gcwmissionproperties.style.visibility = "hidden"
+                erastoinclude = "cw"
+            Else
+                'cwmissionproperties.style.visibility = "hidden"
+                'gcwmissionproperties.style.visibility = "visible"
+                erastoinclude = "gcw"
+            End if
+            Set objMatches2 = Nothing
+            Set objRE2 = Nothing
+    End If
+    Set objMatches = Nothing
+    Set objRE = Nothing       
+
+    
+    activeproject.style.visibility = "visible"
+    activebutton1 = "<button id=zerobutton name=zerobutton class=SmallButton align=top value=" & Chr(34) & modid & Chr(34) & " onClick=" & Chr(34) & "EditWorld('"& openprojectname &"','zeroeditor.exe')" & Chr(34) & "><b>Edit "& modid &"</b></button>"
+    activebutton2 = "<button id=localizeproject name=localizeproject class=SmallButton value=" & Chr(34) & modid & Chr(34) & " onClick=" & Chr(34) & "Launch('"& openprojectname &"','edit_pc_addon_localize.bat')" & Chr(34) & "><b>Localize "&modid&"</b></button>"
+    activebutton3 = "<button id=mungebutton name=mungebutton class=SmallButton value=" & Chr(34) & modid & Chr(34) & " onClick=" & Chr(34) & "Launch('"& openprojectname &"','munge.bat')" & Chr(34) & "><b>Munge "&modid&"</b></button>"
+    activebutton4 = "<button id=cleanbutton name=cleanbutton class=SmallButton value=" & Chr(34) & openprojectname & Chr(34) & " onClick=" & Chr(34) & " Launch('"& openprojectname &"','clean.bat')" & Chr(34) & "><b>Clean "&modid&"</b></button>"
+     
+    'get the lua and read its contents
+    luacwpath = project &"\Common\Scripts\"& modid &"\"& modid &"c.lua"
+    set fso=CreateObject("Scripting.FileSystemObject")
+    set editfilez = fso.OpenTextFile(luacwpath, 1, True)
+    filecontentc = editfilez.ReadAll
+    cwmissionpropertieslua = filecontentc
+    editfilez.close
+    set editfilez=nothing
+    luaera="cw"
+    Call SearchLuaComment(cwmissionpropertieslua,luaera,true,luacwpath,modid)
+        
+    luagcwpath = project &"\Common\Scripts\"& modid &"\"& modid &"a.lua"
+    'set fso=CreateObject("Scripting.FileSystemObject")
+    set editfilez = fso.OpenTextFile(luagcwpath, 1, True)
+    filecontentg = editfilez.ReadAll
+    editfilez.close
+    gcwmissionpropertieslua = filecontentg
+    rgcwmissionpropertieslua = Replace(filecontentg,vbCrLf,"<br>")
+    'MsgBox gcwmissionpropertieslua 
+    luaera="gcw"
+    Call SearchLuaComment(gcwmissionpropertieslua,luaera,true,luagcwpath,modid)
+    set editfilez=nothing    
+    
+    'activegcwlua.innerHTML = rgcwmissionpropertieslua
+    'activecwlua.innerHTML = rcwmissionpropertieslua
+    
+    
+    'Select Case erastoinclude
+    '    Case "both"
+    '        projectproperties  = cwmissionpropertieslua & gcwmissionpropertieslua
+    '    Case "cw"
+    '        'projectproperties = projectpropertiescw
+    '         projectproperties = cwmissionpropertieslua 
+    '    Case "gcw"
+    '        'projectproperties = projectpropertiesgcw
+    '        projectproperties = gcwmissionpropertieslua 
+    '    Case Else
+    '        MsgBox "Side Error"&vbCrLf&vbCrLf&" Check addme.lua for side_a=1 and/or side_c=1"&vbCrLf&vbCrLf&"depending on which eras should be playable."
+    'End Select
+  
+    'activeproject.innerHTML =  activebutton1 & activebutton2 & activebutton3 & activebutton4 & "<br>Mission Properties:<br>" & projectproperties
+    
+    
+    
+    activeproject.innerHTML =  activebutton1 & activebutton2 & activebutton3 & activebutton4
+
+
+       
+    EditMenuOption01 ="<table border=0 cellpadding=1 margin=0 cellspacing=0 height=18 width=100><tr><td id=EditWorldReq name=EditWorldReq class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Worlds\\"&modid&"\\"&modid&".req')"& Chr(34) &">&nbsp;World Req File&nbsp;</td></tr>"
+    EditMenuOption02 ="<tr><td id=EditMissionLuaA name=EditMissionLuaA class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Common\\Scripts\\"&modid&"\\"&modid&"a.lua')" & Chr(34) & ">&nbsp;GCW Mission LUA&nbsp;</td></tr>"
+    EditMenuOption03 ="<tr><td id=EditMissionLuaC name=EditMissionLuaC class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Common\\Scripts\\"&modid&"\\"&modid&"c.lua')" & Chr(34) & ">&nbsp;CW Mission LUA&nbsp;</td></tr>"
+    EditMenuOption04 ="<tr><td id=EditAddmelua name=EditAddmelua class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\addme\\addme.lua')" & Chr(34) & ">&nbsp;AddMe LUA&nbsp;</td></tr>"
+    EditMenuOption05 ="<tr><td id=EditSky name=EditSky class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Worlds\\"&modid&"\\World1\\"&modid&".sky')" & Chr(34) & ">&nbsp;World Sky File&nbsp;</td></tr>"
+    EditMenuOption06 ="<tr><td id=EditFX name=EditFX class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Worlds\\"&modid&"\\World1\\"&modid&".fx')" & Chr(34) & ">&nbsp;World FX File&nbsp;</td></tr>"
+    EditMenuOption07 ="<tr><td id=EditPRP name=EditPRP class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Worlds\\"&modid&"\\World1\\"&modid&".prp')" & Chr(34) & ">&nbsp;World PRP File&nbsp;</td></tr></table>"
+
+    EditMenuOptionhr ="<tr><td height=2 cellpadding=0 cellspacing=0 border=0 class=MenuOptn><hr></td></tr>"
+
+    Select Case erastoinclude
+        Case "both"
+        EditMenuOptionSides=EditmenuOption02 & EditMenuOption03
+        Case "cw"
+        EditMenuOptionSides=EditMenuOption03
+        Case "gcw"
+        EditMenuOptionSides=EditmenuOption02
+        Case Else
+    End Select
+
+    EditMenuOptionsContent = EditMenuOption01 & EditMenuOptionhr & EditMenuOptionSides & EditMenuOption04 & EditMenuOptionhr & EditMenuOption05 & EditMenuOption06 & EditMenuOption07
+    EditMenuOptions.innerHTML = EditMenuOptionsContent
+    
+    SoundMenuOption1 ="<table border=0 cellpadding=1 margin=0 cellspacing=0 height=18 width=100><tr><td id=EditSoundReq name=EditSoundReq class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&".req')" & Chr(34) & ">&nbsp;&nbsp;Global Req&nbsp;</td></tr>"
+    SoundMenuOption2 ="<tr><td id=EditSoundWorldSnd name=EditSoundWorldSnd class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&".snd')" & Chr(34) & ">&nbsp;&nbsp;Global SND&nbsp;</td></tr>"
+    SoundMenuOption3 ="<tr><td id=EditSoundWorldSFX name=EditSoundWorldSFX class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&".sfx')" & Chr(34) & ">&nbsp;&nbsp;Global SFX&nbsp;</td></tr>"
+    SoundMenuOption4 ="<tr><td id=EditSoundWorldASFX name=EditSoundWorldASFX class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&".asfx')" & Chr(34) & ">&nbsp;&nbsp;Global ASFX&nbsp;</td></tr>"
+    SoundMenuOption5 ="<tr><td id=EditSoundWorldST4 name=EditSoundWorldST4 class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&".st4')" & Chr(34) & ">&nbsp;&nbsp;Global ST4&nbsp;</td></tr>"
+    SoundMenuOption6 ="<tr><td id=EditSoundWorldSTM name=EditSoundWorldSTM class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&".stm')" & Chr(34) & ">&nbsp;&nbsp;Global STM&nbsp;</td></tr>"
+    
+    SoundMenuOption7 ="<tr><td class=MenuOptn><hr></td></tr>"
+
+    SoundMenuOption8 ="<tr><td id=EditGCWSoundReq name=EditGCWSoundReq class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"gcw.req')"& Chr(34) &">&nbsp;&nbsp;GCW Req&nbsp;</td></tr>"
+    SoundMenuOption9 ="<tr><td id=EditSoundGCWSnd name=EditSoundGCWSnd class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"gcw.snd')" & Chr(34) & ">&nbsp;&nbsp;GCW SND&nbsp;</td></tr>"
+    SoundMenuOption10 ="<tr><td id=EditSoundGCWASFX name=EditSoundGCWASFX class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"gcw.asfx')" & Chr(34) & ">&nbsp;&nbsp;GCW ASFX&nbsp;</td></tr>"
+    SoundMenuOption11 ="<tr><td id=EditSoundGCWSFX name=EditSoundGCWSFX class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"gcw.sfx')" & Chr(34) & ">&nbsp;&nbsp;GCW SFX&nbsp;</td></tr>"
+    SoundMenuOption12 ="<tr><td id=EditGCWMus name=EditGCWMus class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"gcw_music.mus')"& Chr(34) &">&nbsp;&nbsp;GCW Music MUS&nbsp;</td></tr>"
+    SoundMenuOption13 ="<tr><td id=EditGCMusSnd name=EditGCMusSnd class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"gcw_music_config.snd')" & Chr(34) & ">&nbsp;&nbsp;GCW Music SND&nbsp;</td></tr>"
+    SoundMenuOption14 ="<tr><td id=EditGCWMusStm name=EditGCWMusStm class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"gcw_music.stm')" & Chr(34) & ">&nbsp;&nbsp;GCW Music STM&nbsp;</td></tr>"
+
+    SoundMenuOption15 ="<tr><td class=MenuOptn><hr></td></tr>"
+
+    SoundMenuOption16 ="<tr><td id=EditSoundCWReq name=EditSoundCWReq class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"cw.req')" & Chr(34) & ">&nbsp;&nbsp;CW Req&nbsp;</td></tr>"
+    SoundMenuOption17 ="<tr><td id=EditSoundCWSnd name=EditSoundCWSnd class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"cw.snd')" & Chr(34) & ">&nbsp;&nbsp;CW SND&nbsp;</td></tr>"
+    SoundMenuOption18 ="<tr><td id=EditSoundCWASFX name=EditSoundCWASFX class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"cw.asfx')" & Chr(34) & ">&nbsp;&nbsp;CW ASFX&nbsp;</td></tr>"
+    SoundMenuOption19 ="<tr><td id=EditSoundCWSFX name=EditSoundCWSFX class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"cw.sfx')" & Chr(34) & ">&nbsp;&nbsp;CW SFX&nbsp;</td></tr>"
+    SoundMenuOption20 ="<tr><td id=EditCWMus name=EditCWMus class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"cw_music.mus')"& Chr(34) &">&nbsp;&nbsp;CW Music MUS&nbsp;</td></tr>"
+    SoundMenuOption21 ="<tr><td id=EditCWMussnd name=EditCWMussnd class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"cw_music_config.snd')" & Chr(34) & ">&nbsp;&nbsp;CW Music SND&nbsp;</td></tr>"
+    SoundMenuOption22 ="<tr><td id=EditCWMusStm name=EditCWMusStm class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\sound\\worlds\\"&modid&"\\"&modid&"cw_music.stm')" & Chr(34) & ">&nbsp;&nbsp;CW Music STM&nbsp;</td></tr></table>"
+
+    Select Case erastoinclude
+            Case "both"
+                SoundMenuOptionsContent = SoundMenuOption1 & SoundMenuOption2 & SoundMenuOption3 & SoundMenuOption4 & SoundMenuOption5 & SoundMenuOption6 & SoundMenuOption7 & SoundMenuOption8 & SoundMenuOption9 & SoundMenuOption10 & SoundMenuOption11 & SoundMenuOption12 & SoundMenuOption13 & SoundMenuOption14 & SoundMenuOption15 & SoundMenuOption16 & SoundMenuOption17 & SoundMenuOption18 & SoundMenuOption19 & SoundMenuOption20 & SoundMenuOption21 & SoundMenuOption22
+            Case "cw"
+                SoundMenuOptionsContent = SoundMenuOption1 & SoundMenuOption2 & SoundMenuOption3 & SoundMenuOption4 & SoundMenuOption5 & SoundMenuOption6 & SoundMenuOption15 & SoundMenuOption16 & SoundMenuOption17 & SoundMenuOption18 & SoundMenuOption19 & SoundMenuOption20 & SoundMenuOption21 & SoundMenuOption22
+            Case "gcw"
+                SoundMenuOptionsContent = SoundMenuOption1 & SoundMenuOption2 & SoundMenuOption3 & SoundMenuOption4 & SoundMenuOption5 & SoundMenuOption6 & SoundMenuOption7 & SoundMenuOption8 & SoundMenuOption9 & SoundMenuOption10 & SoundMenuOption11 & SoundMenuOption12 & SoundMenuOption13 & SoundMenuOption14                
+            Case Else
+                MsgBox "Side Error"
+    End Select
+
+
+    SoundMenu.innerHTML = SoundMenuOptionsContent
+
+    SidesMenuOption01 = "<table border=0 cellpadding=2 margin=0 cellspacing=0><tr><td id=CreateNewSide name=CreateNewSide class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "ActivateCreateNewSide()" & Chr(34) & " onselectstart=" & Chr(34) & "return false" & Chr(34) & ">&nbsp;Create New Side&nbsp;</td></tr>"
+    SidesMenuOption02 = "<tr><td id=EditExistingSide name=EditExistingSide class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "FindFolder('editside','"&openprojectname&"')" & Chr(34) & "  onselectstart=" & Chr(34) & "return false" & Chr(34) & ">&nbsp;Edit Existing Side&nbsp;</td></tr>"
+    SidesMenuOption03 = "<tr><td id=ImportRetailSide name=ImportRetailSide class=MenuOptn onmouseover=" & Chr(34) & "MenuOptionOver(this)" & Chr(34) & " onmouseout=" & Chr(34) & "MenuOptionOut(this)" & Chr(34) & " onMousedown=" & Chr(34) & "FindFolder('importretailside','"&openprojectname&"')" & Chr(34) & "  onselectstart=" & Chr(34) & "return false" & Chr(34) & ">&nbsp;Import Retail Side&nbsp;</td></tr></table>"
+    SidesMenuOptionsContent = SidesMenuOption01 & SidesMenuOption02 & SidesMenuOption03
+    SidesMenu.innerHTML = SidesMenuOptionsContent    
+        
+    hiddenmodname.value = project
+
+
+End Function
+'End Project Menu Functions ---------------------------------------
+
+
+
+Function ActivateCreateNewSide()
+    'MsgBox "Create New Side"
+    CreateNewSideControl.style.visibility = "visible"
+    SidesMenuButton.className="MenuBtn"
+    'SidesMenuButton.style.border = "none"
+    SidesMenu.style.visibility = "hidden"
+    assetssides.style.visibility = "hidden"
+    currentsides.style.visibility = "hidden"
+    'CreateNewSide.style.visibility = "hidden"
+    'EditExistingSide.style.visibility = "hidden"
+    'ImportRetailSide.style.visibility = "hidden"
+End Function
+
+
+
+Function CreateNewSideFolder(sideid,hiddenmodname)
+    If sideid="" Then 
+        MsgBox "SideID Cannot Be Blank"
+    Else
+        MsgBox "Creating New Side " & sideid
+        anothershortmodname = Replace(hiddenmodname, "Data","")
+        newsidepath = hiddenmodname &"\Sides\"&sideid
+        newsidemshpath= newsidepath&"\MSH"
+        newsidemungedpath= newsidepath&"\munged"
+        newsideodfpath= newsidepath&"\ODF"
+        newsidereqpath= newsidepath&"\REQ"
+        newsidereqfpmpath= newsidepath&"\REQ\FPM"
+
+        newsideworldreqpath= newsidepath&"\"&sideid&".req"
+        buildpcsidespath = hiddenmodname &"\_BUILD_PC\Sides"
+        buildpcnewsidefldpath = hiddenmodname &"\_BUILD_PC\Sides\"&sideid
+        'MsgBox newsidepath
+
+        dim fso
+        set fso=CreateObject("Scripting.FileSystemObject")
+        Set appfile =fso.GetFile("bfbuilder.hta")
+        sidestemplatepath = appfile.ParentFolder & "\Assets\Sides\"
+        sidefolderlist=""
+        Call FindFolder(buildpcsidespath,hiddenmodname)
+        If fso.FolderExists(newsidepath) Then
+            MsgBox newsidepath& "Folder Already Exists", 16
+        Else
+            MsgBox "Okay to Create Folder"
+            fso.CreateFolder(newsidepath)
+            fso.CreateFolder(newsidemshpath)
+            fso.CreateFolder(newsidemungedpath)
+            fso.CreateFolder(newsideodfpath)
+            fso.CreateFolder(newsidereqpath)
+            fso.CreateFolder(newsidereqfpmpath)
+            fso.CreateTextFile(newsideworldreqpath)   
+            fso.CreateFolder(buildpcnewsidefldpath)
+            fso.CreateFolder(buildpcnewsidefldpath&"\munged")
+
+            If fso.FolderExists("DataTEMPLATE\_BUILD_PC\Sides\GAM") Then
+                fso.CopyFile "DataTEMPLATE\_BUILD_PC\Sides\GAM\munge.bat", buildpcsidespath&"\"&sideid&"\munge.bat"
+                fso.CopyFile "DataTEMPLATE\_BUILD_PC\Sides\GAM\clean.bat", buildpcsidespath&"\"&sideid&"\clean.bat"
+                
+                If fso.FileExists(buildpcsidespath&"\"&sideid&"\snw.req") Then
+                    fso.Delete buildpcsidespath&"\"&sideid&"\snw.req"
+                Else
+                    
+                End If    
+        
+                ' =========_BUILD_PC\Sides\sideid\munge.bat
+                dim sideedit1path, sideedit1write
+                sideedit1path = buildpcsidespath&"\"&sideid&"\munge.bat"
+                If fso.FileExists(sideedit1path) Then
+                    set sideedit1write = fso.GetFile(sideedit1path)
+                    Const ForReading=1, ForWriting=2, ForAppending=8
+                    dim sideedit1, sideedit1content
+                    set sideedit1 = fso.OpenTextFile(sideedit1path, ForReading, True)
+                    sideedit1content = sideedit1.ReadAll
+                    sideedit1content = Replace(sideedit1content, "Gam",sideid)
+                    sideedit1content = Replace(sideedit1content, "GAM",sideid)
+                    sideedit1.close
+                    ConformFileWrite(sideedit1path)
+                    WriteNewFile sideedit1path, sideedit1content
+                Else
+                    MsgBox buildpcsidespath&"\"&sideid&"\munge.bat not found"
+                End If
+  
+                ' =========_BUILD_PC\Sides\clean.bat
+                dim sideedit2path, sideedit2write
+                sideedit2path = buildpcsidespath&"\clean.bat"
+                If fso.FileExists(sideedit2path) Then
+                    'MsgBox "File Exists, proceeding"
+                    set sideedit2write = fso.GetFile(sideedit2path)
+                    ConformFileWrite(sideedit2write)
+                    dim sideedit2, sideedit2content
+                    set sideedit2 = fso.OpenTextFile(sideedit2path, ForReading, True)
+                    'MsgBox edit1
+                    sideedit2content = sideedit2.ReadAll
+                    sideedit2.close
+                    'MsgBox sidefoldercount
+                    If sidefoldercount > 0 Then
+                        'MsgBox "Append clean.bat"
+                        sideedit2content = sideedit2content & " " & "cd "& sideid & vbCrLf & "@call clean.bat" & vbCrLf
+                        sideedit2content = sideedit2content & " " & "cd .."
+                    Else
+                        'delete and recreate clean.bat
+                        sideedit2content = "cd "& sideid & vbCrLf & "@call clean.bat" & vbCrLf
+                        sideedit2content = sideedit2content & " " & "cd .."
+                    End If
+  
+                    ConformFileWrite sideedit2path
+                    'MsgBox "Confirmed"
+                    WriteNewFile sideedit2path, sideedit2content
+                Else
+                    MsgBox sideedit2path &" not found"
+                End If                              
+                '======================ADD build_pc munge
+                mungefilepath = hiddenmodname &"\_BUILD_PC\munge.bat"
+                Call ObtainFile(mungefilepath)
+                mungebatcontents = filecontentz
+                mungeappend = "cd "&sideid& vbCrLf & "@call munge.bat" & vbCrLf &"cd .." & vbCrLf & "REM ENDSIDES"
+                mungebatcontents = Replace(mungebatcontents,"REM ENDSIDES",mungeappend)
+                Call WriteNewFile(mungefilepath,mungebatcontents)  
+            Else 
+                MsgBox "Missing DataTEMPLATE\_BUILD_PC\Sides\GAM folder as template to copy"
+            End If
+                CreateNewSideControl.style.visibility = "hidden"
+
+
+        End If
+            set fso = nothing
+    End If
+
+End Function
+
+Function ActivateEditSides(sidefolderlist)
+    currentsides.innerHTML = sidefolderlist
+    currentsides.style.visibility = "visible"
+    assetssides.style.visibility = "hidden"
+    'MsgBox sidefolderlist
+End Function
+
+Function ActivateImportSides(sidefolderlist)
+    assetssides.innerHTML = sidefolderlist
+    assetssides.style.visibility = "visible"
+    currentsides.style.visibility = "hidden"
+End Function
+
+Function ActivateSide(foldername,sideaction,modsidespath)
+'MsgBox "foldername "& foldername &vbCrLf & "sideaction "& sideaction &vbCrLf & "modsidespath "& modsidespath &vbCrLf 
+    set fso=CreateObject("Scripting.FileSystemObject")
+    Set appfile =fso.GetFile("bfbuilder.hta")    
+    Select Case sideaction
+        Case "createside"
+        Case "editside" 
+            SidesMenuButton.className="MenuBtn"
+            SidesMenu.style.visibility = "hidden"
+            currentsides.style.visibility = "hidden"
+            assetssides.style.visibility = "hidden"
+
+            MsgBox "Edit Not Implemented Yet"
+        Case "importretailside"    
+            SidesMenuButton.className="MenuBtn"
+            SidesMenu.style.visibility = "hidden"
+            currentsides.style.visibility = "hidden"
+            assetssides.style.visibility = "hidden"
+
+            sidesbuildpc = Replace(modsidespath,"\Sides\","\_Build_PC\Sides\")
+            
+            sidescopyfrom = appfile.ParentFolder & "\Assets\Sides\" & foldername
+            sidescopyto = modsidespath & foldername
+            
+            buildsidescopyfrom = appfile.ParentFolder &"\DataTEMPLATE\_BUILD_PC\Sides\GAM"
+            buildsidescopyto = sidesbuildpc &foldername
+            sideid = foldername
+            mungefilepath = Replace(sidesbuildpc,"Sides\","munge.bat")
+            If fso.FolderExists(sidescopyto) Then
+                MsgBox sidescopyto &" Already Exists", 16
+            Else
+                'copy folder from assets folder to sides folder
+                'fso.CopyFile sidescopyfrom,sidescopyto
+            
+            'MsgBox "import" & sidescopyfrom &_
+            '            vbCrLf & "to " &sidescopyto &_
+            '            vbCrLf & "copy " & buildsidescopyfrom &_
+            '            vbCrlf & "to " & buildsidescopyto 
+                fso.CopyFolder sidescopyfrom,sidescopyto
+                
+            End If
+            
+            If fso.FolderExists(buildsidescopyto) Then
+                MsgBox buildsidescopyto& " Already Exists", 16
+            Else
+                Set Folder = fso.GetFolder(sidesbuildpc)
+                    'copy build folders and bat files
+                    fso.CreateFolder(buildsidescopyto)
+                    fso.CreateFolder(buildsidescopyto&"\munged")
+                
+                    If fso.FolderExists("DataTEMPLATE\_BUILD_PC\Sides\GAM") Then
+                        fso.CopyFile "DataTEMPLATE\_BUILD_PC\Sides\GAM\munge.bat", buildsidescopyto&"\munge.bat"
+                        fso.CopyFile "DataTEMPLATE\_BUILD_PC\Sides\GAM\clean.bat", buildsidescopyto&"\clean.bat"
+                    
+                        ' =========_BUILD_PC\Sides\sideid\munge.bat
+                        dim sideedit1path, sideedit1write
+                        sideedit1path = buildsidescopyto&"\munge.bat"
+                        
+                        If fso.FileExists(sideedit1path) Then
+                            set sideedit1write = fso.GetFile(sideedit1path)
+                            Const ForReading=1, ForWriting=2, ForAppending=8
+                            dim sideedit1, sideedit1content
+                            set sideedit1 = fso.OpenTextFile(sideedit1path, ForReading, True)
+                            sideedit1content = sideedit1.ReadAll
+                            sideedit1content = Replace(sideedit1content, "Gam",sideid)
+                            sideedit1content = Replace(sideedit1content, "GAM",sideid)
+                            sideedit1.close
+                            ConformFileWrite(sideedit1path)
+                            WriteNewFile sideedit1path, sideedit1content
+                        Else
+                            MsgBox buildsidescopyto&"\munge.bat not found"
+                        End If
+                      
+                         
+                        ' =========_BUILD_PC\Sides\clean.bat
+                        dim sideedit2path, sideedit2write
+                        sideedit2path = sidesbuildpc&"\clean.bat"
+                        
+                        If fso.FileExists(sideedit2path) Then
+                            'MsgBox "File Exists, proceeding"
+                            set sideedit2write = fso.GetFile(sideedit2path)
+                            ConformFileWrite(sideedit2write)
+                            dim sideedit2, sideedit2content
+                            set sideedit2 = fso.OpenTextFile(sideedit2path, ForReading, True)
+                            'MsgBox edit1
+                            sideedit2content = sideedit2.ReadAll
+                            sideedit2.close
+                            'MsgBox sidefoldercount
+                            If sidefoldercount > 0 Then
+                                'MsgBox "Append clean.bat"
+                                sideedit2content = sideedit2content & " " & "cd "& sideid & vbCrLf & "@call clean.bat" & vbCrLf
+                                sideedit2content = sideedit2content & " " & "cd .."
+                            Else
+                                'delete and recreate clean.bat
+                                sideedit2content = "cd "& sideid & vbCrLf & "@call clean.bat" & vbCrLf
+                                sideedit2content = sideedit2content & " " & "cd .."
+                            End If
+    
+                            ConformFileWrite sideedit2path
+                            'MsgBox "Confirmed"
+                            WriteNewFile sideedit2path, sideedit2content
+                        Else
+                            MsgBox sideedit2path &" not found"
+                        End If                              
+
+                        '======================ADD build_pc munge
+                        'mungefilepath = hiddenmodname &"\_BUILD_PC\munge.bat"
+                        Call ObtainFile(mungefilepath)
+                        mungebatcontents = filecontentz
+                        mungeappend = "cd "&sideid& vbCrLf & "@call munge.bat" & vbCrLf &"cd .." & vbCrLf & "REM ENDSIDES"
+                        mungebatcontents = Replace(mungebatcontents,"REM ENDSIDES",mungeappend)
+                        Call WriteNewFile(mungefilepath,mungebatcontents)  
+
+                        'MsgBox sidefolderlist
+                        MsgBox "Done"
+                    Else 
+                        MsgBox "Missing \GAM folder as template to copy"
+                    End If
+            End If
+        Case "exportside"
+        Case Else
+            MsgBox "sideaction else" 
+End Select
+End Function
+dim appProject, appMod, app
+
+Function Launch(appProject,app)
+    appProject = appProject &"\"
+    Set objApp = CreateObject("WScript.Shell") 
+    'objApp.Run "cmd /C CD C:\ & Program Files & SomeFolder & SETUP" 
+    'MsgBox appProject & app
+    objApp.Run "cmd /K CD "& appProject & " && "& app &" && exit"
+    set objApp = nothing
+End Function
+
+Function EditWorld(appProject,app)
+    dim fso
+    set fso=CreateObject("Scripting.FileSystemObject")
+    appMod = Replace(appProject, "Data","")
+    appMod = appMod &".wld"
+    app = "zeroeditor.exe"
+    dim wldpath, wldspath, wldfldr, wldfile
+    wldfilepath = appProject &".wld"
+    'MsgBox wldfilepath
+    Set objApp = CreateObject("WScript.Shell") 
+    'objApp.Run "cmd /C CD C:\ & Program Files & SomeFolder & SETUP" 
+    'MsgBox appProject & vbCr & app & vbCr & appMod
+    objApp.Run "cmd /K CD "& appProject &" && "& app & " "& appMod &" && exit"
+    set objApp = nothing
+End Function
+
+Function LaunchNotePad(appProject,appProjectFile)
+    'MsgBox appProject & vbCr & appProjectFile
+    dim fso, appMod
+    Set objApp = CreateObject("WScript.Shell") 
+    objApp.Run "notepad "& appProjectFile
+    EditMenuOptions.style.visibility = "hidden"
+    EditMenuButton.className = "MenuBtn"
+    ProjectMenu.style.visibility = "hidden"
+    ProjectMenuButton.className = "MenuBtn"
+    Projects.style.visibility = "hidden"
+    SoundMenu.style.visibility = "hidden"
+    SoundMenuButton.className = "MenuBtn"
+    set objApp = nothing
+End Function
+
+
+Function NewWorld()
+    CreateNew.style.visibility = "hidden"
+    ProjectMenuButtonDisabled.style.visibility = "hidden"
+    dim modnametitle
+    dim modnameshort
+    dim modnameshortdata
+    modnametitle = vmodnametitle.value
+    modnameshort = vmodnameshortn.value
+    erastoinclude = eras.value
+    modnameshortu = UCase(vmodnameshortn.value)
+    modnameshortdata = "Data"&modnameshort
+    modid=modnameshortu    
+    'MsgBox erastoinclude
+    Select Case LCase(modid)
+        Case "bes1" 
+            MsgBox modid&" Already Exists in Game"
+        Case "bes2" 
+            MsgBox modid&" Already Exists in Game" 
+        Case  "geo1"
+            MsgBox modid&" Already Exists in Game" 
+        Case "hot1"
+            MsgBox modid&" Already Exists in Game" 
+        Case "kam1" 
+            MsgBox modid&" Already Exists in Game" 
+        Case "kas1"
+            MsgBox modid&" Already Exists in Game" 
+        Case "kas2" 
+            MsgBox modid&" Already Exists in Game" 
+        Case "nab1"
+            MsgBox modid&" Already Exists in Game" 
+        Case "nab2"
+            MsgBox modid&" Already Exists in Game" 
+        Case "rhn1"
+            MsgBox modid&" Already Exists in Game" 
+        Case "rhn2" 
+            MsgBox modid&" Already Exists in Game" 
+        Case "tat1"
+            MsgBox modid&" Already Exists in Game" 
+        Case "tat2" 
+            MsgBox modid&" Already Exists in Game" 
+        Case "tat3"
+            MsgBox modid&" Already Exists in Game" 
+        Case "yav1"
+            MsgBox modid&" Already Exists in Game" 
+        Case "yav2" 
+            MsgBox modid&" Already Exists in Game" 
+        Case "mod1" 
+            MsgBox modid&" Already Exists"
+        Case "mod2"
+            MsgBox modid&" Already Exists"
+        Case "template" 
+            MsgBox modid&" Already Exists"
+        Case Else
+            dim fso
+            set fso=CreateObject("Scripting.FileSystemObject")
+            If fso.FolderExists(modnameshortdata) Then
+                MsgBox modnameshortdata &" Folder Already Exists", 16
+            Else
+                Call CreateModFolder(modnameshortdata,modnametitle,erastoinclude)
+            End If
+            set fso = nothing
+    End Select
+End Function
+    
+
+
+Function ReplaceModWithModID(filepath,modnameshort,contentfilter)
+    'MsgBox modnameshort
+    dim editfile
+    Const ForReading=1, ForWriting=2, ForAppending=8
+    set fso=CreateObject("Scripting.FileSystemObject")
+    set editfile = fso.OpenTextFile(filepath, 1, True)
+    filecontents = editfile.ReadAll
+    'MsgBox filecontents
+    editfile.close
+    filecontents = Replace(filecontents, "REM Modders Change this to point to new world","")
+    filecontents = Replace(filecontents, "REM Modders change this to point to new world","")
+    filecontents = Replace(filecontents, "REM Modder Change the next the next two lines to match new level","")
+    filecontents = Replace(filecontents, "REM Modder change this to point to add on folder name for uninstaller","")
+    Select Case contentfilter
+        Case "mod" 
+            filecontents = Replace(filecontents, "mod",modnameshort)
+        Case "MOD"
+            filecontents = Replace(filecontents, "MOD",modnameshort)
+        Case "Mod1" 
+            filecontents = Replace(filecontents, "Mod1",modnameshort)
+        Case "mod1"
+            filecontents = Replace(filecontents, "mod1",modnameshort)
+        Case "Mod"
+            filecontents = Replace(filecontents, "Mod",modnameshort)
+        Case "MODMod1"
+            filecontents = Replace(filecontents, "Mod1",modnameshort)
+            filecontents = Replace(filecontents, "MOD",modnameshort)
+        Case "MODmod1"
+            filecontents = Replace(filecontents, "mod1",modnameshort)
+            filecontents = Replace(filecontents, "MOD",modnameshort)
+        Case "Mod1mod1"
+            filecontents = Replace(filecontents, "Mod1",modnameshort)
+            filecontents = Replace(filecontents, "mod1",modnameshort)
+        Case Else            
+    End Select
+    WriteNewFile filepath, filecontents
+End Function
+
+Function ReplaceModificationWithModID(filepath,modnameshort)
+    dim editfile
+    Const ForReading=1, ForWriting=2, ForAppending=8
+    set fso=CreateObject("Scripting.FileSystemObject")
+    set editfile = fso.OpenTextFile(filepath, 1, True)
+    filecontents = editfile.ReadAll
+    editfile.close
+    filecontents = Replace(filecontents, "Modification",modnameshort)
+    filecontents = Replace(filecontents, "MOD",modnameshort)
+    WriteNewFile filepath, filecontents
+End Function
+
+Function WriteLuaA(missionaluapath,modid)
+    missionaluaheader = "--start header" & vbCrLf &_
+                        "function ScriptInit()" & vbCrLf &_
+                        "local ALL = 1" & vbCrLf &_
+                        "local IMP = 2" & vbCrLf &_
+                        "local ATT = 1" & vbCrLf &_
+                        "local DEF = 2" & vbCrLf &_ 
+                        "--end header" & vbCrLf &_ 
+                        "--start objectives" & vbCrLf &_                         
+                        "AddMissionObjective(IMP,"& Chr(34) &"red"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.1"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(IMP,"& Chr(34) &"orange"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.2"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(IMP,"& Chr(34) &"orange"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.3"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(ALL,"& Chr(34) &"red"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.1"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(ALL,"& Chr(34) &"orange"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.2"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(ALL,"& Chr(34) &"orange"& Chr(34) &","& Chr(34) &"level."&modid&".objectives.3"& Chr(34) &");" & vbCrLf &_
+                        "--end objectives" & vbCrLf &_
+                        "--start soundlvl" & vbCrLf &_
+                        "ReadDataFile("& Chr(34)
+    missionaluasoundlvlload = "sound\\tat.lvl;tat1gcw"& Chr(34) & ");" & vbCrLf &_
+                        "--end soundlvl" &vbCrLf
+    missionaluasides = "-- Start sidelvls" & vbCrLf &_
+                        "ReadDataFile("& Chr(34) & "SIDE\\all.lvl"& Chr(34) &","& vbCrLf &_
+                        Chr(34) &"all_inf_basicdesert"& Chr(34) &","& vbCrLf &_
+                        Chr(34) &"all_inf_lukeskywalker"& Chr(34) &","& vbCrLf &_
+                        Chr(34) &"all_inf_smuggler"& Chr(34) &");"& vbCrLf &_
+                        "ReadDataFile("& Chr(34) & "SIDE\\imp.lvl"& Chr(34) & ","& vbCrLf &_
+                        Chr(34) & "imp_inf_basic_tie"& Chr(34) & ","& vbCrLf &_
+                        Chr(34) & "imp_inf_darthvader"& Chr(34) & ","& vbCrLf &_
+                        Chr(34) & "imp_inf_dark_trooper"& Chr(34) &");"& vbCrLf &_
+                        "--end sidelvls" & vbCrLf &_ 
+                        "--start loadouts" & vbCrLf &_                        
+                        "SetTeamName(ALL, "& Chr(34) & "Alliance"& Chr(34) & ")"& vbCrLf &_
+                        "SetTeamIcon(ALL, "& Chr(34) & "all_icon"& Chr(34) & ")"& vbCrLf &_
+                        "AddUnitClass(ALL, "& Chr(34) & "all_inf_soldierdesert"& Chr(34) & ",10)"& vbCrLf &_
+                        "AddUnitClass(ALL, "& Chr(34) & "all_inf_vanguard"& Chr(34) & ",1)"& vbCrLf &_
+                        "AddUnitClass(ALL, "& Chr(34) & "all_inf_pilot"& Chr(34) & ",2)"& vbCrLf &_
+                        "AddUnitClass(ALL, "& Chr(34) & "all_inf_marksman"& Chr(34) & ",2)"& vbCrLf &_
+                        "AddUnitClass(ALL, "& Chr(34) & "all_inf_smuggler"& Chr(34) & ",1)"& vbCrLf &_
+                        "SetHeroClass(ALL, "& Chr(34) & "all_inf_lukeskywalker"& Chr(34) & ")"& vbCrLf &_
+                        "SetTeamName(IMP, "& Chr(34) &"Empire"& Chr(34) &")"& vbCrLf &_
+                        "SetTeamIcon(IMP, "& Chr(34) &"imp_icon"& Chr(34) &")"& vbCrLf &_
+                        "AddUnitClass(IMP, "& Chr(34) &"imp_inf_storm_trooper"& Chr(34) &",10)"& vbCrLf &_
+                        "AddUnitClass(IMP, "& Chr(34) &"imp_inf_shock_trooper"& Chr(34) &",1)"& vbCrLf &_
+                        "AddUnitClass(IMP, "& Chr(34) &"imp_inf_pilottie"& Chr(34) &",2)"& vbCrLf &_
+                        "AddUnitClass(IMP, "& Chr(34) &"imp_inf_scout_trooper"& Chr(34) &",2)"& vbCrLf &_
+                        "AddUnitClass(IMP, "& Chr(34) &"imp_inf_dark_trooper"& Chr(34) &",1)"& vbCrLf &_
+                        "SetHeroClass(IMP, "& Chr(34) &"imp_inf_darthvader"& Chr(34) &")"& vbCrLf &_
+                        "--end loadouts" & vbCrLf &_
+                        "--start teamstats" & vbCrLf &_
+                        "SetUnitCount(ATT, 16)"& vbCrLf &_
+                        "SetReinforcementCount(ATT, 200)"& vbCrLf &_
+                        "SetUnitCount(DEF, 16)"& vbCrLf &_
+                        "SetReinforcementCount(DEF, 200)"& vbCrLf &_
+                        "--end teamstats"& vbCrLf &_
+                        "--start alliances"& vbCrLf &_
+                        "SetTeamAsFriend(ATT, 1)"& vbCrLf &_
+                        "SetTeamAsEnemy(ATT, 2)"& vbCrLf &_
+                        "SetTeamAsFriend(DEF, 2)"& vbCrLf &_
+                        "SetTeamAsEnemy(DEF, 1)"& vbCrLf &_
+                        "SetAttackingTeam(ATT);"& vbCrLf &_
+                        "--end alliances" & vbCrLf
+    missionaluaspecialcfg ="--start memorypools"& vbCrLf &_
+                           "ClearWalkers()"& vbCrLf &_
+                           "AddWalkerType(0, 0)-- special -> droidekas"& vbCrLf &_
+                           "AddWalkerType(1, 0)-- 1x2 (1 pair of legs)"& vbCrLf &_
+                           "AddWalkerType(2, 0)-- 2x2 (2 pairs of legs)"& vbCrLf &_
+                           "AddWalkerType(3, 0)-- 3x2 (3 pairs of legs)"& vbCrLf &_
+                           "SetMemoryPoolSize("& Chr(34) &"PowerupItem"& Chr(34) &", 60)"& vbCrLf &_
+                           "SetMemoryPoolSize("& Chr(34) &"EntityMine"& Chr(34) &", 40)"& vbCrLf &_
+                           "--end memorypools" & vbCrLf &_
+                           "--start worldlvl" &vbCrLf&_
+                           "ReadDataFile("& Chr(34) &"dc:"&modid&"\\"&modid&".lvl"& Chr(34) &")"& vbCrLf &_
+                           "--end worldlvl" & vbCrLf &_
+                            "--start spawndelay" & vbCrLf &_
+                           "SetSpawnDelay(10.0, 0.25)"& vbCrLf &_
+                           "--end spawndelay" & vbCrLf &_
+                            "--start flyheight" & vbCrLf &_
+                           "--end flyheight"& vbCrLf &_
+                           "--start ainotify"& vbCrLf &_
+                           "--end ainotify"& vbCrLf &_
+                           "--start stayinturrets"& vbCrLf &_
+                           "--end stayinturrets" & vbCrLf &_
+                           "--start denseenvironment" & vbCrLf &_
+                           "SetDenseEnvironment("& Chr(34) &"false"& Chr(34) &")"& vbCrLf &_
+                           "--end denseenvironment" & vbCrLf &_
+                           "--start birdsandfish" & vbCrLf &_
+                           "--end birdsandfish" & vbCrLf &_
+                           "--start deathregions" & vbCrLf &_
+                           "--end deathregions" & vbCrLf                         
+    missionaluasoundcfg =   "--start soundconfig"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\tat.lvl"& Chr(34) &","& Chr(34) &"tatgcw_music"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\tat.lvl"& Chr(34) &","& Chr(34) &"tat1"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\tat.lvl"& Chr(34) &","& Chr(34) &"tat1"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\gcw.lvl"& Chr(34) &","& Chr(34) &"gcw_vo"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\gcw.lvl"& Chr(34) &","& Chr(34) &"gcw_tac_vo"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\tat.lvl"& Chr(34) &","& Chr(34) &"tat1_emt"& Chr(34) &");"& vbCrLf &_
+                            "SetBleedingVoiceOver(ALL,ALL,"& Chr(34) &"all_off_com_report_us_overwhelmed"& Chr(34) &",1);"& vbCrLf &_
+                            "SetBleedingVoiceOver(ALL,IMP,"& Chr(34) &"all_off_com_report_enemy_losing"& Chr(34) &",1);"& vbCrLf &_
+                            "SetBleedingVoiceOver(IMP,ALL,"& Chr(34) &"imp_off_com_report_enemy_losing"& Chr(34) &",1);"& vbCrLf &_
+                            "SetBleedingVoiceOver(IMP,IMP,"& Chr(34) &"imp_off_com_report_us_overwhelmed"& Chr(34) &",1);"& vbCrLf &_
+                            "SetLowReinforcementsVoiceOver(ALL, ALL, "& Chr(34) &"all_off_defeat_im"& Chr(34) &", .1,1);"& vbCrLf &_
+                            "SetLowReinforcementsVoiceOver(ALL, IMP, "& Chr(34) &"all_off_victory_im"& Chr(34) &", .1,1);"& vbCrLf &_
+                            "SetLowReinforcementsVoiceOver(IMP, IMP, "& Chr(34) &"imp_off_defeat_im"& Chr(34) &", .1,1);"& vbCrLf &_
+                            "SetLowReinforcementsVoiceOver(IMP, ALL, "& Chr(34) &"imp_off_victory_im"& Chr(34) &", .1,1);"& vbCrLf &_        
+                            "SetOutOfBoundsVoiceOver(2,"& Chr(34) &"Allleaving"& Chr(34) &");"& vbCrLf &_
+                            "SetOutOfBoundsVoiceOver(1,"& Chr(34) &"Impleaving"& Chr(34) &");"& vbCrLf &_    
+                            "SetAmbientMusic(ALL,1.0,"& Chr(34) &"all_tat_amb_start"& Chr(34) &",0,1);"& vbCrLf &_
+                            "SetAmbientMusic(ALL,0.99,"& Chr(34) &"all_tat_amb_middle"& Chr(34) &",1,1);"& vbCrLf &_
+                            "SetAmbientMusic(ALL,0.1,"& Chr(34) &"all_tat_amb_end"& Chr(34) &",2,1);"& vbCrLf &_
+                            "SetAmbientMusic(IMP,1.0,"& Chr(34) &"imp_tat_amb_start"& Chr(34) &",0,1);"& vbCrLf &_
+                            "SetAmbientMusic(IMP,0.99,"& Chr(34) &"imp_tat_amb_middle"& Chr(34) &",1,1);"& vbCrLf &_
+                            "SetAmbientMusic(IMP,0.1,"& Chr(34) &"imp_tat_amb_end"& Chr(34) &",2,1);"& vbCrLf &_
+                            "SetVictoryMusic(ALL,"& Chr(34) &"all_tat_amb_victory"& Chr(34) &");"& vbCrLf &_
+                            "SetDefeatMusic (ALL,"& Chr(34) &"all_tat_amb_defeat"& Chr(34) &");"& vbCrLf &_
+                            "SetVictoryMusic(IMP,"& Chr(34) &"imp_tat_amb_victory"& Chr(34) &");"& vbCrLf &_
+                            "SetDefeatMusic (IMP,"& Chr(34) &"imp_tat_amb_defeat"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"ScopeDisplayZoomIn"& Chr(34) &","& Chr(34) &"binocularzoomin"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"ScopeDisplayZoomOut"& Chr(34) &","& Chr(34) &"binocularzoomout"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplayUnitChange"& Chr(34) &","& Chr(34) &"shell_select_unit"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplayUnitAccept"& Chr(34) &","& Chr(34) &"shell_menu_enter"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplaySpawnPointChange"& Chr(34) &","& Chr(34) &"shell_select_change"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplaySpawnPointAccept"& Chr(34) &","& Chr(34) &"shell_menu_enter"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplayBack"& Chr(34) &","& Chr(34) &"shell_menu_exit"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,IMP,0,"& Chr(34) &"imp_bonus_imp_medical"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,ALL,0,"& Chr(34) &"imp_bonus_all_medical"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,IMP,1,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,ALL,1,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,IMP,2,"& Chr(34) &"imp_bonus_imp_sensors"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,ALL,2,"& Chr(34) &"imp_bonus_all_sensors"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,IMP,3,"& Chr(34) &"imp_bonus_imp_hero"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,ALL,3,"& Chr(34) &"imp_bonus_all_hero"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,IMP,4,"& Chr(34) &"imp_bonus_imp_reserves"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,ALL,4,"& Chr(34) &"imp_bonus_all_reserves"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,IMP,5,"& Chr(34) &"imp_bonus_imp_sabotage"& Chr(34) &");--sabotage"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,ALL,5,"& Chr(34) &"imp_bonus_all_sabotage"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,IMP,6,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,ALL,6,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,IMP,7,"& Chr(34) &"imp_bonus_imp_training"& Chr(34) &");--advanced training"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(IMP,ALL,7,"& Chr(34) &"imp_bonus_all_training"& Chr(34) &");--advanced training"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,ALL,0,"& Chr(34) &"all_bonus_all_medical"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,IMP,0,"& Chr(34) &"all_bonus_imp_medical"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,ALL,1,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,IMP,1,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,ALL,2,"& Chr(34) &"all_bonus_all_sensors"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,IMP,2,"& Chr(34) &"all_bonus_imp_sensors"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,ALL,3,"& Chr(34) &"all_bonus_all_hero"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,IMP,3,"& Chr(34) &"all_bonus_imp_hero"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,ALL,4,"& Chr(34) &"all_bonus_all_reserves"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,IMP,4,"& Chr(34) &"all_bonus_imp_reserves"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,ALL,5,"& Chr(34) &"all_bonus_all_sabotage"& Chr(34) &");--sabotage"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,IMP,5,"& Chr(34) &"all_bonus_imp_sabotage"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,ALL,6,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,IMP,6,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,ALL,7,"& Chr(34) &"all_bonus_all_training"& Chr(34) &");--advanced training"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(ALL,IMP,7,"& Chr(34) &"all_bonus_imp_training"& Chr(34) &");--advanced training"& vbCrLf &_
+                            "--end soundconfig" & vbCrLf
+    missionaluabonus =  "--start activebonus" & vbCrLf &_
+                        "--end activebonus" & vbCrLf                                               
+    missionaluacamerashots =    "--start camerashots" & vbCrLf &_
+                                "AddCameraShot(-0.404895, 0.000992, -0.914360, -0.002240, -85.539894, 20.536297, 141.699493);" & vbCrLf &_
+                                "AddCameraShot(0.040922, 0.004049, -0.994299, 0.098381, -139.729523, 17.546598, -34.360893);" & vbCrLf &_
+                                "AddCameraShot(-0.312360, 0.016223, -0.948547, -0.049263, -217.381485, 20.150953, 54.514324);" & vbCrLf &_
+                                "--end camerashots" & vbCrLf
+    missionaluafooter = "--start footer" & vbCrLf &_
+                        "end" & vbCrLf &_
+                        "--end footer" & vbCrLf        
+    luaatemplate =  missionaluaheader &_
+                    missionaluasoundlvlload & vbCrLf &_
+                    missionaluasides & vbCrLf &_
+                    missionaluaspecialcfg & vbCrLf &_
+                    missionaluasoundcfg & vbCrLf &_
+                    missionaluabonus & vbCrLf &_
+                    missionaluacamerashots & vbCrLf &_
+                    missionaluafooter & vbCrLf
+    WriteNewFile missionaluapath, luaatemplate
+    
+End Function
+
+Function WriteLuaC(missioncluapath,modid)
+    missioncluaheader = "--start header" & vbCrLf &_
+                        "function ScriptInit()" & vbCrLf &_
+                        "local CIS = 1" & vbCrLf &_
+                        "local REP = 2" & vbCrLf &_
+                        "local ATT = 1" & vbCrLf &_
+                        "local DEF = 2" & vbCrLf &_ 
+                        "--end header" & vbCrLf &_ 
+                        "--start objectives" & vbCrLf &_                         
+                        "AddMissionObjective(REP,"& Chr(34) &"red"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.1"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(REP,"& Chr(34) &"orange"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.2"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(REP,"& Chr(34) &"orange"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.3"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(CIS,"& Chr(34) &"red"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.1"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(CIS,"& Chr(34) &"orange"& Chr(34) &", "& Chr(34) &"level."&modid&".objectives.2"& Chr(34) &");" & vbCrLf &_
+                        "AddMissionObjective(CIS,"& Chr(34) &"orange"& Chr(34) &","& Chr(34) &"level."&modid&".objectives.3"& Chr(34) &");" & vbCrLf &_
+                        "--end objectives" & vbCrLf &_
+                        "--start soundlvl" & vbCrLf &_
+                        "ReadDataFile("& Chr(34)
+    missioncluasoundlvlload = "sound\\tat.lvl;tat1cw"& Chr(34) & ");" & vbCrLf &_
+                        "--end soundlvl" &vbCrLf
+    missioncluasides = "-- Start sidelvls" & vbCrLf &_
+                        "ReadDataFile("& Chr(34) & "SIDE\\cis.lvl"& Chr(34) &","& vbCrLf &_
+                        Chr(34) &"cis_inf_basic"& Chr(34) &","& vbCrLf &_
+                        Chr(34) &"cis_inf_countdooku"& Chr(34) &","& vbCrLf &_
+                        Chr(34) &"cis_inf_droideka"& Chr(34) &");"& vbCrLf &_
+                        "ReadDataFile("& Chr(34) & "SIDE\\rep.lvl"& Chr(34) & ","& vbCrLf &_
+                        Chr(34) & "rep_inf_basic"& Chr(34) & ","& vbCrLf &_
+                        Chr(34) & "rep_inf_macewindu"& Chr(34) & ","& vbCrLf &_
+                        Chr(34) & "rep_inf_jet_trooper"& Chr(34) &");"& vbCrLf &_
+                        "--end sidelvls" & vbCrLf &_ 
+                        "--start loadouts" & vbCrLf &_                        
+                        "SetTeamName(CIS, "& Chr(34) & "CIS"& Chr(34) & ")"& vbCrLf &_
+                        "SetTeamIcon(CIS, "& Chr(34) & "cis_icon"& Chr(34) & ")"& vbCrLf &_
+                        "AddUnitClass(CIS, "& Chr(34) & "cis_inf_battledroid"& Chr(34) & ",10)"& vbCrLf &_
+                        "AddUnitClass(CIS, "& Chr(34) & "cis_inf_assault"& Chr(34) & ",1)"& vbCrLf &_
+                        "AddUnitClass(CIS, "& Chr(34) & "cis_inf_pilotdroid"& Chr(34) & ",2)"& vbCrLf &_
+                        "AddUnitClass(CIS, "& Chr(34) & "cis_inf_assassindroid"& Chr(34) & ",2)"& vbCrLf &_
+                        "AddUnitClass(CIS, "& Chr(34) & "cis_inf_droideka"& Chr(34) & ",1)"& vbCrLf &_
+                        "SetHeroClass(CIS, "& Chr(34) & "cis_inf_countdooku"& Chr(34) & ")"& vbCrLf &_
+                        "SetTeamName(REP, "& Chr(34) &"Republic"& Chr(34) &")"& vbCrLf &_
+                        "SetTeamIcon(REP, "& Chr(34) &"rep_icon"& Chr(34) &")"& vbCrLf &_
+                        "AddUnitClass(REP, "& Chr(34) &"rep_inf_clone_trooper"& Chr(34) &",10)"& vbCrLf &_
+                        "AddUnitClass(REP, "& Chr(34) &"rep_inf_arc_trooper"& Chr(34) &",1)"& vbCrLf &_
+                        "AddUnitClass(REP, "& Chr(34) &"rep_inf_clone_pilot"& Chr(34) &",2)"& vbCrLf &_
+                        "AddUnitClass(REP, "& Chr(34) &"rep_inf_clone_sharpshooter"& Chr(34) &",2)"& vbCrLf &_
+                        "AddUnitClass(REP, "& Chr(34) &"rep_inf_jet_trooper"& Chr(34) &",1)"& vbCrLf &_
+                        "SetHeroClass(REP, "& Chr(34) &"rep_inf_macewindu"& Chr(34) &")"& vbCrLf &_
+                        "--end loadouts" & vbCrLf &_
+                        "--start teamstats" & vbCrLf &_
+                        "SetUnitCount(ATT, 16)"& vbCrLf &_
+                        "SetReinforcementCount(ATT, 200)"& vbCrLf &_
+                        "SetUnitCount(DEF, 16)"& vbCrLf &_
+                        "SetReinforcementCount(DEF, 200)"& vbCrLf &_
+                        "--end teamstats"& vbCrLf &_
+                        "--start alliances"& vbCrLf &_
+                        "SetTeamAsFriend(ATT, 1)"& vbCrLf &_
+                        "SetTeamAsEnemy(ATT, 2)"& vbCrLf &_
+                        "SetTeamAsFriend(DEF, 2)"& vbCrLf &_
+                        "SetTeamAsEnemy(DEF, 1)"& vbCrLf &_
+                        "SetAttackingTeam(ATT);"& vbCrLf &_
+                        "--end alliances" & vbCrLf
+    missioncluaspecialcfg ="--start memorypools"& vbCrLf &_
+                           "ClearWalkers()"& vbCrLf &_
+                           "AddWalkerType(0, 4)-- special -> droidekas"& vbCrLf &_
+                           "AddWalkerType(1, 4)-- 1x2 (1 pair of legs)"& vbCrLf &_
+                           "AddWalkerType(2, 0)-- 2x2 (2 pairs of legs)"& vbCrLf &_
+                           "AddWalkerType(3, 0)-- 3x2 (3 pairs of legs)"& vbCrLf &_
+                           "SetMemoryPoolSize("& Chr(34) &"PowerupItem"& Chr(34) &", 60)"& vbCrLf &_
+                           "SetMemoryPoolSize("& Chr(34) &"EntityMine"& Chr(34) &", 40)"& vbCrLf &_
+                           "--end memorypools" & vbCrLf &_
+                           "--start worldlvl" &vbCrLf&_
+                           "ReadDataFile("& Chr(34) &"dc:"&modid&"\\"&modid&".lvl"& Chr(34) &")"& vbCrLf &_
+                           "--end worldlvl" & vbCrLf &_
+                            "--start spawndelay" & vbCrLf &_
+                           "SetSpawnDelay(10.0, 0.25)"& vbCrLf &_
+                           "--end spawndelay" & vbCrLf &_
+                            "--start flyheight" & vbCrLf &_
+                           "--end flyheight"& vbCrLf &_
+                           "--start ainotify"& vbCrLf &_
+                           "--end ainotify"& vbCrLf &_
+                           "--start stayinturrets"& vbCrLf &_
+                           "--end stayinturrets" & vbCrLf &_
+                           "--start denseenvironment" & vbCrLf &_
+                           "SetDenseEnvironment("& Chr(34) &"false"& Chr(34) &")"& vbCrLf &_
+                           "--end denseenvironment" & vbCrLf &_
+                           "--start birdsandfish" & vbCrLf &_
+                           "--end birdsandfish" & vbCrLf &_
+                           "--start deathregions" & vbCrLf &_
+                           "--end deathregions" & vbCrLf                         
+    missioncluasoundcfg =   "--start soundconfig"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\tat.lvl"& Chr(34) &","& Chr(34) &"tatcw_music"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\tat.lvl"& Chr(34) &","& Chr(34) &"tat1"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\tat.lvl"& Chr(34) &","& Chr(34) &"tat1"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\cw.lvl"& Chr(34) &","& Chr(34) &"cw_vo"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\cw.lvl"& Chr(34) &","& Chr(34) &"cw_tac_vo"& Chr(34) &");"& vbCrLf &_
+                            "OpenAudioStream("& Chr(34) &"sound\\tat.lvl"& Chr(34) &","& Chr(34) &"tat1_emt"& Chr(34) &");"& vbCrLf &_
+                            "SetBleedingVoiceOver(CIS,CIS,"& Chr(34) &"cis_off_com_report_us_overwhelmed"& Chr(34) &",1);"& vbCrLf &_
+                            "SetBleedingVoiceOver(CIS,REP,"& Chr(34) &"cis_off_com_report_enemy_losing"& Chr(34) &",1);"& vbCrLf &_
+                            "SetBleedingVoiceOver(REP,CIS,"& Chr(34) &"rep_off_com_report_enemy_losing"& Chr(34) &",1);"& vbCrLf &_
+                            "SetBleedingVoiceOver(REP,REP,"& Chr(34) &"rep_off_com_report_us_overwhelmed"& Chr(34) &",1);"& vbCrLf &_
+                            "SetLowReinforcementsVoiceOver(CIS, CIS, "& Chr(34) &"cis_off_defeat_im"& Chr(34) &", .1,1);"& vbCrLf &_
+                            "SetLowReinforcementsVoiceOver(CIS, REP, "& Chr(34) &"cis_off_victory_im"& Chr(34) &", .1,1);"& vbCrLf &_
+                            "SetLowReinforcementsVoiceOver(REP, REP, "& Chr(34) &"rep_off_defeat_im"& Chr(34) &", .1,1);"& vbCrLf &_
+                            "SetLowReinforcementsVoiceOver(REP, CIS, "& Chr(34) &"rep_off_victory_im"& Chr(34) &", .1,1);"& vbCrLf &_        
+                            "SetOutOfBoundsVoiceOver(2,"& Chr(34) &"Allleaving"& Chr(34) &");"& vbCrLf &_
+                            "SetOutOfBoundsVoiceOver(1,"& Chr(34) &"Impleaving"& Chr(34) &");"& vbCrLf &_    
+                            "SetAmbientMusic(CIS,1.0,"& Chr(34) &"cis_tat_amb_start"& Chr(34) &",0,1);"& vbCrLf &_
+                            "SetAmbientMusic(CIS,0.99,"& Chr(34) &"cis_tat_amb_middle"& Chr(34) &",1,1);"& vbCrLf &_
+                            "SetAmbientMusic(CIS,0.1,"& Chr(34) &"cis_tat_amb_end"& Chr(34) &",2,1);"& vbCrLf &_
+                            "SetAmbientMusic(REP,1.0,"& Chr(34) &"rep_tat_amb_start"& Chr(34) &",0,1);"& vbCrLf &_
+                            "SetAmbientMusic(REP,0.99,"& Chr(34) &"rep_tat_amb_middle"& Chr(34) &",1,1);"& vbCrLf &_
+                            "SetAmbientMusic(REP,0.1,"& Chr(34) &"rep_tat_amb_end"& Chr(34) &",2,1);"& vbCrLf &_
+                            "SetVictoryMusic(CIS,"& Chr(34) &"cis_tat_amb_victory"& Chr(34) &");"& vbCrLf &_
+                            "SetDefeatMusic (CIS,"& Chr(34) &"cis_tat_amb_defeat"& Chr(34) &");"& vbCrLf &_
+                            "SetVictoryMusic(REP,"& Chr(34) &"rep_tat_amb_victory"& Chr(34) &");"& vbCrLf &_
+                            "SetDefeatMusic (REP,"& Chr(34) &"rep_tat_amb_defeat"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"ScopeDisplayZoomIn"& Chr(34) &","& Chr(34) &"binocularzoomin"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"ScopeDisplayZoomOut"& Chr(34) &","& Chr(34) &"binocularzoomout"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplayUnitChange"& Chr(34) &","& Chr(34) &"shell_select_unit"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplayUnitAccept"& Chr(34) &","& Chr(34) &"shell_menu_enter"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplaySpawnPointChange"& Chr(34) &","& Chr(34) &"shell_select_change"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplaySpawnPointAccept"& Chr(34) &","& Chr(34) &"shell_menu_enter"& Chr(34) &");"& vbCrLf &_
+                            "SetSoundEffect("& Chr(34) &"SpawnDisplayBack"& Chr(34) &","& Chr(34) &"shell_menu_exit"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,REP,0,"& Chr(34) &"rep_bonus_rep_medical"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,CIS,0,"& Chr(34) &"rep_bonus_cis_medical"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,REP,1,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,CIS,1,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,REP,2,"& Chr(34) &"rep_bonus_rep_sensors"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,CIS,2,"& Chr(34) &"rep_bonus_cis_sensors"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,REP,3,"& Chr(34) &"rep_bonus_rep_hero"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,CIS,3,"& Chr(34) &"rep_bonus_cis_hero"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,REP,4,"& Chr(34) &"rep_bonus_rep_reserves"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,CIS,4,"& Chr(34) &"rep_bonus_cis_reserves"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,REP,5,"& Chr(34) &"rep_bonus_rep_sabotage"& Chr(34) &");--sabotage"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,CIS,5,"& Chr(34) &"rep_bonus_cis_sabotage"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,REP,6,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,CIS,6,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,REP,7,"& Chr(34) &"rep_bonus_rep_training"& Chr(34) &");--advanced training"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(REP,CIS,7,"& Chr(34) &"rep_bonus_cis_training"& Chr(34) &");--advanced training"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,CIS,0,"& Chr(34) &"cis_bonus_cis_medical"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,REP,0,"& Chr(34) &"cis_bonus_rep_medical"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,CIS,1,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,REP,1,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,CIS,2,"& Chr(34) &"cis_bonus_cis_sensors"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,REP,2,"& Chr(34) &"cis_bonus_rep_sensors"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,CIS,3,"& Chr(34) &"cis_bonus_cis_hero"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,REP,3,"& Chr(34) &"cis_bonus_rep_hero"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,CIS,4,"& Chr(34) &"cis_bonus_cis_reserves"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,REP,4,"& Chr(34) &"cis_bonus_rep_reserves"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,CIS,5,"& Chr(34) &"cis_bonus_cis_sabotage"& Chr(34) &");--sabotage"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,REP,5,"& Chr(34) &"cis_bonus_rep_sabotage"& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,CIS,6,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,REP,6,"& Chr(34) &""& Chr(34) &");"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,CIS,7,"& Chr(34) &"cis_bonus_cis_training"& Chr(34) &");--advanced training"& vbCrLf &_
+                            "SetPlanetaryBonusVoiceOver(CIS,REP,7,"& Chr(34) &"cis_bonus_rep_training"& Chr(34) &");--advanced training"& vbCrLf &_
+                            "--end soundconfig" & vbCrLf
+    missioncluabonus =  "--start activebonus" & vbCrLf &_
+                        "--end activebonus" & vbCrLf                                               
+    missioncluacamerashots =    "--start camerashots" & vbCrLf &_
+                                "AddCameraShot(-0.404895, 0.000992, -0.914360, -0.002240, -85.539894, 20.536297, 141.699493);" & vbCrLf &_
+                                "AddCameraShot(0.040922, 0.004049, -0.994299, 0.098381, -139.729523, 17.546598, -34.360893);" & vbCrLf &_
+                                "AddCameraShot(-0.312360, 0.016223, -0.948547, -0.049263, -217.381485, 20.150953, 54.514324);" & vbCrLf &_
+                                "--end camerashots" & vbCrLf
+    missioncluafooter = "--start footer" & vbCrLf &_
+                        "end" & vbCrLf &_
+                        "--end footer" & vbCrLf        
+    luactemplate =  missioncluaheader &_
+                    missioncluasoundlvlload & vbCrLf &_
+                    missioncluasides & vbCrLf &_
+                    missioncluaspecialcfg & vbCrLf &_
+                    missioncluasoundcfg & vbCrLf &_
+                    missioncluabonus & vbCrLf &_
+                    missioncluacamerashots & vbCrLf &_
+                    missioncluafooter & vbCrLf
+    WriteNewFile missioncluapath, luactemplate
+    
+End Function
+
+Function CreateModFolder(modnameshortdata,modnametitle,erastoinclude)
+
+    CreateMsgBox = MsgBox("Create Directory "&modnameshortdata&"?", vbQuestion + vbYesNo)
+
+    modnameshort=Replace(modnameshortdata,"Data","")
+    modnameshortn=modnameshort
+    modnamelong=modnameshort
+    If CreateMsgBox = 6 Then
+        set fso=CreateObject("Scripting.FileSystemObject")
+        
+    
+        fso.CopyFolder "dataTemplate", modnameshortdata
+        
+        ' =========Datamodid\Soundmunge.bat
+        soundmungebatpath = modnameshortdata &"\soundmunge.bat"
+        ConformFileWrite(soundmungebatpath)
+        contentfilter = "mod"
+        Call ReplaceModWithModID(soundmungebatpath,modnameshort,contentfilter)
+        
+        '==========_build_pc\clean.bat
+        cleanbatpath = modnameshortdata &"\_build_pc\clean.bat"
+        ConformFileWrite(cleanbatpath)
+        contentfilter = "MOD"
+        Call ReplaceModWithModID(cleanbatpath,modnameshort,contentfilter)
+        
+        
+                '==========_build_pc\clean.bat
+        cleansidespath = modnameshortdata &"\_build_pc\sides\clean.bat"
+        ConformFileWrite(cleansidespath)
+        'contentfilter = "MOD"
+        'Call ReplaceModWithModID(cleanbatpath,modnameshort,contentfilter)
+        
+        
+        '==========_build_pc\munge.bat
+        mungebatpath = modnameshortdata &"\_build_pc\munge.bat"
+        ConformFileWrite(mungebatpath)
+        contentfilter = "MODMod1"
+        Call ReplaceModWithModID(mungebatpath,modnameshort,contentfilter)
+                       
+        '==========_build_pc\sound\clean.bat
+        soundcleanbatpath = modnameshortdata &"\_build_pc\sound\clean.bat"
+        ConformFileWrite(soundcleanbatpath)
+        contentfilter = "mod"
+        Call ReplaceModWithModID(soundcleanbatpath,modnameshort,contentfilter)
+        
+        '==========_build_pc\worlds\clean.bat
+        worldscleanbatpath = modnameshortdata &"\_build_pc\worlds\clean.bat"
+        ConformFileWrite(worldscleanbatpath)
+        contentfilter = "MOD"
+        Call ReplaceModWithModID(worldscleanbatpath,modnameshort,contentfilter)
+        
+        '==========_build_pc\uninstall_from_pc.bat
+        uninstallbatpath = modnameshortdata &"\_build_pc\uninstall_from_pc.bat"
+        ConformFileWrite(uninstallbatpath)
+        contentfilter="Mod1"
+        Call ReplaceModWithModID(uninstallbatpath,modnameshort,contentfilter)
+        
+        '==========_build_pc\worlds\Mod\munge.bat
+        worldmodmungebatpath = modnameshortdata &"\_build_pc\worlds\mod\munge.bat"
+        ConformFileWrite(worldmodmungebatpath)
+        Call ReplaceModificationWithModID(worldmodmungebatpath,modnameshort)
+                
+        '==========_build_pc\worlds\MOD
+        Set modfolderpath = fso.GetFolder(modnameshortdata &"\_build_pc\worlds\MOD")
+        modfolderpath.Name = modnameshort
+        
+        '==========_BUILD_PC\sound\worlds\mod
+        Set soundworldmodpath = fso.GetFolder(modnameshortdata &"\_build_pc\sound\worlds\MOD")
+        soundworldmodpath.Name = modnameshort
+        
+        '==========_lvl_pc\MOD
+        Set lvlpcmodpath = fso.GetFolder(modnameshortdata &"\_lvl_pc\MOD")
+        lvlpcmodpath.Name = modnameshort
+        
+        '==========_lvl_pc\movies\mod1.mvs
+        mod1mvspath = modnameshortdata &"\_lvl_pc\movies\mod1.mvs"
+        newpathandname = modnameshortn&".mvs"
+        Call RenameFile(mod1mvspath,newpathandname)
+                
+        '==========_source_pc\Shell\Movies\mod1.mlst
+        mod1mlstpath = modnameshortdata &"\_source_pc\Shell\Movies\mod1.mlst"
+        newpathandname = modnameshortn&".mlst"
+        Call RenameFile(mod1mlstpath,newpathandname)
+                
+        '==========\addme\addme.lua
+        addmeluapath = modnameshortdata &"\addme\addme.lua"
+        ConformFileWrite(addmeluapath)
+        dim editfile
+        Const ForReading=1, ForWriting=2, ForAppending=8
+        set fso=CreateObject("Scripting.FileSystemObject")
+        set editfile = fso.OpenTextFile(addmeluapath, 1, True)
+        filecontents = editfile.ReadAll
+        editfile.close
+        filecontents = Replace(filecontents, "MOD MAP 1",modnametitle) 
+        filecontents = Replace(filecontents, "MOD1",modnameshort)
+        If erastoinclude = "gcw" then filecontents = Replace(filecontents, "side_c = 1,","")
+        If erastoinclude = "cw" then filecontents = Replace(filecontents, "side_a = 1,","")
+        WriteNewFile addmeluapath, filecontents
+        
+        '==========\Common\mission.req
+        missionreqpath = modnameshortdata &"\Common\mission.req"
+        ConformFileWrite(missionreqpath)
+        contentfilter = "mod1"
+        Call ReplaceModWithModID(missionreqpath,modnameshort,contentfilter)
+        
+        '==========\Common\Mission\mod1a.req
+        missionareqpath = modnameshortdata &"\Common\Mission\mod1a.req"
+        ConformFileWrite(missionareqpath)
+        contentfilter = "mod1"
+        Call ReplaceModWithModID(missionareqpath,modnameshort,contentfilter)
+        newpathandname = modnameshort&"a.req"
+        Call RenameFile(missionareqpath,newpathandname)
+     
+        '==========\Common\Mission\mod1c.req
+        missioncreqpath = modnameshortdata &"\Common\Mission\mod1c.req"
+        ConformFileWrite(missioncreqpath)
+        contentfilter = "mod1"
+        Call ReplaceModWithModID(missioncreqpath,modnameshort,contentfilter)
+        newpathandname = modnameshort&"c.req"
+        Call RenameFile(missioncreqpath,newpathandname)    
+        
+        '==========\Common\Scripts\MOD\mod1a.lua
+        missionaluapath = modnameshortdata &"\Common\Scripts\MOD\mod1a.lua"
+        ConformFileWrite(missionaluapath)
+        Set fso = CreateObject("Scripting.FileSystemObject")
+        Set f1 = fso.GetFile(missionaluapath)
+        f1.Delete
+        'Set fso=nothing
+        Set f1 = nothing
+        Call WriteLuaA(missionaluapath,modnameshort)
+        
+        ConformFileWrite(missionaluapath)
+        contentfilter = "MODmod1"
+        Call ReplaceModWithModID(missionaluapath,modnameshort,contentfilter)
+        newpathandname = modnameshort&"a.lua"
+        Call RenameFile(missionaluapath,newpathandname)
+        
+        '==========\Common\Scripts\MOD\mod1c.lua
+        missioncluapath = modnameshortdata &"\Common\Scripts\MOD\mod1c.lua"
+        ConformFileWrite(missioncluapath)
+        Set fso = CreateObject("Scripting.FileSystemObject")
+        Set f2 = fso.GetFile(missioncluapath)
+        f2.Delete
+        'Set fso=nothing
+        Set f2 = nothing   
+        Call WriteLuaC(missioncluapath,modnameshort)
+                
+        ConformFileWrite(missioncluapath)     
+        contentfilter = "MODmod1"
+        Call ReplaceModWithModID(missioncluapath,modnameshort,contentfilter)
+        newpathandname = modnameshort&"c.lua"
+        Call RenameFile(missioncluapath,newpathandname)
+        
+        '==========Common\Scripts\MOD
+        Set scriptsmodpath = fso.GetFolder(modnameshortdata &"\Common\Scripts\MOD")
+        scriptsmodpath.Name = modnameshort       
+        
+        '==========\Shell\Movies\mod1.mcfg
+        shellmoviemcfg = modnameshortdata &"\Shell\Movies\mod1.mcfg"
+        ConformFileWrite(shellmoviemcfg)
+        contentfilter = "mod1"
+        Call ReplaceModWithModID(shellmoviemcfg,modnameshort,contentfilter)
+        newpathandname = modnameshort&".mcfg"
+        Call RenameFile(shellmoviemcfg,newpathandname)
+               
+        '==========Sound\worlds\mod\mod1.asfx
+        worldasfxfilepath = modnameshortdata &"\Sound\worlds\mod\mod1.asfx"
+        ConformFileWrite(worldasfxfilepath)
+        newpathandname = modnameshortn&".asfx"
+        Call RenameFile(worldasfxfilepath,newpathandname)
+        
+        '==========Sound\worlds\mod\mod1cw.req
+        worldcwsoundreqpath = modnameshortdata &"\Sound\worlds\mod\mod1cw.req"
+        ConformFileWrite(worldcwsoundreqpath)
+        newpathandname = modnameshortn&"cw.req"
+        Call RenameFile(worldcwsoundreqpath,newpathandname)
+        
+        '==========Sound\worlds\mod\mod1gcw.req
+        worldgcwsoundreqpath = modnameshortdata &"\Sound\worlds\mod\mod1gcw.req"
+        ConformFileWrite(worldgcwsoundreqpath)
+        newpathandname = modnameshortn&"gcw.req"
+        Call RenameFile(worldgcwsoundreqpath,newpathandname)
+               
+        '==========Sound\worlds\mod\mod.req
+        worldsoundreqpath = modnameshortdata &"\Sound\worlds\mod\mod.req"
+        ConformFileWrite(worldsoundreqpath)
+        newpathandname = modnameshortn&".req"
+        Call RenameFile(worldsoundreqpath,newpathandname)
+       
+        '==========Sound\worlds\mod
+        Set lvlpcsoundmodpath = fso.GetFolder(modnameshortdata &"\Sound\worlds\mod")
+        lvlpcsoundmodpath.Name = modnameshort
+        
+        '==========Sides\GAM
+        Set sidegampath = fso.GetFolder(modnameshortdata &"\Sides\GAM")
+        Set sidegampath2 = fso.GetFolder(modnameshortdata &"\_Build_PC\Sides\GAM")
+        sidegampath.Delete True
+        sidegampath2.Delete True
+        '====build_pc\clean.bat
+        cleanfilepath = modnameshortdata &"\_BUILD_PC\clean.bat"
+        Call ObtainFile(cleanfilepath)
+        cleanbatcontents = filecontentz
+        'MsgBox "cleanbatcontents" & cleanbatcontents
+        'gamfilter = "cd GAM"&vbCrLf&" @call clean.bat"&vbCrLf&"cd.."
+        gampattern = "cd GAM(.*)\n(.*)@call clean.bat(.*)\n(.*)cd..."
+        gamreplace = "@call clean.bat"
+        Call SearchReg(cleanbatcontents,gampattern,True,gamreplace)
+        'cleanbatcontents = Replace(cleanbatcontents,gamfilter,"@call clean.bat")
+        'cleanbatcontents = Replace(cleanbatcontents,"cd GAM","")
+        cleanbatcontents = newstr
+        'MsgBox "cleanbatcontents" & cleanbatcontents
+        WriteNewFile cleanfilepath, cleanbatcontents
+        cleanbatcontents = ""
+
+        '====build_pc\sides\clean.bat
+        sidescleanfilepath = modnameshortdata &"\_BUILD_PC\sides\clean.bat"
+        Call ObtainFile(sidescleanfilepath)
+        sidescleanbatcontents = filecontentz
+        sidesgampattern = "cd GAM(.*)\n(.*)@call clean.bat(.*)\n(.*)cd..."
+        sidesgamreplace = ""
+        Call SearchReg(sidescleanbatcontents,sidesgampattern,True,sidesgamreplace)
+        'cleanbatcontents = Replace(cleanbatcontents,gamfilter,"@call clean.bat")
+        'cleanbatcontents = Replace(cleanbatcontents,"cd GAM","")
+        sidescleanbatcontents = newstr
+        'MsgBox "cleanbatcontents" & cleanbatcontents
+        WriteNewFile sidescleanfilepath, sidescleanbatcontents
+        sidescleanbatcontents = ""
+
+
+        
+        '==========\Worlds\Modification\mod1.req
+        worldsmodreqpath = modnameshortdata &"\Worlds\Modification\mod1.req"
+        ConformFileWrite(worldsmodreqpath)
+        contentfilter = "Mod1"
+        Call ReplaceModWithModID(worldsmodreqpath,modnameshort,contentfilter)
+        newpathandname = modnameshortn&".req"
+        Call RenameFile(worldsmodreqpath,newpathandname)
+    
+        '==========\Shell\shell.req
+        shellreqpath = modnameshortdata &"\Shell\shell.req"
+        ConformFileWrite(shellreqpath)
+        contentfilter = "mod1"
+        Call ReplaceModWithModID(shellreqpath,modnameshort,contentfilter)
+
+       '===========\Worlds\Modid\World1\mod1_map.tga
+        maptgapath = modnameshortdata &"\Worlds\Modification\World1\mod1_map.tga"
+        ConformFileWrite(maptgapath)
+        newpathandname = modnameshortn&"_map.tga"
+        Call RenameFile(maptgapath,newpathandname)
+
+        '==========\Worlds\Modification\world1\mod1.wld
+        worldfilepath = modnameshortdata &"\Worlds\Modification\World1\Mod1.wld"
+        ConformFileWrite(worldfilepath)
+        contentfilter = "Mod1mod1"
+        Call ReplaceModWithModID(worldfilepath,modnameshort,contentfilter)
+        newpathandname = modnameshortn&".wld"
+        Call RenameFile(worldfilepath,newpathandname)
+
+        '==========\Worlds\Modification\world1\Mod1.ter.option
+        terrainoptionfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.ter.option"
+        ConformFileWrite(terrainoptionfilepath)
+        newpathandname = modnameshortn&".ter.option"
+        Call RenameFile(terrainoptionfilepath,newpathandname)
+                
+        '==========\Worlds\Modification\world1\Mod1.ter
+        terrainfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.ter"
+        ConformFileWrite(terrainfilepath)
+        newpathandname = modnameshortn&".ter"
+        Call RenameFile(terrainfilepath,newpathandname)
+                
+        '==========\Worlds\Modification\world1\Mod1.sky
+        skyfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.sky"
+        ConformFileWrite(skyfilepath)
+        newpathandname = modnameshortn&".sky"
+        Call RenameFile(skyfilepath,newpathandname)
+     
+        '==========\Worlds\Modification\world1\Mod1.rgn
+        regionfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.rgn" 
+        ConformFileWrite(regionfilepath)
+        newpathandname = modnameshortn&".rgn"
+        Call RenameFile(regionfilepath,newpathandname)
+              
+        '==========\Worlds\Modification\world1\Mod1.pth
+        pathfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.pth"
+        ConformFileWrite(pathfilepath)
+        newpathandname = modnameshortn&".pth"
+        Call RenameFile(pathfilepath,newpathandname)
+        
+        '==========\Worlds\Modification\world1\Mod1.pln
+        planfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.pln"
+        ConformFileWrite(planfilepath)
+        newpathandname = modnameshortn&".pln"
+        Call RenameFile(planfilepath,newpathandname)
+        
+        '==========\Worlds\Modification\world1\Mod1.ldx
+        ldxfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.ldx"
+        ConformFileWrite(ldxfilepath)
+        newpathandname = modnameshortn&".ldx"
+        Call RenameFile(ldxfilepath,newpathandname)        
+        
+        '==========\Worlds\Modification\world1\Mod1.hnt
+        hintfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.hnt"
+        ConformFileWrite(hintfilepath)
+        newpathandname = modnameshortn&".hnt"
+        Call RenameFile(hintfilepath,newpathandname)  
+
+        '==========\Worlds\Modification\world1\Mod1.grp
+        groupfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.grp"
+        ConformFileWrite(groupfilepath)
+        newpathandname = modnameshortn&".grp"
+        Call RenameFile(groupfilepath,newpathandname)  
+
+        '==========\Worlds\Modification\world1\Mod1.cus
+        customfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.cus"
+        ConformFileWrite(customfilepath)
+        newpathandname = modnameshortn&".cus"
+        Call RenameFile(customfilepath,newpathandname) 
+               
+        '==========\Worlds\Modification\world1\Mod1.bnd
+        boundaryfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.bnd"
+        ConformFileWrite(boundaryfilepath)
+        newpathandname = modnameshortn&".bnd"
+        Call RenameFile(boundaryfilepath,newpathandname) 
+        
+        '==========\Worlds\Modification\world1\Mod1.bar
+        barrierfilepath = modnameshortdata &"\Worlds\Modification\world1\Mod1.bar"
+        ConformFileWrite(barrierfilepath)
+        newpathandname = modnameshortn&".bar"
+        Call RenameFile(barrierfilepath,newpathandname) 
+        
+        '==========Worlds\Modification
+        Set modificationfolderpath = fso.GetFolder (modnameshortdata &"\Worlds\Modification")
+        ConformFolderWrite(modificationfolderpath)
+        modificationfolderpath.Name = modnameshort
+        
+        
+        '==========_SOURCE_PC\Common\Localize\english.cfg
+        englishcfgpath = modnameshortdata &"\_SOURCE_PC\Common\Localize\english.cfg"
+        ConformFileWrite(englishcfgpath)
+        contentfilter = "Mod1mod1"
+        Call ReplaceModWithModID(englishcfgpath,modnameshort,contentfilter)
+       
+        set fso=nothing
+        CreateNew.style.visibility="hidden"
+        ProjectMenuButtonDisabled.style.visibility="hidden"
+
+        working.style.visibility = "hidden"
+
+        MsgBox "Done"
+        ActivateOpenProject(modnameshortdata)
+    Else
+    End if
+End Function
+
+</script>
+</head>
+<body onselectstart=return false>
+<div id=DefaultWorkspace 
+    name=DefaultWorkspace 
+    class=Workspace
+    style="position:absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:110%;
+    background-color:appworkspace;
+    "onselectstart="
+    return false
+    "></div>
+<div id=MenuBar 
+    name=MenuBar 
+    class=MenuBar 
+    style="position:absolute;
+    top:0px;
+    left:0px;
+    height:20px;
+    width:110%;
+    border-bottom-style:outset;
+    border-bottom-width:2px;
+    background-color:menu;
+    " onselectstart="
+    return false
+    "></div>
+<div id=activeproject 
+    name=activeproject 
+    class=projectworkspace 
+    style="position:absolute;
+    background-color:appworkspace;
+    top:21px;
+    left:1px;
+    width:110%;
+    height:100%;
+    padding:0px;
+    visibility:hidden;
+    "onselectstart="
+    return false"></div>
+<div id=activeworld 
+    name=activeworld 
+    class=menu
+    style="position:absolute;
+        background-color:none;
+        top:42px;
+        left:1px;
+        width:110%;
+        height:100%;
+        padding:1px;
+        visibility:hidden;
+        "onselectstart="
+    return false">
+    <div id=activeaddmelua name=activeaddmelua class=menuoptns style="position:absolute;visibility:hidden;">
+    </div>
+    <div id=activereqfile name=activereqfile class=menuoptns style="position:absolute;visibility:hidden;">
+    </div>
+    <div id=activeskyfile name=activeskyfile class=menuoptns style="position:absolute;visibility:hidden;">
+    </div>
+    <div id=activeenfxfile name=activeenfxfile class=menuoptns style="position:absolute;visibility:hidden;">
+    </div>
+    <div id=activeprpfile name=activeprpfile class=menuoptns style="position:absolute;visibility:hidden;">
+    </div>    
+
+    
+    <div id=activeluas name=activeluas class=menuoptns style="position:absolute;border:0px;visibility:hidden;">
+    <div id=activegcwlua name=activegcwlua class=menuoptns style="position:absolute;width:300px;visibility:hidden;">
+    </div>
+    <div id=activecwlua name=activecwlua class=menuoptns style="position:absolute;width:300px;visibility:hidden;">
+    </div>
+    </div>
+    <div id=activesides name=activesides class=menuoptns style="position:absolute;visibility:hidden;">
+    </div>
+    <div id=activesound name=activesound class=menuoptns style="position:absolute;visibility:hidden;">
+    </div>
+    </div>
+<div id=ProjectMenuButton 
+    name=ProjectMenuButton 
+    class=MenuBtn 
+    style="position:absolute;
+    top:0px;
+    left:1px;
+    height:18px;
+    width:42px;
+    " onmouseover="
+    MenuButtonOver(this)
+    " onmouseout="
+    MenuButtonOut(this)
+    " onMousedown="
+    MenuButtonDown(this)
+    "onselectstart="
+    return false
+    ">&nbsp;Project&nbsp;</div>
+<div id=ProjectMenuButtonDisabled 
+    name=ProjectMenuButtonDisabled 
+    class=MenuBtn 
+    style="position:absolute;
+    top:0px;
+    left:1px;
+    height:18px;
+    width:42px;
+    color:graytext;
+    visibility:hidden;
+    "onselectstart="
+        return false
+    ">&nbsp;Project&nbsp;</div>
+<div id=ProjectMenu 
+    name=ProjectMenu 
+    class=MenuOptns 
+    style="position:absolute;
+    top:18px;
+    left:1px;
+    visibility:hidden;
+    " onmouseover="
+    style.visibility='visible';
+    " onmouseout="
+    ">
+        <table border=0 cellpadding=2 margin=0 cellspacing=0>
+        <tr>
+            <td id=NewProjectMenuOption 
+            name=NewProjectMenuOption 
+            class=MenuOptn 
+            value=CreateNewProject
+            style="
+            " onmouseover="
+            MenuOptionOver(this);
+            Projects.style.visibility='hidden';
+            " onmouseout="
+            MenuOptionOut(this)
+            " onmouseDown="
+            ActivateCreateNewProject()
+            " onselectstart="
+            return false
+            ">
+            &nbsp;New Project&nbsp;</td>
+        </tr>
+        <tr>
+            <td id=OpenProjectMenuOption 
+            name=OpenProjectMenuOption
+            class=MenuOptn 
+            value=OpenProject
+            style="
+            " onmouseover="
+            MenuOptionOver(this)
+            " onmouseout="
+            MenuOptionOut(this)
+            " onMousedown="
+            ActivateSearchProjects()
+            " onselectstart="
+            return false
+            ">
+            &nbsp;Open Project&nbsp;</td>
+            </tr>
+    </table></div>
+<div id=Projects 
+    name=Projects 
+    class=MenuOptns 
+    style="position:relative;
+    top:22px;
+    left:67px;
+    width:140px;
+    visibility:hidden;
+    " onmouseout="
+    "onselectstart="
+    return false
+    "></div>
+    
+<div id=EditMenuButton 
+    name=EditMenuButton
+    class=MenuBtn
+    style="position:absolute;
+    top:0px;
+    left:43px;
+    height:18px;
+    width:25px;
+    visibility:visible;
+    " onmouseover="
+    MenuButtonOver(this)
+    " onmouseout="
+    MenuButtonOut(this)
+    " onMousedown="
+    MenuButtonDown(this)    
+    "onselectstart="
+    return false
+    ">&nbsp;Edit&nbsp;</div>
+<div id=EditMenuButtonDisabled 
+    name=EditMenuButtonDisable
+    class=MenuBtnDis
+    style="position:absolute;
+    top:0px;
+    left:43px;
+    height:18px;
+    width:25px;
+    visibility:visible;
+    "onselectstart="
+    return false
+    ">&nbsp;Edit&nbsp;</div>
+<div id=EditMenuOptions 
+    name=EditMenuOptions
+    class=MenuOptns
+    style="position:absolute;
+    top:18px;
+    left:43px;
+    visibility:hidden;"
+    ></div>
+<div id=SidesMenuButton 
+    name=SidesMenuButton
+    class=MenuBtn
+    style="position:absolute;
+    top:0px;
+    left:69px;
+    height:18px;
+    width:30px;
+    visibility:visible;
+    " onmouseover="
+    MenuButtonOver(this)
+    " onmouseout="
+    MenuButtonOut(this)
+    " onMousedown="
+    MenuButtonDown(this)
+    " onselectstart="
+    return false
+    ">&nbsp;Sides&nbsp;</div> 
+<div id=SidesMenuButtonDisabled 
+    name=SidesMenuButtonDisabled
+    class=MenuBtnDis
+    style="position:absolute;
+    top:0px;
+    left:69px;
+    height:18px;
+    width:30px;
+    visibility:visible;
+    " onselectstart="
+    return false
+    ">&nbsp;Sides&nbsp;</div> 
+<div id=SidesMenu 
+    name=SidesMenu 
+    class=MenuOptns 
+    style="position:absolute;
+    top:18px;
+    left:69px;
+    visibility:hidden;
+    " onmouseover="
+    style.visibility='visible';
+    " onmouseout="
+    " onselectstart="
+    return false"></div>    
+    <div id=currentsides 
+        name=currentsides 
+        class=MenuOptns 
+        style="position:absolute;
+        top:38px;
+        left:167px;
+        width:100px;
+        visibility:hidden;
+        " onmouseout="
+        " onselectstart="
+        return false"></div>
+    <div id=assetssides 
+        name=assetssides 
+        class=MenuOptns 
+        style="position:absolute;
+        top:54px;
+        left:167px;
+        width:100px;
+        visibility:hidden;
+        " onmouseout="        
+        " onselectstart="
+        return false"></div>
+<div id=CreateBar 
+    name=CreateBar 
+    style="position:absolute;
+    top:200px;
+    left:250px;
+    background-color:activetitle;
+    visibility:hidden;"></div>
+<div id=MissionEdit 
+    name=MissionEdit 
+    style="position:absolute;
+    top:25px;
+    left:5px;
+    width:620px;
+    height:423px;
+    background-color:window;
+    visibility:hidden;"></div>
+
+<div id=SoundMenuButton 
+    name=SoundMenuButton
+    class=MenuBtn
+    style="position:absolute;
+    top:0px;
+    left:102px;
+    height:18px;
+    width:30px;
+    visibility:visible;
+    " onmouseover="
+    MenuButtonOver(this)
+    " onmouseout="
+    MenuButtonOut(this)
+    " onMousedown="
+    MenuButtonDown(this)
+    " onselectstart="
+    return false
+    ">&nbsp;Sound&nbsp;</div> 
+<div id=SoundMenuButtonDisabled 
+    name=SoundMenuButtonDisabled
+    class=MenuBtnDis
+    style="position:absolute;
+    top:0px;
+    left:102px;
+    height:18px;
+    width:30px;
+    visibility:visible;
+    "onselectstart="
+    return false
+    ">&nbsp;Sound&nbsp;</div> 
+<div id=SoundMenu 
+    name=SoundMenu 
+    class=MenuOptns
+    style="position:absolute;
+    top:18px;
+    left:102px;
+    visibility:hidden;
+    "></div>    
+
+<div id=CreateNew 
+    name=CreateNew 
+    class=MenuOptns
+    style="position:absolute;
+    top:45px;
+    left:170px;
+    width:300px;
+    height:200px;
+    visibility:hidden;">
+    <table border=0 cellpadding=0 cellspacing=0 width=294 height=100%  onselectstart="return false">
+        <tr>
+        <td align=left height=18 bgcolor="activecaption"><b><font style="font-size:8pt;" onselectstart="return false" color=white>&nbsp;Create New World</font></b></td>
+        </tr>
+        <tr>
+        <td align=center>
+        <table border=0 cellpadding=1 cellspacing=1>
+            <tr>
+            <td align=right valign=top style="font-size:10pt;line-height:16pt;"  onselectstart="return false"><b>New Map Title:</b></td><td style="font-size:10pt;"><INPUT TYPE="text" Size=27 maxlegnth=27 Name="vmodnametitle" onselectstart="return true"></td>
+            </tr>
+            <tr>
+            <td align=right colspan=2 style="font-size:10pt;line-height:12pt;"  onselectstart="return false">To appear in map list ex: "Bespin: Cloud City"<p></td>
+            </tr>
+            <tr>
+            <td align=right valign=top style="font-size:10pt;line-height:16pt;"  onselectstart="return false" ><b>New Mod Id:</b></td><td style="font-size:10pt;"><INPUT TYPE="text" Size=12 maxlength=12 Name="vmodnameshortn" onselectstart="return true"></td>
+            </tr>
+            <tr>
+            <td align=right colspan=2 style="font-size:10pt;line-height:12pt;"  onselectstart="return false">12 chars max. ex: "Dag01", "DeathMap1"<p></td>
+            </tr>
+            <tr>
+            <td align=right valign=top style="font-size:10pt;line-height:16pt;"  onselectstart="return false" ><b>Playable Eras:</b></td><td style="font-size:10pt;"><select name=eras><option value="Both">Both CW and GCW<option value="cw">Clone Wars Only<option value="gcw">Galactic Civil War Only</select><p></td>
+            </tr>
+            <tr>
+            <td align=center colspan=2 style="font-size:10pt;"  onselectstart="return false"><button onclick=NewWorld() style="width:120px;"><b>Create New World</b></button>&nbsp;&nbsp;&nbsp;<button style="width:80px;" onClick="CreateNew.style.visibility='hidden';ProjectMenuButtonDisabled.style.visibility='hidden';"><b>Cancel</b></button><p></td>
+            </tr>
+        </table>
+        </td></tr>
+    </table>
+</div>
+<div id=CreateNewSideControl 
+    name=CreateNewSideControl 
+    class=MenuOptns 
+    style="position:absolute;
+    top:45px;
+    left:170px;
+    width:280px;
+    height:100px;
+    visibility:hidden;">
+    <table border=0 cellpadding=0 cellspacing=0 width=274 height=100%  onselectstart="return false">
+        <tr>
+        <td align=left height=18 bgcolor="activecaption"><b><font style="font-size:8pt;"  onselectstart="return false" color=white>&nbsp;Create New Side</font></b></td>
+        </tr>
+        <tr>
+        <td align=center>
+        <table border=0 cellpadding=1 cellspacing=1>
+            <tr>
+            <td align=right valign=top style="font-size:10pt;line-height:16pt;"><b>SideID:</b></td><td style="font-size:10pt;"><INPUT TYPE="text" Size=12 maxlegnth=12 Name="vsideid"><br>Ex: AllAces,AngryImp,SuperCis</td>
+            </tr>
+            <tr>
+            <td align=center colspan=2 style="font-size:10pt;"><button onclick=CreateNewSideFolder(vsideid.value,hiddenmodname.value) style="width:120px;"><b>Create New Side</b></button>&nbsp;&nbsp;&nbsp;<button style="width:80px;" onClick="CreateNewSideControl.style.visibility='hidden'"><b>Cancel</b></button><input id=hiddenmodname name=hiddenmodname type=hidden></td>
+            </tr>
+        </table>
+        </td>
+        </tr>
+    </table>
+</div>
+<div id=working 
+    name=working
+    class=MenuOptns 
+    style="position:absolute;
+    top:45px;
+    left:170px;
+    width:280px;
+    height:50px;
+    visibility:hidden;"><br>&nbsp;&nbsp;Building Project...</b><br><br>&nbsp;
+    <t:PAR CLASS="time" ID="workingbaranim" timeaction="none" REPEATCOUNT="indefinite" style="background-color:transparent;overflow:hidden;">
+    <font id=workingbar name=workingbar class="time" begin="1" dur="13" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="2" dur="12" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="3" dur="11" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="4" dur="10" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="5" dur="9" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="6" dur="8" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="7" dur="7" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="7" dur="7" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="9" dur="6" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="10" dur="5" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="11" dur="4" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="12" dur="2" end="13">___</font>
+    <font id=workingbar name=workingbar class="time" begin="13" dur="2" end="13">___</font></t:PAR><br><br>
+
+</div>
+</body>
+</html>
+
+

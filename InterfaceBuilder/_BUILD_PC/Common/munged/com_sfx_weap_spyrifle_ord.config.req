@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"flare1"
+		"cs_flare1"
+		"flare4"
+		"dirt"
+	}
+}

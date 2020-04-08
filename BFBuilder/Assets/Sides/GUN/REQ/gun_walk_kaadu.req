@@ -1,0 +1,18 @@
+ucft
+{
+	REQN
+	{
+		"zafbin"
+		"rep_walk_kaadu"
+	}
+	REQN
+	{
+		"zaabin"
+		"rep_walk_kaadu"
+	}
+	REQN
+	{
+		"class"
+		"gun_walk_kaadu"
+	}
+}

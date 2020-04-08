@@ -1,0 +1,47 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"com_inf_droid_exp"
+		"cis_weap_inf_sniperrifle"
+		"cis_weap_inf_pistol"
+		"cis_weap_inf_thermaldetonator"
+		"cis_weap_inf_powerup_dispenser"
+	}
+	REQN
+	{
+		"texture"
+		"cis_bdroid_icon"
+		"troop_icon"
+		"cis_inf_battledroid_red"
+	}
+	REQN
+	{
+		"model"
+		"cis_inf_bdroid"
+		"cis_inf_bdroid_low1"
+		"bdroid_chunk1"
+		"bdroid_chunk2"
+		"bdroid_chunk3"
+		"bdroid_chunk4"
+		"bdroid_chunk5"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_inf_snowtrooper"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_inf_snowtrooper"
+	}
+	REQN
+	{
+		"config"
+		"dirtspray"
+		"chunksmoke"
+	}
+}

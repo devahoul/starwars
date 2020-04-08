@@ -1,0 +1,32 @@
+
+ucft
+{
+	REQN
+	{
+		"zaabin"
+		"sbdroid"
+	}
+	REQN
+	{
+		"zafbin"
+		"sbdroid"
+	}
+	REQN
+	{
+		"model"
+		"cis_weap_inf_sbdroidmuzzle"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_wrist_blaster_ord"
+		"cis_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"texture"
+		"imp_blasterrifle_icon"
+		"hud_weap_fullauto"
+		"reticule_rifle"
+	}
+}

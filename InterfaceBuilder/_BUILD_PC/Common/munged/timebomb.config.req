@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"flare0"
+		"thicksmoke3"
+		"starburst"
+		"underlitesmoke2"
+	}
+	REQN
+	{
+		"model"
+		"blastring"
+	}
+}

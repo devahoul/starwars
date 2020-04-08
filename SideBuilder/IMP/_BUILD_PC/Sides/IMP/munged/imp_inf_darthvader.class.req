@@ -1,0 +1,40 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"watersplash_md"
+		"watersplash_wade"
+	}
+	REQN
+	{
+		"texture"
+		"troop_icon"
+	}
+	REQN
+	{
+		"model"
+		"imp_inf_vader"
+		"imp_inf_vader_low1"
+		"imp_inf_vader_cape"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_inf_snowtrooper"
+		"imp_inf_vader_cape"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_inf_snowtrooper"
+		"imp_inf_vader_cape"
+	}
+	REQN
+	{
+		"class"
+		"imp_weap_lightsaber"
+	}
+}

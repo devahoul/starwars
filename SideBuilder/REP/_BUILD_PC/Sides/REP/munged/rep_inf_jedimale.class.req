@@ -1,0 +1,38 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"watersplash_md"
+		"watersplash_wade"
+	}
+	REQN
+	{
+		"texture"
+		"troop_icon"
+	}
+	REQN
+	{
+		"model"
+		"rep_inf_jedimale"
+		"rep_inf_jedimale_low1"
+		"gen_wings"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_inf_snowtrooper"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_inf_snowtrooper"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_lightsaberr"
+	}
+}

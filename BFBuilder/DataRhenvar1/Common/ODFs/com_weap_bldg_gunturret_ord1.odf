@@ -1,0 +1,60 @@
+[OrdnanceClass]
+ClassLabel 			= "bolt"
+
+[Properties]
+
+ImpactEffect			= "small_blaster_impacts"
+ExplosionName			= "com_weap_ord_exp"
+
+LifeSpan 			= "4.0"
+Velocity 			= "60.0"
+Gravity				= "1.0"
+Rebound				= "0.0"
+
+Damage 				= "50.0"
+LaserTexture			= "redlaser_D"
+LaserLength			= "2.0"
+LaserWidth			= "0.15"
+LaserGlowColor			= "254 6 18 100"
+LightColor              	= "254 6 18 150"
+LightRadius             	= "5.0"
+
+ExplosionImpact			= "com_weap_bldg_gunturret_exp1"
+ExplosionExpire			= "com_weap_bldg_gunturret_exp1"
+
+NEXTCHARGE			= "0.5"
+Damage 				= "150.0"
+LaserTexture			= "redlaser_D"
+LaserLength			= "3.0"
+LaserWidth			= "0.25"
+LaserGlowColor			= "254 6 18 100"
+LightColor              	= "254 6 18 175"
+LightRadius             	= "5.0"
+
+ExplosionImpact			= "com_weap_bldg_gunturret_exp2"
+ExplosionExpire			= "com_weap_bldg_gunturret_exp2"
+
+NEXTCHARGE			= "0.75"
+Damage 				= "250.0"
+LaserTexture			= "redlaser_D"
+LaserLength			= "4.0"
+LaserWidth			= "0.35"
+LaserGlowColor			= "254 6 18 100"
+LightColor              	= "254 6 18 200"
+LightRadius             	= "5.0"
+
+ExplosionImpact			= "com_weap_bldg_gunturret_exp3"
+ExplosionExpire			= "com_weap_bldg_gunturret_exp3"
+
+NEXTCHARGE			= "1.0"
+Damage 				= "400.0"
+LaserTexture			= "redlaser_D"
+LaserLength			= "4.5"
+LaserWidth			= "0.4"
+LaserGlowColor			= "254 6 18 100"
+LightColor              	= "254 6 18 225"
+LightRadius             	= "5.0"
+
+ExplosionImpact			= "com_weap_bldg_gunturret_exp4"
+ExplosionExpire			= "com_weap_bldg_gunturret_exp4"
+

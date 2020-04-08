@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_md"
+		"sbd_missiles_gold"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_av_rocket_exp"
+		"com_weap_inf_ord_hum_rocket"
+	}
+}

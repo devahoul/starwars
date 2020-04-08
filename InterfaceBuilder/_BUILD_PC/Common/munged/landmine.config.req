@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"thicksmoke1"
+		"dirt"
+		"boom4"
+		"flare0"
+		"cs_flare1"
+		"whitesmoke"
+		"redlaser"
+	}
+}

@@ -1,0 +1,25 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_rifle_icon"
+		"greenlightsabre"
+	}
+	REQN
+	{
+		"model"
+		"all_weap_inf_lightsabre"
+	}
+	REQN
+	{
+		"zaabin"
+		"lightsabre"
+	}
+	REQN
+	{
+		"zafbin"
+		"lightsabre"
+	}
+}

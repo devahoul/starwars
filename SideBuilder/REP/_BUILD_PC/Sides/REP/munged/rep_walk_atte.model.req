@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rep_walk_sixleg_lowrez"
+		"rep_walk_sixleg_grate"
+		"rep_walk_sixleg"
+		"rep_walk_sixleg_bump"
+	}
+}

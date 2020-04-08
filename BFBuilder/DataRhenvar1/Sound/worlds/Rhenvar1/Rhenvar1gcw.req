@@ -1,0 +1,13 @@
+ucft
+{
+    REQN
+    {
+    "bnk"
+    "align=2048"
+    }
+
+    REQN
+    {
+    "config"
+    }
+}

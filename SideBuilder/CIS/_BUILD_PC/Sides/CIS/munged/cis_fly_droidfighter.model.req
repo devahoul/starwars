@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_fly_droidstarfighter_lowrez"
+		"cis_fly_droidstarfighter"
+		"cis_fly_droidstarfighter_bump"
+	}
+}

@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"cis_lander"
+		"cis_lander_lowrez"
+	}
+}

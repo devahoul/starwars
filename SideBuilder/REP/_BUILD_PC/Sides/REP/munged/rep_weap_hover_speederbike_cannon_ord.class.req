@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_ord"
+		"med_cannon_impacts"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_hover_speederbike_cannon_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+	REQN
+	{
+		"texture"
+		"redlaser_l"
+	}
+}

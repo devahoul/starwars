@@ -1,0 +1,67 @@
+ucft
+{
+    REQN
+    {
+        "config"
+    }
+
+    REQN
+    {
+        "class"
+    }
+
+    REQN
+    {
+        "texture"
+        "Endor_map"
+    }
+
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+
+    }
+
+    REQN
+    {
+        "path"
+        "Endor"
+    }
+    REQN
+    {
+        "congraph"
+        "Endor"
+    }
+    REQN
+    {
+        "envfx"
+      --  "Endor"
+    }
+    REQN
+    {
+        "world"
+        "Endor"
+    }
+    REQN
+    {
+        "prop"
+     --   "Endor"
+    }
+    REQN
+    {
+        "boundary"
+        "Endor"
+    }
+    REQN
+    {
+        "config"
+    --    "flyerspray"
+    --    "walkerstomp"
+    --    "hailfire_wake"
+    --    "dustwake"
+    }
+
+}
+

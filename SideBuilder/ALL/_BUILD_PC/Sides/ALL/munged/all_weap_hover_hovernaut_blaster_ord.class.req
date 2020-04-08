@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"greenlaser_l"
+	}
+	REQN
+	{
+		"config"
+		"med_cannon_impacts"
+		"watersplash_sm"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_hover_hovernaut_blaster_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+}

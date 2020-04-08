@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_rifle_icon"
+		"hud_weap_fullauto"
+		"imp_pistol_icon"
+		"reticule_rifle"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_hover_stap_cannon_ord"
+	}
+}

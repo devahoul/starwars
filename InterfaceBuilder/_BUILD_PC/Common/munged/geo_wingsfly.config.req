@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"geonosianwings_fly1"
+		"geonosianwings_fly2"
+		"geonosianwings_fly3"
+		"geonosianwings_fly4"
+	}
+}

@@ -1,0 +1,408 @@
+// ================================
+// VOLLEYBALL EDITOR INITIALIZATION
+// ================================
+
+//
+// CONFIGURE FONTS
+//
+ConfigureInterface()
+{
+	// large font: bank gothic medium 12-point
+	CreateFont("LARGE", "bg12.bmf");
+
+	// medium font: bank gothic medium 10-point
+	CreateFont("MEDIUM", "bg10.bmf");
+
+	// small font: bank gothic medium 8-point
+	CreateFont("SMALL", "bg08.bmf");
+
+	// tiny font: small fonts 5-point
+	CreateFont("TINY", "small.bmf");
+
+	// use medium as the system font
+	CreateFont("SYSTEM", "bg10.bmf");
+}
+
+//
+// CONFIGURE COLORS
+//
+ConfigureInterface()
+{
+	// blue interface elements
+	DefineColorGroup("DEFAULT")
+	{
+		// unselected, unhighlit
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 0, 127, 255, 160);
+
+		// selected, unhighlit
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 255, 0, 127, 160);
+
+		// unselected, highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 127, 191, 255, 160);
+
+		// selected, highlit
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 255, 127, 191, 160);
+	}
+
+	// magenta interface elements
+	DefineColorGroup("MAGENTA")
+	{
+		// unselected, unhighlit
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 255, 0, 127, 127);
+
+		// selected, unhighlit
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 0, 127, 255, 127);
+
+		// unselected, highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 255, 127, 191, 127);
+
+		// selected, highlit
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 127, 191, 255, 127);
+	}
+
+
+	// Bright magenta interface elements
+	DefineColorGroup("BRIGHTMAGENTA")
+	{
+		// unselected, unhighlit
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 200, 0, 127, 127);
+
+		// selected, unhighlit
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 0, 127, 255, 127);
+
+		// unselected, highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 255, 127, 191, 127);
+
+		// selected, highlit
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 127, 191, 255, 127);
+	}
+
+	// magenta listbox elements
+	DefineColorGroup("LISTBOX")
+	{
+		// unselected, unhighlit
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 0, 0, 0, 255);
+
+		// selected, unhighlit
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 127, 0, 63, 255);
+
+		// unselected, highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 63, 63, 63, 255);
+
+		// selected, highlit
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 255, 0, 127, 255);
+	}
+
+	// blue listbox elements
+	DefineColorGroup("BLACKBLUE")
+	{
+		// unselected, unhighlit
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 0, 0, 0, 255);
+
+		// selected, unhighlit
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 0, 63, 127, 255);
+
+		// unselected, highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 63, 63, 63, 255);
+
+		// selected, highlit
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 0, 127, 255, 255);
+	}
+
+	// black background
+	DefineColorGroup("BACKGROUND")
+	{
+		// unselected, unhighlit
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 0, 0, 0, 127);
+
+		// selected, unhighlit
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 0, 0, 0, 127);
+
+		// unselected, highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 0, 0, 0, 127);
+
+		// selected, highlit
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 0, 0, 0, 127);
+	}
+
+	// opaque white
+	DefineColorGroup("WHITE")
+	{
+		// unselected, unhighlit
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 255, 255, 255, 255);
+
+		// selected, unhighlit
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 255, 255, 255, 255);
+
+		// unselected, highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 255, 255, 255, 255);
+
+		// selected, highlit
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 255, 255, 255, 255);
+	}
+
+	// group unit icon
+	DefineColorGroup("GROUPICON")
+	{
+		// normal mode
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 255, 255, 255, 255);
+
+		// attacked mode
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 255, 0, 0, 255);
+
+		// normal mode (ignore highlight)
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 255, 255, 255, 255);
+
+		// attacked mode (ignore highlight)
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 255, 0, 0, 255);
+	}
+
+	// group unit background
+	DefineColorGroup("GROUPBACK")
+	{
+		// unselected, unhighlit
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 0, 63, 127, 0);
+
+		// selected, unhighlit
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 127, 0, 63, 127);
+
+		// unselected, highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 63, 95, 127, 0);
+
+		// selected, highlit
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 127, 63, 95, 127);
+	}
+
+	DefineColorGroup("COMMANDTEXT")
+	{
+		// normal mode: inert
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 0, 127, 255, 127);
+
+		// normal mode: selected
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 255, 0, 127, 127);
+
+		// normal mode: highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 127, 191, 255, 127);
+
+		// normal mode: highlit and selected 
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 255, 127, 191, 127);
+
+		// disabled mode: inert
+		Foreground(4, 191, 191, 191, 255);
+		Background(4, 63, 63, 63, 127);
+
+		// disabled mode: selected
+		Foreground(5, 255, 255, 255, 255);
+		Background(5, 127, 127, 127, 127);
+
+		// disabled mode: highlit
+		Foreground(6, 255, 255, 255, 255);
+		Background(6, 127, 127, 127, 127);
+
+		// disabled mode: highlit and selected 
+		Foreground(7, 255, 255, 255, 255);
+		Background(7, 255, 255, 255, 127);
+
+		// ghosted mode: inert
+		Foreground(8, 255, 255, 255, 127);
+		Background(8, 0, 127, 255, 127);
+
+		// ghosted mode: selected
+		Foreground(9, 255, 255, 255, 255);
+		Background(9, 255, 0, 127, 127);
+
+		// ghosted mode: highlit
+		Foreground(10, 255, 255, 255, 255);
+		Background(10, 127, 191, 255, 127);
+
+		// ghosted mode: highlit and selected
+		Foreground(11, 255, 255, 255, 255);
+		Background(11, 255, 127, 191, 127);
+
+		// darkened mode: inert
+		Foreground(12, 127, 127, 127, 255);
+		Background(12, 0, 0, 0, 127);
+
+		// darkened mode: selected
+		Foreground(13, 255, 255, 255, 255);
+		Background(13, 63, 63, 63, 127);
+
+		// darkened mode: highlit
+		Foreground(14, 255, 255, 255, 255);
+		Background(14, 63, 63, 63, 127);
+
+		// darkened mode: highlit and selected
+		Foreground(15, 255, 255, 255, 255);
+		Background(15, 127, 127, 127, 127);
+	}
+
+	DefineColorGroup("COMMANDICON")
+	{
+		// normal mode: inert
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 255, 255, 255, 255);
+
+		// normal mode: selected
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 255, 255, 255, 255);
+
+		// normal mode: highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 255, 255, 255, 255);
+
+		// normal mode: highlit and selected
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 255, 255, 255, 255);
+
+		// disabled mode: inert
+		Foreground(4, 127, 127, 127, 255);
+		Background(4, 127, 127, 127, 255);
+
+		// disabled mode: selected
+		Foreground(5, 255, 255, 255, 255);
+		Background(5, 255, 255, 255, 255);
+
+		// disabled mode: highlit
+		Foreground(6, 255, 255, 255, 255);
+		Background(6, 255, 255, 255, 255);
+
+		// disabled mode: highlit and selected
+		Foreground(7, 255, 255, 255, 255);
+		Background(7, 255, 255, 255, 255);
+
+		// ghosted mode: inert
+		Foreground(8, 255, 255, 255, 127);
+		Background(8, 255, 255, 255, 127);
+
+		// ghosted mode: selected
+		Foreground(9, 255, 255, 255, 255);
+		Background(9, 255, 255, 255, 255);
+
+		// ghosted mode: highlit
+		Foreground(10, 255, 255, 255, 255);
+		Background(10, 255, 255, 255, 255);
+
+		// ghosted mode: highlit and selected
+		Foreground(11, 255, 255, 255, 255);
+		Background(11, 255, 255, 255, 255);
+
+		// darkened mode: inert
+		Foreground(12, 63, 63, 63, 255);
+		Background(12, 63, 63, 63, 255);
+
+		// darkened mode: selected
+		Foreground(13, 255, 255, 255, 255);
+		Background(13, 255, 255, 255, 255);
+
+		// darkened mode: highlit
+		Foreground(14, 255, 255, 255, 255);
+		Background(14, 255, 255, 255, 255);
+
+		// darkened mode: highlit and selected
+		Foreground(15, 255, 255, 255, 255);
+		Background(15, 255, 255, 255, 255);
+	}
+
+	DefineColorGroup("TILE")
+	{
+		// normal mode: inert
+		Foreground(0, 255, 255, 255, 255);
+		Background(0, 255, 255, 255, 127);
+
+		// normal mode: selected
+		Foreground(1, 255, 255, 255, 255);
+		Background(1, 255, 255, 255, 255);
+
+		// normal mode: highlit
+		Foreground(2, 255, 255, 255, 255);
+		Background(2, 255, 255, 255, 191);
+
+		// normal mode: highlit and selected
+		Foreground(3, 255, 255, 255, 255);
+		Background(3, 255, 255, 255, 255);
+	}
+}
+
+//
+// CONFIGURE SOUNDS
+//
+ConfigureInterface()
+{
+	DefaultSound("MouseEnter", "");
+	DefaultSound("MouseLeave", "");
+	DefaultSound("ButtonPress", "");
+	DefaultSound("ButtonRelease", "");
+}
+
+//
+// CONFIGURE CURSORS
+//
+ConfigureCursors()
+{
+	// DEFAULT CURSOR
+	CreateCursor("Default")
+	{
+		Size(32, 32);
+		Hotspot(5, 10);
+		Image("zeroeditor-cursor.tga");
+		Frames(0, 15);
+  	}
+
+	// HIGHLIGHT CURSOR
+	CreateCursor("Highlight")
+  	{
+	    	Size(32, 32);
+    		Hotspot(5, 10);
+    		Image("zeroeditor-cursor.tga");
+		Frames(0, 15);
+  	}
+
+	// SET STANDARD CURSORS
+  	StandardCursors()
+	{
+		Default("Default");
+		IBeam("Default");
+		Wait("Default");
+		No("Default");
+	}
+}

@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cs_bubble"
+		"jetpack"
+		"flare3"
+		"cs_flare1"
+	}
+}

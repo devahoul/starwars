@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"tat_landspeeder_lowrez"
+		"tat_landspeeder_glass"
+		"tat_landspeeder"
+	}
+}

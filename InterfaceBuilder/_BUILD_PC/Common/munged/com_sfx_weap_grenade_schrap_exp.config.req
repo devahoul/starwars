@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"flare4"
+		"flare0"
+		"boom4"
+		"boom5"
+		"cs_flare1"
+		"dirt"
+		"underlitesmoke2"
+	}
+}

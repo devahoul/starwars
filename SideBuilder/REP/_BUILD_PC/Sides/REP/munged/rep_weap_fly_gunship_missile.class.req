@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"imp_launcher_icon"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_fly_gunship_missile_ord"
+	}
+}

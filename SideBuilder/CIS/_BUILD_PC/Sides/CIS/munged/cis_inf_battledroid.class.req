@@ -1,0 +1,48 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"watersplash_md"
+		"watersplash_wade"
+		"dirtspray"
+		"chunksmoke"
+	}
+	REQN
+	{
+		"class"
+		"com_inf_droid_exp"
+		"cis_weap_inf_wrist_blaster"
+		"cis_weap_inf_wrist_shrapnel"
+		"cis_weap_inf_wrist_rocket"
+	}
+	REQN
+	{
+		"texture"
+		"cis_bdroid_icon"
+		"troop_icon"
+	}
+	REQN
+	{
+		"model"
+		"cis_inf_sbdroid"
+		"cis_inf_sbdroid_low1"
+		"sbdroid_chunk1"
+		"sbdroid_chunk2"
+		"sbdroid_chunk3"
+		"sbdroid_chunk4"
+		"sbdroid_chunk5"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_inf_snowtrooper"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_inf_snowtrooper"
+	}
+}

@@ -1,0 +1,33 @@
+
+ucft
+{
+	REQN
+	{
+		"zaabin"
+		"bazooka"
+	}
+	REQN
+	{
+		"zafbin"
+		"bazooka"
+	}
+	REQN
+	{
+		"model"
+		"cis_weap_inf_launcher"
+		"cis_1st_weap_inf_launcher"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_torpedo_launcher_ord"
+		"cis_weap_inf_equip_lg"
+	}
+	REQN
+	{
+		"texture"
+		"imp_launcher_icon"
+		"hud_weap_semiauto"
+		"reticule_rocket"
+	}
+}

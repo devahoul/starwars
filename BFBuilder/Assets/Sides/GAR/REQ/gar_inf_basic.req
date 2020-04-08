@@ -1,0 +1,10 @@
+ucft
+{
+    REQN
+    {
+        "class"
+		"gar_inf_soldier"
+		"gar_inf_pilot"
+		"gar_inf_vanguard"
+    }
+}

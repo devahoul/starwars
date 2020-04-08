@@ -1,0 +1,11 @@
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_inf_soldierjungle"
+		"all_inf_vanguardjungle"
+		"all_inf_marksmanjungle"
+		"all_inf_pilot"
+	}
+}

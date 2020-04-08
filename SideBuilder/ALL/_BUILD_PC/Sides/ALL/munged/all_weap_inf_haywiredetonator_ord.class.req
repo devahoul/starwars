@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal_ord"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_inf_haywiredetonator_exp"
+		"thermal_detonator"
+	}
+	REQN
+	{
+		"config"
+		"medium_explosion"
+		"com_sfx_weap_grenade_blue"
+	}
+}

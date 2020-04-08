@@ -1,0 +1,49 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"waterwake_sm"
+		"dustwake"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+		"dirtspray"
+	}
+	REQN
+	{
+		"texture"
+		"speederbike_icon"
+		"hud_speederbike_icon"
+	}
+	REQN
+	{
+		"class"
+		"rep_hover_speederbike_exp"
+		"collisionmesh"
+		"rep_weap_hover_speederbike_cannon"
+	}
+	REQN
+	{
+		"model"
+		"rep_hover_speederbike"
+		"rep_speederbike_chunk3"
+		"rep_speederbike_chunk1"
+		"rep_speederbike_chunk2"
+		"rep_speederbike_chunk4"
+		"rep_speederbike_chunk5"
+	}
+	REQN
+	{
+		"zaabin"
+		"imp_hover_speederbike"
+		"imp_speederbike_9pose"
+	}
+	REQN
+	{
+		"zafbin"
+		"imp_hover_speederbike"
+		"imp_speederbike_9pose"
+	}
+}

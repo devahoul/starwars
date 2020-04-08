@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"med_cannon_impacts"
+	}
+	REQN
+	{
+		"texture"
+		"bluelaser_d"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_hover_fightertank_cannon1_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+}

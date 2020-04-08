@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_weap_hover_aat_missile_ord"
+	}
+	REQN
+	{
+		"texture"
+		"hud_weap_semiauto"
+		"reticule_rocket"
+	}
+}

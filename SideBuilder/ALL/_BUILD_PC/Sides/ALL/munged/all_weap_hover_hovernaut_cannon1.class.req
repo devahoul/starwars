@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_weap_hover_hovernaut_cannon1_ord"
+	}
+	REQN
+	{
+		"texture"
+		"hud_weap_semiauto"
+		"reticule_rifle"
+		"hud_all_lascannon_icon"
+	}
+}

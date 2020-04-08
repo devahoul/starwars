@@ -1,0 +1,33 @@
+
+ucft
+{
+	REQN
+	{
+		"zaabin"
+		"bdroid"
+	}
+	REQN
+	{
+		"zafbin"
+		"bdroid"
+	}
+	REQN
+	{
+		"model"
+		"cis_weap_inf_rifle"
+		"cis_1st_weap_inf_rifle"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_lightrifle_ord"
+		"cis_weap_inf_equip_med"
+	}
+	REQN
+	{
+		"texture"
+		"imp_blasterrifle_icon"
+		"hud_weap_semiauto"
+		"reticule_rifle"
+	}
+}

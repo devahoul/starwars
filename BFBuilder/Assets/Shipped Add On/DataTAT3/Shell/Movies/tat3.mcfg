@@ -1,0 +1,23 @@
+// transition times used by all movies
+
+MovieProperties()
+{
+    Name("flythrough_template");
+    FadeInTime(1.0);
+    FadeOutTime(1.0);
+}
+
+
+// Level fly throughs...
+
+// TAT3
+MovieProperties()
+{
+    Name("tat3fly");
+    Inherit("flythrough_template");
+    Movie("tat3");
+    SegmentList()
+    {
+        Segment("tat3fly", 1.0, -1);
+    }
+}

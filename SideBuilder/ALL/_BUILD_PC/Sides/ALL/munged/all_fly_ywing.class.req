@@ -1,0 +1,46 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"y-wing_icon"
+		"hud_all_ywing_icon"
+	}
+	REQN
+	{
+		"model"
+		"all_fly_ywing"
+		"all_fly_ywing_chunk1"
+		"all_fly_ywing_chunk2"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_fly_ywing"
+		"drive"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_fly_ywing"
+		"drive"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_fly_ywing_cannon"
+		"all_weap_fly_ywing_bomb"
+		"all_fly_ywing_exp"
+	}
+	REQN
+	{
+		"config"
+		"exhaust_xwing"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+		"explosion"
+		"mediumsmoketrail"
+	}
+}

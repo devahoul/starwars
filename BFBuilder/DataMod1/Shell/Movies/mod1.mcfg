@@ -1,0 +1,23 @@
+// transition times used by all movies
+
+MovieProperties()
+{
+    Name("flythrough_template");
+    FadeInTime(1.0);
+    FadeOutTime(1.0);
+}
+
+
+// Level fly throughs...
+
+// MOD1
+MovieProperties()
+{
+    Name("mod1fly");
+    Inherit("flythrough_template");
+    Movie("mod1");
+    SegmentList()
+    {
+        Segment("mod1fly", 1.0, -1);
+    }
+}

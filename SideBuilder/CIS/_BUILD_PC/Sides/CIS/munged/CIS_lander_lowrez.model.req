@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_lander_3_lowrez"
+		"cis_lander_4_lowrez"
+		"cis_lander_2_lowrez"
+		"cis_lander_1_lowrez"
+		"cis_lander_7_lowrez"
+		"cis_lander_5_lowrez"
+		"cis_lander_6_lowrez"
+	}
+}

@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"greenlaser_d"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_walk_atte_cannon_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+	}
+}

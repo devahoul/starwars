@@ -1,0 +1,23 @@
+ucft
+{
+	REQN
+	{
+		"lvl"
+		"cis_fly_maf"
+		"cis_fly_droidfighter"
+		"cis_fly_droidfighter_dome"
+		"cis_fly_fedcoreship_dome"
+		"cis_fly_fedlander_dome"
+		"cis_fly_geofighter"
+		"cis_fly_techounion_dome"
+		"cis_hover_aat"
+		"cis_hover_mtt"
+		"cis_hover_stap"
+		"cis_inf_basic"
+		"cis_inf_basic_battledroids"
+		"cis_inf_countdooku"
+		"cis_inf_droideka"
+		"cis_tread_hailfire"
+		"cis_walk_spider"
+	}
+}

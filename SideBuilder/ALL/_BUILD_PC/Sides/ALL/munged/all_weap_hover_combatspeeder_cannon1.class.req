@@ -1,0 +1,17 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_weap_hover_combatspeeder_cannon1_ord"
+		"vehicle_equip"
+	}
+	REQN
+	{
+		"texture"
+		"imp_blasterrifle_icon"
+		"hud_weap_fullauto"
+		"reticule_rifle"
+	}
+}

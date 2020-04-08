@@ -1,0 +1,26 @@
+
+ucft
+{
+	REQN
+	{
+		"zaabin"
+		"sbdroid"
+	}
+	REQN
+	{
+		"zafbin"
+		"sbdroid"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_av_rocket_ord"
+	}
+	REQN
+	{
+		"texture"
+		"hud_all_lascannon_icon"
+		"hud_weap_semiauto"
+		"reticule_rocket"
+	}
+}

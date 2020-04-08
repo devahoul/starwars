@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"terrain"
+		"rhenvar1"
+	}
+	REQN
+	{
+		"config"
+		"rhenvar1"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+	}
+}

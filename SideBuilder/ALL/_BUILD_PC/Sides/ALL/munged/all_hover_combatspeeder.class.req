@@ -1,0 +1,51 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"waterwake_lg"
+		"hailfire_wake"
+		"dirtspray"
+		"mediumsmoketrail"
+		"smokeplume"
+		"vehiclespark"
+		"vehiclesmoke"
+	}
+	REQN
+	{
+		"texture"
+		"combatspeeder_icon"
+		"hud_combat_speeder_icon"
+	}
+	REQN
+	{
+		"model"
+		"all_hover_rebel_attack_speeder"
+		"all_hover_rebel_attack_speeder_chunk1"
+		"all_hover_rebel_attack_speeder_chunk2"
+		"all_hover_rebel_attack_speeder_chunk3"
+		"all_hover_rebel_attack_speeder_chunk4"
+	}
+	REQN
+	{
+		"class"
+		"all_hover_combatspeeder_exp"
+		"all_weap_hover_combatspeeder_cannon1"
+		"all_weap_hover_combatspeeder_missile"
+		"all_weap_hover_combatspeeder_cannon"
+		"collisionmesh"
+		"p_turret"
+		"p_barrel"
+	}
+	REQN
+	{
+		"zaabin"
+		"drive"
+	}
+	REQN
+	{
+		"zafbin"
+		"drive"
+	}
+}

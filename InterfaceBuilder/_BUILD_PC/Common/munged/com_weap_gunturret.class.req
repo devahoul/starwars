@@ -1,0 +1,42 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"turret_icon"
+		"hud_all_lascannon_icon"
+		"hud_enclosedturret_icon"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_gunturret"
+		"com_prop_buildzone"
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_gunturret_exp"
+		"com_holo_turret"
+		"com_weap_bldg_gunturret"
+		"p_armor1"
+		"p_armor2"
+		"p_wall1"
+		"p_wall2"
+		"p_wall3"
+		"p_wall4"
+		"p_wall5"
+		"p_wall6"
+		"p_wall7"
+		"p_wall8"
+		"p_wall9"
+		"collisionmesh"
+	}
+	REQN
+	{
+		"config"
+		"vehiclespark"
+		"smokeplume"
+	}
+}

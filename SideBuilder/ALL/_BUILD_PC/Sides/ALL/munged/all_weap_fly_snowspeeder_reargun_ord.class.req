@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_ord"
+		"med_cannon_impacts"
+	}
+	REQN
+	{
+		"class"
+		"red_blaster_bolt_small"
+	}
+}

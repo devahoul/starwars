@@ -1,0 +1,33 @@
+effects\crtr_gamorrean_chatter_01.wav gam_chatter_01
+effects\crtr_gamorrean_chatter_02.wav gam_chatter_02
+effects\crtr_gamorrean_chatter_03.wav gam_chatter_03
+effects\crtr_gamorrean_chatter_04.wav gam_chatter_04
+effects\crtr_gamorrean_death_01.wav gam_death_01
+effects\crtr_gamorrean_death_02.wav gam_death_02
+effects\crtr_gamorrean_death_03.wav gam_death_04
+effects\crtr_gamorrean_hurt_01.wav gam_hurt_01
+effects\crtr_gamorrean_hurt_02.wav gam_hurt_02
+effects\crtr_gamorrean_hurt_03.wav gam_hurt_03
+effects\emt_trap_door_01.wav trap_01
+effects\emt_trap_door_02.wav trap_02
+effects\emt_cell_door_cl_01.wav cell_door_cl_01
+effects\emt_cell_door_cl_02.wav cell_door_cl_02
+effects\emt_cell_door_cl_03.wav cell_door_cl_03
+effects\emt_cell_door_op_01.wav door_op_01
+effects\emt_cell_door_op_02.wav door_op_02
+effects\emt_cell_door_op_03.wav door_op_03
+
+
+
+// old
+//effects\00gamordeath01.wav gam_death_01
+//effects\00gamordeath02.wav gam_death_02
+//effects\00gamorfall01.wav gam_death_03
+//effects\00gamorgethit01.wav gam_hurt_01
+//effects\00gamorgethit02.wav gam_hurt_02
+//effects\00gamorgibberish01.wav gam_chatter_01
+//effects\00gamorwakeup01.wav gam_chatter_02
+//effects\00gamorwakeup02.wav gam_chatter_03
+//effects\slideout.wav
+//effects\slidein.wav
+//effects\TablLand.wav

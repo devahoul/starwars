@@ -1,0 +1,57 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"x-wing_icon"
+		"hud_all_xwing_icon"
+	}
+	REQN
+	{
+		"model"
+		"all_fly_xwing"
+		"all_fly_xwing_chunk1"
+		"all_fly_xwing_chunk2"
+		"all_fly_xwing_chunk3"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_fly_xwing"
+		"drive"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_fly_xwing"
+		"drive"
+	}
+	REQN
+	{
+		"class"
+		"all_fly_snowspeeder_exp"
+		"all_weap_fly_xwing_cannon"
+		"all_weap_fly_xwing_ptorpedo"
+		"p_wing1"
+		"p_wing2"
+		"p_wing3"
+		"p_wing4"
+		"p_laser1"
+		"p_laser2"
+		"p_laser3"
+		"p_laser4"
+	}
+	REQN
+	{
+		"config"
+		"explosion"
+		"mediumsmoketrail"
+		"dirtspray"
+		"smokeplume"
+		"exhaust_xwing"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+	}
+}

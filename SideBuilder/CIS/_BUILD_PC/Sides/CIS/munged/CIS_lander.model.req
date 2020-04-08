@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_lander_2"
+		"cis_lander_4"
+		"cis_lander_1"
+		"noicon"
+		"cis_lander_3"
+		"cis_lander_7"
+		"cis_lander_5"
+		"cis_lander_6"
+	}
+}

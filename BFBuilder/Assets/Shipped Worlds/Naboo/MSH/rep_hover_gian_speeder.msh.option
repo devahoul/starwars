@@ -1,0 +1,1 @@
+-keep  gun_left barrel_left gun_right barrel_right turret_barrel turret_body turret_aimer -lodgroup bigmodel -bump rep_hover_gian_speeder

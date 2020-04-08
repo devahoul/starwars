@@ -1,0 +1,32 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_lascannon_icon"
+		"hud_weap_semiauto"
+	}
+	REQN
+	{
+		"model"
+		"cis_weap_inf_launcher"
+		"cis_1st_weap_inf_launcher"
+	}
+	REQN
+	{
+		"zaabin"
+		"bazooka"
+	}
+	REQN
+	{
+		"zafbin"
+		"bazooka"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_rocketlauncher_ord"
+		"cis_weap_inf_equip_lg"
+	}
+}

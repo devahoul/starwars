@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"small_explosion"
+		"tinysmoketrail"
+	}
+	REQN
+	{
+		"model"
+		"com_smallchunk1"
+	}
+}

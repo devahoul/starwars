@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"imp_weap_fly_tiebomber_ptorpedo_ord"
+	}
+	REQN
+	{
+		"texture"
+		"imp_launcher_icon"
+		"reticule_03"
+	}
+}

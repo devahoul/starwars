@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rep_inf_pilot"
+		"jetpack_prop"
+		"rep_inf_arc_pack_blue"
+	}
+}

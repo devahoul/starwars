@@ -1,0 +1,102 @@
+ucft
+{
+
+	REQN
+	{
+		"config"
+	}
+
+	REQN
+	{
+		"zafbin"
+		"inf_gungan"
+		"rep_walk_kaadu"
+	}
+
+	REQN
+	{
+		"zaabin"
+		"rep_walk_kaadu"
+	}
+
+
+	REQN
+	{
+		"class"
+		"nab_bldg_fambaa_generator"
+		"nab_bldg_fambaa_shield"
+	}
+	REQN
+	{
+		"texture"
+		"naboo1_map"
+		"bird"
+	}
+	REQN
+	{
+		"texture"
+		"platform=ps2"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=xbox"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=pc"
+	}
+
+
+	REQN
+	{
+		"path"
+		"naboo1"
+	}
+	REQN
+	{
+		"congraph"
+		"naboo1"
+	}
+	REQN
+	{
+		"envfx"
+		"naboo1"
+	}
+	REQN
+	{
+		"world"
+		"naboo1"
+	}
+	REQN
+	{
+		"prop"
+		"naboo1"
+	}
+	REQN
+	{
+		"class"
+		"bluelight"
+		"redlight"
+		"greenlight"
+		"whitelight"
+
+	}
+
+	REQN
+	{
+		"boundary"
+		"naboo1"
+
+	}
+	REQN
+	{
+		"config"
+		"flyerspray"
+		"walkerstomp"
+		"hailfire_wake"
+	}
+}

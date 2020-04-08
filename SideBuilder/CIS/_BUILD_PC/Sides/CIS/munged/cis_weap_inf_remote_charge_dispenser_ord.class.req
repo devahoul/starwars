@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_seismic_mine"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_remote_charge_dispenser_exp"
+	}
+}

@@ -1,0 +1,37 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"speeder_icon"
+		"hud_rep_jedistarfighter_icon"
+	}
+	REQN
+	{
+		"model"
+		"rep_fly_jedifighter_dome"
+	}
+	REQN
+	{
+		"config"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+	}
+	REQN
+	{
+		"class"
+		"rep_fly_jedifighter_exp"
+	}
+	REQN
+	{
+		"zaabin"
+		"drive"
+	}
+	REQN
+	{
+		"zafbin"
+		"drive"
+	}
+}

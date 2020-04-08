@@ -1,0 +1,27 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_powerup_icon"
+		"hud_weap_ammo"
+		"reticule_00"
+	}
+	REQN
+	{
+		"zaabin"
+		"grenade"
+	}
+	REQN
+	{
+		"zafbin"
+		"grenade"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_inf_equip_med"
+		"com_item_powerup_dual"
+	}
+}

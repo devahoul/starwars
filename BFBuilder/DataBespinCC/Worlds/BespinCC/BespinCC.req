@@ -1,0 +1,67 @@
+ucft
+{
+    REQN
+    {
+        "config"
+    }
+
+    REQN
+    {
+        "class"
+    }
+
+    REQN
+    {
+        "texture"
+        "BespinCC_map"
+    }
+
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+
+    }
+
+    REQN
+    {
+        "path"
+        "BespinCC"
+    }
+    REQN
+    {
+        "congraph"
+        "BespinCC"
+    }
+    REQN
+    {
+        "envfx"
+      --  "BespinCC"
+    }
+    REQN
+    {
+        "world"
+        "BespinCC"
+    }
+    REQN
+    {
+        "prop"
+     --   "BespinCC"
+    }
+    REQN
+    {
+        "boundary"
+        "BespinCC"
+    }
+    REQN
+    {
+        "config"
+    --    "flyerspray"
+    --    "walkerstomp"
+    --    "hailfire_wake"
+    --    "dustwake"
+    }
+
+}
+

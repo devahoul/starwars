@@ -1,0 +1,36 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hailfire_icon"
+		"hud_cis_hailfire_icon"
+	}
+	REQN
+	{
+		"model"
+		"cis_tread_hailfire"
+		"hailfire_chunk1"
+		"hailfire_chunk2"
+		"hailfire_chunk3"
+	}
+	REQN
+	{
+		"class"
+		"cis_tread_hailfire_exp"
+		"cis_weap_tread_hailfire_missile"
+		"cis_weap_walk_spider_cannon"
+		"collisionmesh"
+	}
+	REQN
+	{
+		"config"
+		"hailfire_wake"
+		"walkerstomp"
+		"explosion"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+	}
+}

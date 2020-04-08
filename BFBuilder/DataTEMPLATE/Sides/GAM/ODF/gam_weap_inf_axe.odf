@@ -1,0 +1,31 @@
+[WeaponClass]
+
+ClassLabel          = "melee"
+
+[Properties]
+IconTexture     = "HUD_all_rifle_icon"
+
+
+GeometryName        = "gam_inf_weap_axe"
+AnimationBank       = "gam"
+
+MuzzleFlash         = "med_muzzle_flash"
+Discharge           = "med_smoke_effect"
+
+RoundsPerClip       = "75"
+ReloadTime          = "5.0"
+
+LockOnRange         = "1.0"
+LockTime            = "0.4"
+AutoAimSize         = "1.0"
+
+MinRange            = "0"
+OptimalRange        = "1.5"
+MaxRange        = "3"
+
+
+FirePointName       = "hp_fire_lightsabre"
+
+HitSound            = "com_weap_inf_grenade_bounce"
+SwingTime           = "0.9 0.4 com_weap_throw"
+CanDeflect          = 0

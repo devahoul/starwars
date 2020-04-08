@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_lascannon_icon"
+		"reticule_rifle"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_walk_spider_cannon_ord"
+	}
+}

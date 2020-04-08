@@ -1,0 +1,67 @@
+ucft
+{
+    REQN
+    {
+        "config"
+    }
+
+    REQN
+    {
+        "class"
+    }
+
+    REQN
+    {
+        "texture"
+        "Yavin1_map"
+    }
+
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+
+    }
+
+    REQN
+    {
+        "path"
+        "Yavin1"
+    }
+    REQN
+    {
+        "congraph"
+        "Yavin1"
+    }
+    REQN
+    {
+        "envfx"
+      --  "Yavin1"
+    }
+    REQN
+    {
+        "world"
+        "Yavin1"
+    }
+    REQN
+    {
+        "prop"
+     --   "Yavin1"
+    }
+    REQN
+    {
+        "boundary"
+        "Yavin1"
+    }
+    REQN
+    {
+        "config"
+    --    "flyerspray"
+    --    "walkerstomp"
+    --    "hailfire_wake"
+    --    "dustwake"
+    }
+
+}
+

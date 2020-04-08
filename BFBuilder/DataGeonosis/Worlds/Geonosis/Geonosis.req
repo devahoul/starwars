@@ -1,0 +1,67 @@
+ucft
+{
+    REQN
+    {
+        "config"
+    }
+
+    REQN
+    {
+        "class"
+    }
+
+    REQN
+    {
+        "texture"
+        "Geonosis_map"
+    }
+
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+
+    }
+
+    REQN
+    {
+        "path"
+        "Geonosis"
+    }
+    REQN
+    {
+        "congraph"
+        "Geonosis"
+    }
+    REQN
+    {
+        "envfx"
+      --  "Geonosis"
+    }
+    REQN
+    {
+        "world"
+        "Geonosis"
+    }
+    REQN
+    {
+        "prop"
+     --   "Geonosis"
+    }
+    REQN
+    {
+        "boundary"
+        "Geonosis"
+    }
+    REQN
+    {
+        "config"
+    --    "flyerspray"
+    --    "walkerstomp"
+    --    "hailfire_wake"
+    --    "dustwake"
+    }
+
+}
+

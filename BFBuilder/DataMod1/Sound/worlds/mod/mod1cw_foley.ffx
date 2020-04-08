@@ -1,0 +1,10 @@
+FoleyFXGroup()
+{
+    Name("terrain_foley");
+    FoleyFX("cis_inf_droid_stone");
+    FoleyFX("cis_inf_sbdroid_stone");
+    FoleyFX("rep_inf_trooper_stone");
+    FoleyFX("cis_inf_soldier_stone");
+    FoleyFX("rep_inf_soldier_stone");
+    FoleyFX("wok_inf_soldier_stone");
+}

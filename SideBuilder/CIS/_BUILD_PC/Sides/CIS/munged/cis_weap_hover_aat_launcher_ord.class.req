@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_md"
+		"med_cannon_impacts"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_hover_aat_launcher_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+	REQN
+	{
+		"texture"
+		"orangelaser_d"
+	}
+}

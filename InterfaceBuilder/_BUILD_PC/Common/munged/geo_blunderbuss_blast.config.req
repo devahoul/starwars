@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"geo_blast_ring"
+	}
+	REQN
+	{
+		"texture"
+		"boom4"
+	}
+}

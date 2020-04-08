@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_weap_fly_xwing_ptorpedo_ord"
+		"vehicle_equip"
+	}
+	REQN
+	{
+		"texture"
+		"imp_launcher_icon"
+		"reticule_03"
+	}
+}

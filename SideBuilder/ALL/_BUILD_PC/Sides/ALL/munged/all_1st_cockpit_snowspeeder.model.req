@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"all_1st_cockpit_fx"
+		"all_1st_cockpit_snowspeeder"
+		"all_cockpit_xwingwin"
+	}
+}

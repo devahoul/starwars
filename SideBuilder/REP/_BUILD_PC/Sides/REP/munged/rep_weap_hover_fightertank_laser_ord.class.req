@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_md"
+		"med_cannon_impacts"
+	}
+	REQN
+	{
+		"texture"
+		"bluelaser_d"
+	}
+}

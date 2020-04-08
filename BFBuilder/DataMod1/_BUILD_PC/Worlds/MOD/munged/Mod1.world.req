@@ -1,0 +1,24 @@
+
+ucft
+{
+	REQN
+	{
+		"terrain"
+		"mod1"
+	}
+	REQN
+	{
+		"config"
+		"mod1"
+	}
+	REQN
+	{
+		"path"
+		""
+	}
+	REQN
+	{
+		"class"
+		"com_bldg_controlzone"
+	}
+}

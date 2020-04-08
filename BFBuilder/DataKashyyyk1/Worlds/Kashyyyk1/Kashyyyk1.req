@@ -1,0 +1,67 @@
+ucft
+{
+    REQN
+    {
+        "config"
+    }
+
+    REQN
+    {
+        "class"
+    }
+
+    REQN
+    {
+        "texture"
+        "Kashyyyk1_map"
+    }
+
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+
+    }
+
+    REQN
+    {
+        "path"
+        "Kashyyyk1"
+    }
+    REQN
+    {
+        "congraph"
+        "Kashyyyk1"
+    }
+    REQN
+    {
+        "envfx"
+      --  "Kashyyyk1"
+    }
+    REQN
+    {
+        "world"
+        "Kashyyyk1"
+    }
+    REQN
+    {
+        "prop"
+     --   "Kashyyyk1"
+    }
+    REQN
+    {
+        "boundary"
+        "Kashyyyk1"
+    }
+    REQN
+    {
+        "config"
+    --    "flyerspray"
+    --    "walkerstomp"
+    --    "hailfire_wake"
+    --    "dustwake"
+    }
+
+}
+

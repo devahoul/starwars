@@ -1,0 +1,31 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"droidfighter_icon"
+		"hud_cis_droidfighter_icon"
+	}
+	REQN
+	{
+		"model"
+		"cis_fly_droidfighter"
+		"cis_fly_droidfighter_chunk1"
+		"cis_fly_droidfighter_chunk2"
+	}
+	REQN
+	{
+		"class"
+		"cis_fly_droidfighter_exp"
+		"cis_weap_fly_droidfighter_cannon"
+	}
+	REQN
+	{
+		"config"
+		"explosion"
+		"mediumsmoketrail"
+		"vehiclespark"
+		"vehiclesmoke"
+	}
+}

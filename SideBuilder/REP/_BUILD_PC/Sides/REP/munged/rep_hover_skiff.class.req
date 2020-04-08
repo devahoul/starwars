@@ -1,0 +1,47 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"waterwake_lg"
+		"dirtspray"
+		"mediumsmoketrail"
+		"smokeplume"
+	}
+	REQN
+	{
+		"model"
+		"rep_hover_skiff"
+		"skiff_chunk1"
+		"skiff_chunk2"
+		"skiff_chunk3"
+	}
+	REQN
+	{
+		"class"
+		"rep_hover_skiff_exp"
+		"collisionmesh"
+		"com_weap_bldg_gunturret"
+	}
+	REQN
+	{
+		"zaabin"
+		"man_minigun"
+		"tat_hover_skiff"
+		"tat_skiff_9pose"
+	}
+	REQN
+	{
+		"zafbin"
+		"man_minigun"
+		"tat_hover_skiff"
+		"tat_skiff_9pose"
+	}
+	REQN
+	{
+		"texture"
+		"combatspeeder_icon"
+		"hud_tat_skiff_icon"
+	}
+}

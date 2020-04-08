@@ -1,0 +1,26 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_binoculars"
+	}
+	REQN
+	{
+		"texture"
+		"hud_all_binoculars_icon"
+		"hud_weap_scope"
+		"reticule_01"
+	}
+	REQN
+	{
+		"zaabin"
+		"tool"
+	}
+	REQN
+	{
+		"zafbin"
+		"tool"
+	}
+}

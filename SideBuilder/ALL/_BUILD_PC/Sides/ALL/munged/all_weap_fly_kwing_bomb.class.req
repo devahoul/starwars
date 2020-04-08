@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_weap_fly_kwing_bomb_ord"
+	}
+	REQN
+	{
+		"texture"
+		"hud_weap_scope"
+	}
+}

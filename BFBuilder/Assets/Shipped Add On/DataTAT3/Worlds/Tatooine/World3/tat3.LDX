@@ -1,0 +1,33 @@
+Version(1);
+NextID(5);
+
+Layer("[Base]", 0, 8)
+{
+	Description("");
+}
+
+Layer("Design", 1, 0)
+{
+	Description("");
+}
+
+Layer("SoundRegions", 2, 17)
+{
+	Description("");
+}
+
+Layer("SoundEmitters", 3, 17)
+{
+	Description("");
+}
+
+Layer("SoundSpaces", 4, 17)
+{
+	Description("");
+}
+
+Layer("Shadows", 5, 0)
+{
+	Description("");
+}
+

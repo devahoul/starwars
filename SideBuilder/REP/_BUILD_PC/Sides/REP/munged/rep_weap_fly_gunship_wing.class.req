@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_lascannon_icon"
+		"reticule_rifle"
+		"hud_weap_semiauto"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_fly_gunship_wing_ord"
+	}
+}

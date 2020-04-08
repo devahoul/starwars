@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"all_weap_fly_ywing_bomb_ord"
+	}
+	REQN
+	{
+		"texture"
+		"hud_weap_scope"
+		"imp_launcher_icon"
+		"reticule_rocket"
+	}
+}

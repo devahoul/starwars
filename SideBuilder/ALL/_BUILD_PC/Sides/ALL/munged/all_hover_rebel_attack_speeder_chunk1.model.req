@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"noicon"
+		"all_hover_rebel_attack_speeder"
+		"all_hover_combatspeeder"
+	}
+}

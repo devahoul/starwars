@@ -1,0 +1,33 @@
+
+ucft
+{
+	REQN
+	{
+		"zaabin"
+		"pistol"
+	}
+	REQN
+	{
+		"zafbin"
+		"pistol"
+	}
+	REQN
+	{
+		"model"
+		"imp_weap_inf_pistol"
+		"imp_1st_weap_inf_pistol"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_inf_cpistol_ord"
+		"all_weap_inf_equip_sm"
+	}
+	REQN
+	{
+		"texture"
+		"imp_pistol_icon"
+		"hud_weap_semiauto"
+		"reticule_pistol"
+	}
+}

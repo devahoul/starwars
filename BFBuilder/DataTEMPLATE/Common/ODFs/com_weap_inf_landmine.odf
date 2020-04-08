@@ -1,0 +1,23 @@
+[GameObjectClass]
+ClassLabel          = "mine"
+
+[Properties]
+GeometryName            = "com_weap_inf_landmine_placed"
+HighResGeometry                 = "com_1st_weap_inf_landmine"
+
+LightColor                  = "247 56 65 150"
+LightRadius                 = "1.0"
+
+ExplosionTrigger        = "com_weap_inf_landmine_exp"
+ExplosionDeath          = "com_weap_inf_landmine_destroyed_exp"
+
+TriggerRadius           = "1.0"
+//SuppressRadius            = "1.0"
+
+MaxHealth           = "200"
+Velocity            = "0.0"
+Gravity             = "1.0"
+Rebound             = "0.0"
+Friction            = "1.0"
+
+CollisionOtherSound     = "com_weap_mine_land defer"

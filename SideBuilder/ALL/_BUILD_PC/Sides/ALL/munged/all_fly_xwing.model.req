@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"all_fly_ywing_windscreen"
+		"all_fly_xwing_lowrez"
+		"all_fly_xwing"
+		"all_fly_xwing_bump"
+	}
+}

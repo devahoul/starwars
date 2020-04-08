@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"protontorpedo"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_inf_grenadethermal_ord"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_fly_ywing_bomb_exp"
+		"com_weap_inf_ord_hum_rocket"
+	}
+}

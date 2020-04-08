@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"all_hover_rebel_attack_speeder_lowrez"
+		"all_hover_rebel_attack_speeder"
+		"all_hover_rebel_attack_speeder_bump"
+		"all_hover_combatspeeder_windshield"
+	}
+}

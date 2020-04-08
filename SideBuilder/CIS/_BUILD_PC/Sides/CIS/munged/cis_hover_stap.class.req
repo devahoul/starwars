@@ -1,0 +1,39 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"stap_icon"
+		"hud_cis_stap_icon"
+	}
+	REQN
+	{
+		"class"
+		"cis_hover_stap_exp"
+		"cis_weap_hover_stap_cannon"
+		"collisionmesh"
+	}
+	REQN
+	{
+		"model"
+		"cis_hover_stap"
+	}
+	REQN
+	{
+		"config"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+	}
+	REQN
+	{
+		"zaabin"
+		"stap_ride"
+	}
+	REQN
+	{
+		"zafbin"
+		"stap_ride"
+	}
+}

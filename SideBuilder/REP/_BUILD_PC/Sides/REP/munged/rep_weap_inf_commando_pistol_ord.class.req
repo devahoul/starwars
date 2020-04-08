@@ -1,0 +1,20 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_ord"
+		"ord_explosion"
+	}
+	REQN
+	{
+		"texture"
+		"bluelaser_l"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_ord_hum_sm"
+	}
+}

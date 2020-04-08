@@ -1,0 +1,32 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_inf_seismic_mine"
+	}
+	REQN
+	{
+		"texture"
+		"hud_timebomb_icon"
+		"hud_weap_mine"
+		"reticule_00"
+	}
+	REQN
+	{
+		"zaabin"
+		"grenade"
+	}
+	REQN
+	{
+		"zafbin"
+		"grenade"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_inf_remote_charge_dispenser_ord"
+		"all_weap_inf_equip_med"
+	}
+}

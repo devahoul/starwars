@@ -1,0 +1,11 @@
+ucft
+{
+	REQN
+	{
+		"class"
+		"rep_inf_clone_trooper"
+		"rep_inf_clone_pilot"
+		"rep_inf_arc_trooper"
+		"rep_inf_clone_sharpshooter"
+	}
+}

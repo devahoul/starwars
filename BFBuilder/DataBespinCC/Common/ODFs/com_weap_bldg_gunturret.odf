@@ -1,0 +1,71 @@
+[WeaponClass]
+ClassLabel 			= "cannon"
+
+[Properties]
+//***********************************************
+//***********  HUD & CONTROLLER VALUES  *********
+//***********************************************
+Label				= "Blaster Cannon"
+IconTexture			= "HUD_all_lascannon_icon"
+ReticuleTexture			= "reticule_rifle"
+ScopeTexture		= "weapon_scope4"
+
+//***********************************************
+//*********** WEAPON PERFORMANCE VALUES *********
+//***********************************************
+RoundsPerClip 			= "0"
+ReloadTime 			= "0.0"
+ShotDelay 			= "0.4" //for RS style, 0.1
+
+SalvoCount			= "1"
+ShotsPerSalvo			= "1"
+SalvoDelay			= "0.0"
+InitialSalvoDelay		= "0.0"
+SalvoTime			= "0.0"
+
+RecoilLengthLight       	= "0.1"
+RecoilLengthHeavy       	= "0.1"
+RecoilStrengthLight     	= "1"
+RecoilStrengthHeavy     	= "1"
+
+HeatRecoverRate			= "0.35"
+HeatThreshold			= "0.4"
+HeatPerShot			= "0.21"
+
+
+MuzzleFlash			= "small_muzzle_flash"
+FlashLightColor 		= "255 192 192 175"
+FlashLightRadius 		= "2.0"
+FlashLightDuration 		= "0.25"
+Discharge			= "small_smoke_effect"
+
+//RoundsPerClip 			= "800"
+//ReloadTime 			= "3.0"
+//HeatThreshold			= "0.3"
+//HeatRecoverRate			= "0.15"
+
+ZoomMin				= "2.0"
+ZoomMax				= "15.0"
+ZoomRate			= "1.0"
+
+WEAPONSECTION			= 1
+OrdnanceName 			= "com_weap_bldg_gunturret_ord"
+
+//ModeTexture			= "HUD_weap_fullauto"
+
+//ShotDelay 			= "0.4"
+//HeatPerShot			= "0.05"
+
+LockOnRange			= "0.0"
+LockTime 			= "0.0"
+PitchSpread			= "0.1"
+YawSpread			= "0.1"
+//AutoAimSize			= "0.1"
+
+
+SalvoCount			= "1"
+SalvoDelay			= "0.0"
+InitialSalvoDelay		= "0.0"
+//FirePointName			= "hp_fire"
+
+FireSound           = "com_weap_turret_fire Defer"

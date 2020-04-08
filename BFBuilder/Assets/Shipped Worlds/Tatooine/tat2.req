@@ -1,0 +1,66 @@
+ucft
+{
+	REQN
+	{
+		"config"
+	}
+
+	REQN
+	{
+		"texture"
+		"tat2_map"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=xbox"
+		"shimmer_waves"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=pc"
+	}
+
+	REQN
+	{
+		"path"
+		"tat2"
+	}
+	REQN
+	{
+		"congraph"
+		"tat2"
+	}
+	REQN
+	{
+		"envfx"
+		"tat2"
+	}
+	REQN
+	{
+		"world"
+		"tat2"
+	}
+	REQN
+	{
+		"prop"
+		"tat2"
+	}
+	REQN
+	{
+		"boundary"
+		"tat2"
+	}
+
+	REQN
+	{
+		"config"
+		"flyerspray"
+		"walkerstomp"
+		"hailfire_wake"
+	}
+
+}

@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_weap_semiauto"
+		"imp_launcher_icon"
+		"reticule_rocket"
+	}
+	REQN
+	{
+		"class"
+		"imp_weap_hover_fightertank_missile_ord"
+	}
+}

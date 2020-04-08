@@ -1,0 +1,29 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_dest_icon"
+		"hud_rep_forward_comm_icon"
+	}
+	REQN
+	{
+		"model"
+		"rep_bldg_forwardcenter"
+		"rep_bldg_forwardcenter_dest"
+		"rep_bldg_forwardcenter_chunk1"
+	}
+	REQN
+	{
+		"class"
+		"rep_bldg_forwardcenter_exp"
+		"collisionmesh"
+	}
+	REQN
+	{
+		"config"
+		"explosion"
+		"mediumsmoketrail"
+	}
+}

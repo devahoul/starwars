@@ -1,0 +1,11 @@
+ucft
+{
+	REQN
+	{
+		"class"
+		"imp_inf_storm_troopersnow"
+		"imp_inf_shock_troopersnow"
+		"imp_inf_scout_troopersnow"
+		"imp_inf_pilotatat"
+	}
+}

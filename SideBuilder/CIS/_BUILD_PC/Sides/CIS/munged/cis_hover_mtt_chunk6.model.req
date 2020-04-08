@@ -1,0 +1,10 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_hover_mtt_hatch"
+		"cis_hover_mtt_body"
+	}
+}

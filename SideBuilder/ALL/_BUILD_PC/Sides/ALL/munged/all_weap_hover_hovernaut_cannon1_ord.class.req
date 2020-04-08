@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"redlaser_l"
+	}
+	REQN
+	{
+		"config"
+		"spiderdroid_ord_exp"
+		"small_explosion"
+		"watersplash_md"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_inf_ord_hum_lg"
+	}
+}

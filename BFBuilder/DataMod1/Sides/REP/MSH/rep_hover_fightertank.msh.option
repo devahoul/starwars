@@ -1,0 +1,2 @@
+-bump rep_hover_fightertank
+-lodgroup bigmodel -keep turret_y turret_x lgun_x lgun_y rgun_x rgun_y Turret_1 Turret_2 turret_barrel1 -shadowOn

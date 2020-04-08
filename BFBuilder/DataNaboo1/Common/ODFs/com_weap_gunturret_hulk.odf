@@ -1,0 +1,9 @@
+[GameObjectClass]		
+
+ClassLabel		=	"prop"
+GeometryName	=	"com_weap_broken_gunturret.msh"
+
+
+[Properties]		
+
+GeometryName	=	"com_weap_broken_gunturret"

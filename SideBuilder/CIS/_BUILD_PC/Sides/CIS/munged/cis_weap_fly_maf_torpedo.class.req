@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_weap_fly_maf_torpedo_ord"
+	}
+	REQN
+	{
+		"texture"
+		"reticule_03"
+		"imp_launcher_icon"
+	}
+}

@@ -1,0 +1,49 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"jedi_starfighter_icon"
+		"hud_rep_jedistarfighter_icon"
+	}
+	REQN
+	{
+		"model"
+		"rep_fly_jedifighter"
+		"rep_fly_jedifighter_chunk1"
+		"rep_fly_jedifighter_chunk2"
+		"rep_fly_jedifighter_chunk3"
+	}
+	REQN
+	{
+		"zaabin"
+		"rep_fly_jedifighter"
+		"drive"
+	}
+	REQN
+	{
+		"zafbin"
+		"rep_fly_jedifighter"
+		"drive"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_fly_jedifighter_cannon"
+		"rep_weap_fly_jedifighter_missile"
+		"rep_fly_jedifighter_exp"
+	}
+	REQN
+	{
+		"config"
+		"explosion"
+		"mediumsmoketrail"
+		"dirtspray"
+		"smokeplume"
+		"exhaust_jedistarfighter"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+	}
+}

@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"rep_hover_combatspeeder_windshield"
+		"noicon"
+		"rep_hover_combatspeeder"
+	}
+}

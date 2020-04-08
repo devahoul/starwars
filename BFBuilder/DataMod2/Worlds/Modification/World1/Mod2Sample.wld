@@ -1,0 +1,576 @@
+Version(3);
+SaveType(0);
+
+Camera("camera")
+{
+	Rotation(0.571, 0.316, 0.663, -0.367);
+	Position(-13.620, 402.490, -112.285);
+	FieldOfView(55.400);
+	NearPlane(1.000);
+	FarPlane(2000.000);
+	ZoomFactor(1.000);
+	Bookmark(0.000, 76.320, 0.164,  1.000, 0.001, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+	Bookmark(0.000, 0.000, 0.000,  1.000, 0.000, 0.000, 0.000);
+}
+TerrainName("Mod2Sample.ter");
+SkyName("Mod2Sample.sky");
+ScriptName("DummyScript.dll");
+ControllerManager("StandardCtrlMgr");
+
+WorldExtents()
+{
+	Min(0.000000, 0.000000, 0.000000);
+	Max(0.000000, 0.000000, 0.000000);
+}
+
+NextSequence(-26865377);
+
+Object("CP2Gun", "com_weap_gunturret", 106011556)
+{
+	ChildRotation(0.718, 0.000, -0.696, 0.000);
+	ChildPosition(190.465, -0.030, -59.553);
+	SeqNo(106011556);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("CP1Walker", "com_item_vehicle_spawn", 354717744)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-83.353, 0.317, -88.503);
+	SeqNo(354717744);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP1");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("");
+	ClassCISATK("cis_walk_spider");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_walk_atst");
+	ClassRepDEF("rep_walk_atte");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP2VehicleRecharge", "com_item_vehiclerecharge", 517952161)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(225.378, 0.007, -64.929);
+	SeqNo(517952161);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("20.0");
+}
+
+Object("CP1VehicleRecharge", "com_item_vehiclerecharge", 554480216)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-120.921, 0.007, -48.894);
+	SeqNo(554480216);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("20.0");
+}
+
+Object("CP2Ammo", "com_item_weaponrecharge", 886243357)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(215.622, 0.022, -56.612);
+	SeqNo(886243357);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("CP2Flyer2", "com_item_vehicle_spawn", 889083797)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(214.508, 0.317, -97.029);
+	SeqNo(889083797);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP2");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("all_fly_ywing");
+	ClassCISATK("cis_fly_maf");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_fly_tiebomber");
+	ClassRepDEF("rep_fly_gunship");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP1Flyer3", "com_item_vehicle_spawn", 1072858320)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-107.237, 0.317, -17.955);
+	SeqNo(1072858320);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP1");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("all_fly_xwing");
+	ClassCISATK("cis_fly_droidfighter");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_fly_tiefighter");
+	ClassRepDEF("rep_fly_jedifighter");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP1Hover", "com_item_vehicle_spawn", 1629540934)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-98.107, 0.317, -88.731);
+	SeqNo(1629540934);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP1");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("imp_hover_speederbike");
+	ClassCISATK("cis_hover_stap");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_hover_speederbike");
+	ClassRepDEF("rep_hover_speederbike");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP1Flyer", "com_item_vehicle_spawn", 1951893127)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-74.703, 0.317, -17.401);
+	SeqNo(1951893127);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP1");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("all_fly_xwing");
+	ClassCISATK("cis_fly_droidfighter");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_fly_tiefighter");
+	ClassRepDEF("rep_fly_jedifighter");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP1Flyer2", "com_item_vehicle_spawn", 1972129685)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-90.362, 0.317, -17.931);
+	SeqNo(1972129685);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP1");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("all_fly_ywing");
+	ClassCISATK("CIS_fly_maf");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_fly_tiebomber");
+	ClassRepDEF("rep_fly_gunship");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP1Gun", "com_weap_gunturret", -1884657007)
+{
+	ChildRotation(0.675, 0.000, 0.738, 0.000);
+	ChildPosition(-72.792, -0.020, -46.191);
+	SeqNo(-1884657007);
+	Team(0);
+	NetworkId(-1);
+}
+
+Object("CP2Walker", "com_item_vehicle_spawn", -1725357728)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(199.450, 0.317, -28.976);
+	SeqNo(-1725357728);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP2");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("");
+	ClassCISATK("cis_walk_spider");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_walk_atst");
+	ClassRepDEF("rep_walk_atte");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP2Health", "com_item_healthrecharge", -1510266551)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(215.181, 0.008, -64.857);
+	SeqNo(-1510266551);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("CP2Flyer", "com_item_vehicle_spawn", -1218046728)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(199.069, 0.317, -97.388);
+	SeqNo(-1218046728);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP2");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("all_fly_xwing");
+	ClassCISATK("cis_fly_droidfighter");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_fly_tiefighter");
+	ClassRepDEF("rep_fly_jedifighter");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP1", "com_bldg_controlzone", -1112063373)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-104.970, 0.049, -59.726);
+	SeqNo(-1112063373);
+	Team(1);
+	NetworkId(-1);
+	Label("CP1Label");
+	CaptureRegion("CP1Capture");
+	ControlRegion("CP1Control");
+	SpawnPath("CP1Spawn");
+	AllyPath("");
+	AllyCount("65536");
+	Radius("0.0");
+	ValueBleed("10");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost3");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_lost_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_lost_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost3");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost3");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_lost_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_lost_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_chatter_goodjob2");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost3");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+}
+
+Object("CP1Health", "com_item_healthrecharge", -1047426833)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-111.073, 0.008, -49.238);
+	SeqNo(-1047426833);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("CP1Ammo", "com_item_weaponrecharge", -971082717)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(-111.448, 0.022, -65.120);
+	SeqNo(-971082717);
+	Team(0);
+	NetworkId(-1);
+	EffectRegion("");
+	Radius("5.0");
+}
+
+Object("CP2Hover", "com_item_vehicle_spawn", -865421662)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(215.099, 0.317, -29.180);
+	SeqNo(-865421662);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP2");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("imp_hover_speederbike");
+	ClassCISATK("cis_hover_stap");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_hover_speederbike");
+	ClassRepDEF("rep_hover_speederbike");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP2Flyer3", "com_item_vehicle_spawn", -777063937)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(229.668, 0.317, -97.539);
+	SeqNo(-777063937);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP2");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("all_fly_xwing");
+	ClassCISATK("cis_fly_droidfighter");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_fly_tiefighter");
+	ClassRepDEF("rep_fly_jedifighter");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP2Hover2", "com_item_vehicle_spawn", -497161259)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(229.777, 0.317, -28.882);
+	SeqNo(-497161259);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP2");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("all_hover_combatspeeder");
+	ClassCISATK("cis_hover_aat");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_hover_fightertank");
+	ClassRepDEF("rep_hover_fightertank");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP1Hover2", "com_item_vehicle_spawn", -68115631)
+{
+	ChildRotation(0.000, 0.000, -1.000, 0.000);
+	ChildPosition(-114.580, 0.317, -88.725);
+	SeqNo(-68115631);
+	Team(0);
+	NetworkId(-1);
+	ControlZone("CP1");
+	SpawnTime("45.0");
+	ExpireTimeEnemy("20.0");
+	ExpireTimeField("40.0");
+	DecayTime("10.0");
+	ClassAllATK("all_hover_combatspeeder");
+	ClassCISATK("cis_hover_aat");
+	ClassImpATK("");
+	ClassRepATK("");
+	ClassLocATK("");
+	ClassHisATK("");
+	ClassAllDEF("");
+	ClassCISDEF("");
+	ClassImpDEF("imp_hover_fightertank");
+	ClassRepDEF("rep_hover_fightertank");
+	ClassLocDEF("");
+	ClassHisDEF("");
+}
+
+Object("CP2", "com_bldg_controlzone", -26865378)
+{
+	ChildRotation(1.000, 0.000, 0.000, 0.000);
+	ChildPosition(210.194, 0.049, -60.091);
+	SeqNo(-26865378);
+	Team(2);
+	NetworkId(-1);
+	Label("CP2Label");
+	CaptureRegion("CP2Capture");
+	ControlRegion("CP2Control");
+	SpawnPath("CP2Spawn");
+	AllyPath("");
+	AllyCount("65536");
+	Radius("0.0");
+	ValueBleed("10");
+	Value_ATK_Alliance("10");
+	Value_ATK_CIS("10");
+	Value_ATK_Empire("10");
+	Value_ATK_Republic("10");
+	Value_ATK_Locals("10");
+	Value_DEF_Alliance("10");
+	Value_DEF_CIS("10");
+	Value_DEF_Empire("10");
+	Value_DEF_Republic("10");
+	Value_DEF_Locals("10");
+	VO_All_AllCapture("all_off_com_report_captured_commandpost");
+	VO_All_AllLost("all_off_com_report_lost_commandpost3");
+	VO_All_AllInDispute("");
+	VO_All_AllSaved("");
+	VO_All_AllInfo("");
+	VO_All_ImpCapture("all_off_com_report_lost_commandpost");
+	VO_All_ImpLost("");
+	VO_All_ImpInDispute("");
+	VO_All_ImpSaved("");
+	VO_All_ImpInfo("");
+	VO_Imp_AllCapture("imp_off_com_report_lost_commandpost");
+	VO_Imp_AllLost("");
+	VO_Imp_AllInDispute("");
+	VO_Imp_AllSaved("");
+	VO_Imp_AllInfo("");
+	VO_Imp_ImpCapture("imp_off_com_report_captured_commandpost");
+	VO_Imp_ImpLost("imp_off_com_report_lost_commandpost3");
+	VO_Imp_ImpInDispute("");
+	VO_Imp_ImpSaved("");
+	VO_Imp_ImpInfo("");
+	VO_Rep_RepCapture("rep_off_com_report_captured_commandpost");
+	VO_Rep_RepLost("rep_off_com_report_lost_commandpost3");
+	VO_Rep_RepInDispute("");
+	VO_Rep_RepSaved("");
+	VO_Rep_RepInfo("");
+	VO_Rep_CISCapture("rep_off_com_report_lost_commandpost");
+	VO_Rep_CISLost("");
+	VO_Rep_CISInDispute("");
+	VO_Rep_CISSaved("");
+	VO_Rep_CISInfo("");
+	VO_CIS_RepCapture("cis_off_com_report_lost_commandpost");
+	VO_CIS_RepLost("");
+	VO_CIS_RepInDispute("");
+	VO_CIS_RepSaved("");
+	VO_CIS_RepInfo("");
+	VO_CIS_CISCapture("cis_off_com_chatter_goodjob2");
+	VO_CIS_CISLost("cis_off_com_report_lost_commandpost3");
+	VO_CIS_CISInDispute("");
+	VO_CIS_CISSaved("");
+	VO_CIS_CISInfo("");
+	SoldierBan("");
+	HoverBan("");
+	SmallBan("");
+	MediumBan("");
+	HugeBan("");
+	FlyerBan("");
+}

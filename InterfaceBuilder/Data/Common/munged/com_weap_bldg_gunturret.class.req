@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_lascannon_icon"
+		"reticule_rifle"
+		"weapon_scope4"
+	}
+	REQN
+	{
+		"class"
+		"com_weap_bldg_gunturret_ord"
+	}
+}

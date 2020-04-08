@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_lascannon_icon"
+		"reticule_rifle"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_fly_ywing_cannon_ord"
+	}
+}

@@ -1,0 +1,31 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_rifle_icon"
+		"reticule_04"
+	}
+	REQN
+	{
+		"model"
+		"cis_weap_inf_sonicblaster"
+		"cis_1st_weap_inf_sonicblaster"
+	}
+	REQN
+	{
+		"zaabin"
+		"rifle"
+	}
+	REQN
+	{
+		"zafbin"
+		"rifle"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_sonicblaster_ord"
+	}
+}

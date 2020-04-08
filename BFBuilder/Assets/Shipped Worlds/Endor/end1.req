@@ -1,0 +1,70 @@
+ucft
+{
+	REQN
+	{
+		"config"
+	}
+
+	REQN
+	{
+		"texture"
+		"end1_map"
+		"bird"
+     		"bird2"
+		"bunker_lightning"
+		"end_worldshadow"
+	}
+
+	REQN
+	{
+		"texture"
+		"platform=ps2"
+	}
+
+	REQN
+	{
+		"path"
+		"end1"
+	}
+	REQN
+	{
+		"congraph"
+		"end1"
+	}
+	REQN
+	{
+		"envfx"
+		"end1"
+	}
+	REQN
+	{
+		"world"
+		"end1"
+	}
+	REQN
+	{
+		"prop"
+		"end1"
+	}
+	REQN
+	{
+		"boundary"
+		"end1"
+	}
+	REQN
+	{
+		"class"
+		"bluelight"
+		"redlight"
+		"greenlight"
+		"whitelight"
+	}
+	REQN
+	{
+		"config"
+		"flyerspray"
+		"walkerstomp"
+		"hailfire_wake"
+		"bunker_lightning"
+	}
+}

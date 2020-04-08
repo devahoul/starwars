@@ -1,0 +1,1 @@
+-keep gun gun1 gun2 gun3 turret barrel -lodgroup bigmodel -shadowOn -bump cis_fly_droidstarfighter

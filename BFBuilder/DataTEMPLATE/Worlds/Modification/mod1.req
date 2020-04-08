@@ -1,0 +1,66 @@
+ucft
+{
+    REQN
+    {
+        "config"
+    }
+
+    REQN
+    {
+        "class"
+    }
+
+    REQN
+    {
+        "texture"
+        "Mod1_map"
+    }
+
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+
+    }
+
+    REQN
+    {
+        "path"
+        "Mod1"
+    }
+    REQN
+    {
+        "congraph"
+        "Mod1"
+    }
+    REQN
+    {
+        "envfx"
+      --  "Mod1"
+    }
+    REQN
+    {
+        "world"
+        "Mod1"
+    }
+    REQN
+    {
+        "prop"
+     --   "Mod1"
+    }
+    REQN
+    {
+        "boundary"
+        "Mod1"
+    }
+    REQN
+    {
+        "config"
+    --    "flyerspray"
+    --    "walkerstomp"
+    --    "hailfire_wake"
+    --    "dustwake"
+    }
+
+}

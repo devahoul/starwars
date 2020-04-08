@@ -1,0 +1,67 @@
+ucft
+{
+    REQN
+    {
+        "config"
+    }
+
+    REQN
+    {
+        "class"
+    }
+
+    REQN
+    {
+        "texture"
+        "Hoth_map"
+    }
+
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+
+    }
+
+    REQN
+    {
+        "path"
+        "Hoth"
+    }
+    REQN
+    {
+        "congraph"
+        "Hoth"
+    }
+    REQN
+    {
+        "envfx"
+      --  "Hoth"
+    }
+    REQN
+    {
+        "world"
+        "Hoth"
+    }
+    REQN
+    {
+        "prop"
+     --   "Hoth"
+    }
+    REQN
+    {
+        "boundary"
+        "Hoth"
+    }
+    REQN
+    {
+        "config"
+    --    "flyerspray"
+    --    "walkerstomp"
+    --    "hailfire_wake"
+    --    "dustwake"
+    }
+
+}
+

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_weap_hover_aat_cannon_ord"
+	}
+	REQN
+	{
+		"texture"
+		"hud_weap_fullauto"
+	}
+}

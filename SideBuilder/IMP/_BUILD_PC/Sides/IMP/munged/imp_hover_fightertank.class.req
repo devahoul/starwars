@@ -1,0 +1,52 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"waterwake_lg"
+		"hailfire_wake"
+		"dirtspray"
+		"mediumsmoketrail"
+		"smokeplume"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+	}
+	REQN
+	{
+		"texture"
+		"fightertank_icon"
+		"hud_rep_fightertank_icon"
+	}
+	REQN
+	{
+		"model"
+		"imp_hover_fightertank"
+		"imp_hover_fightertank_chunk1"
+		"imp_hover_fightertank_chunk2"
+		"imp_hover_fightertank_chunk3"
+	}
+	REQN
+	{
+		"class"
+		"imp_hover_fightertank_exp"
+		"p_cube"
+		"collisionmesh"
+		"imp_weap_hover_fightertank_cannon"
+		"imp_weap_hover_fightertank_missile"
+		"imp_weap_hover_fightertank_laser"
+	}
+	REQN
+	{
+		"zaabin"
+		"rep_hover_fightertank"
+		"rep_fightertank_9pose"
+	}
+	REQN
+	{
+		"zafbin"
+		"rep_hover_fightertank"
+		"rep_fightertank_9pose"
+	}
+}

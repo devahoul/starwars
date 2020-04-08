@@ -1,0 +1,1 @@
+-keep  aimer_l_laser barrel_l_laser aimer_r_laser barrel_r_laser L_Single_cannon R_Single_cannon turret_rearcannon aimer_rearcannon barrel_r_rearcannon  barrel_l_rearcannon -lodgroup bigmodel  -shadowOn -bump CIS_MAF

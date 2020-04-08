@@ -1,0 +1,12 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"explode4"
+		"cs_flare1"
+		"dirt"
+		"spark2"
+	}
+}

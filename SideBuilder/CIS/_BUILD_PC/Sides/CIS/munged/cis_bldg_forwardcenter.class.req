@@ -1,0 +1,19 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"cis_bldg_forwardcenter"
+	}
+	REQN
+	{
+		"zaabin"
+		"drive"
+	}
+	REQN
+	{
+		"zafbin"
+		"drive"
+	}
+}

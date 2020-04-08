@@ -1,0 +1,973 @@
+<html>
+<head>
+<TITLE>Star Wars Battlefront World Builder</TITLE>
+<HTA:APPLICATION ID="HTAEx" APPLICATIONNAME="Custom Browser"
+     ICON="DataTEMPLATE\Build\Data\Interface\buildericon.bmp"
+     BORDER="thick"
+     innerBorder="no"
+     navigable="yes"
+     scroll="no"
+     scrollFlat="no"
+     selection="yes"
+     BORDERSTYLE="normal"
+     CAPTION="yes"
+     MAXIMIZEBUTTON="no"
+     MINIMIZEBUTTON="yes"
+     SHOWINTASKBAR="yes"
+     SINGLEINSTANCE="yes"
+     SYSMENU="yes"
+     VERSION="1.0"
+     WINDOWSTATE="normal"/>
+
+
+<style type='text/css'>
+body{font-family:arial,helvetica;}
+div{border:0px;border-style:solid;border-color:black;font-family:arial,helvetica;font-size:12px;padding:0px;margin:0px;}
+a{text-decoration:none;font-size:12px;}
+a:hover{color:'#0000cc';text-decoration:highlight}
+input{height:18px;font-face:arial,helvetica;font-size:12px;}
+button{height:20px;font-face:arial,helvetica;font-size:12px;text-align-vertical:center;border:1px;border-style:solid;border-top-color:white;border-left-color:white;border-color-right:#808080;border-color-bottom:#808080;font-weight:bold;}
+table{border:0px;font-face:arial,helvetica;font-size:12px;}
+span{background-color:#d4d0c8;border:0px;height:18px;font-family:arial,helvetica;font-size:12px;padding:0px;margin:0px;}
+</style>
+<SCRIPT language="JScript">
+function window.onload()
+{
+ window.resizeTo(640,480);
+ Projects.style.visibility = "hidden";
+}
+</script>
+<SCRIPT language="JavaScript">
+
+function ActivateCreateNew() {
+if (CreateNew.style.visibility == "hidden") {
+    CreateNew.style.visibility = "visible";
+    NewProject.style.visibility = "hidden";
+    Projects.style.visibility = "hidden";
+    OpenProject.style.visibility = "hidden";
+    ProjectMenu.style.borderStyle = "none";
+}
+else{
+    CreateNew.style.visibility = "hidden";
+}
+
+
+
+}
+
+function ActivateFile() {
+if (NewProject.style.visibility == "hidden") {
+    NewProject.style.visibility = "visible";
+    NewProject.style.borderTopStyle = "outset";
+    NewProject.style.borderLeftStyle = "outset";
+    NewProject.style.borderRightStyle = "outset";
+    NewProject.style.borderTopWidth= "2px";
+    NewProject.style.borderLeftWidth = "2px";
+    NewProject.style.borderRightWidth = "2px";
+    NewProject.style.borderTopColor= "#ffffff";
+    NewProject.style.borderLeftColor = "#ffffff";
+    NewProject.style.borderRightColor = "#d4d0c8";
+    OpenProject.style.visibility = "visible";
+    OpenProject.style.borderBottomStyle = "outset";
+    OpenProject.style.borderLeftStyle = "outset";
+    OpenProject.style.borderRightStyle = "outset";
+    OpenProject.style.borderBottomWidth= "2px";
+    OpenProject.style.borderLeftWidth = "2px";
+    OpenProject.style.borderRightWidth = "2px";
+    OpenProject.style.borderLeftColor = "#ffffff";
+    OpenProject.style.borderRightColor = "#d4d0c8";
+    OpenProject.style.borderBottomColor= "#d4d0c8";
+    OpenProject.style.borderLeftColor = "#ffffff";
+    OpenProject.style.borderRightColor = "#d4d0c8";
+    ProjectMenu.style.borderTopStyle = "inset";
+    ProjectMenu.style.borderLeftStyle = "inset";
+    ProjectMenu.style.borderRightStyle = "inset";
+    ProjectMenu.style.borderTopWidth= "1px";
+    ProjectMenu.style.borderLeftWidth = "1px";
+    ProjectMenu.style.borderRightWidth = "2px";
+    ProjectMenu.style.borderLeftColor = "#d4d0c8";
+    ProjectMenu.style.borderRightColor = "#ffffff";
+    ProjectMenu.style.borderTopColor= "#d4d0c8";
+    ProjectMenu.style.borderLeftColor = "#d4d0c8";
+    ProjectMenu.style.borderRightColor = "#ffffff";
+
+}
+else{
+    NewProject.style.visibility = "hidden";
+    ProjectMenu.style.borderStyle = "none";
+    OpenProject.style.visibility = "hidden";
+    Projects.style.visibility = "hidden";
+
+}
+
+}
+
+function ActivateOpen() {
+if (Projects.style.visibility == "hidden") {
+    Projects.style.visibility = "visible";
+    Projects.style.backgroundColor = "#d4d0c8";
+    Projects.style.borderBottomStyle = "outset";
+    Projects.style.borderLeftStyle = "outset";
+    Projects.style.borderRightStyle = "outset";
+    Projects.style.borderBottomWidth= "2px";
+    Projects.style.borderLeftWidth = "2px";
+    Projects.style.borderRightWidth = "2px";
+    Projects.style.borderLeftColor = "#ffffff";
+    Projects.style.borderRightColor = "#d4d0c8";
+    Projects.style.borderBottomColor= "#d4d0c8";
+    Projects.style.borderLeftColor = "#ffffff";
+    Projects.style.borderRightColor = "#d4d0c8"
+    Projects.style.position = "absolute"
+    Projects.style.left = "80px";
+    Projects.style.top = "36px";
+    Projects.style.width = "130px";
+}
+else{
+Projects.style.visibility = "hidden";
+}
+}
+
+function ActivateEdit() {
+if (EditSky.style.visibility == "hidden") {
+    EditSky.style.visibility = "visible";
+    EditSky.style.borderTopStyle = "outset";
+    EditSky.style.borderLeftStyle = "outset";
+    EditSky.style.borderRightStyle = "outset";
+    EditSky.style.borderTopWidth= "2px";
+    EditSky.style.borderLeftWidth = "2px";
+    EditSky.style.borderRightWidth = "2px";
+    EditSky.style.borderTopColor= "#ffffff";
+    EditSky.style.borderLeftColor = "#ffffff";
+    EditSky.style.borderRightColor = "#d4d0c8";
+    EditWorldReq.style.visibility = "visible";
+    EditWorldReq.style.borderBottomStyle = "outset";
+    EditWorldReq.style.borderLeftStyle = "outset";
+    EditWorldReq.style.borderRightStyle = "outset";
+    EditWorldReq.style.borderBottomWidth= "2px";
+    EditWorldReq.style.borderLeftWidth = "2px";
+    EditWorldReq.style.borderRightWidth = "2px";
+    EditWorldReq.style.borderLeftColor = "#ffffff";
+    EditWorldReq.style.borderRightColor = "#d4d0c8";
+    EditWorldReq.style.borderBottomColor= "#d4d0c8";
+    EditWorldReq.style.borderLeftColor = "#ffffff";
+    EditWorldReq.style.borderRightColor = "#d4d0c8";
+    EditMissionLuaA.style.visibility = "visible";
+    EditMissionLuaA.style.borderBottomStyle = "outset";
+    EditMissionLuaA.style.borderLeftStyle = "outset";
+    EditMissionLuaA.style.borderRightStyle = "outset";
+    EditMissionLuaA.style.borderBottomWidth= "2px";
+    EditMissionLuaA.style.borderLeftWidth = "2px";
+    EditMissionLuaA.style.borderRightWidth = "2px";
+    EditMissionLuaA.style.borderLeftColor = "#ffffff";
+    EditMissionLuaA.style.borderRightColor = "#d4d0c8";
+    EditMissionLuaA.style.borderBottomColor= "#d4d0c8";
+    EditMissionLuaA.style.borderLeftColor = "#ffffff";
+    EditMissionLuaA.style.borderRightColor = "#d4d0c8";
+    EditMissionLuaC.style.visibility = "visible";
+    EditMissionLuaC.style.borderBottomStyle = "outset";
+    EditMissionLuaC.style.borderLeftStyle = "outset";
+    EditMissionLuaC.style.borderRightStyle = "outset";
+    EditMissionLuaC.style.borderBottomWidth= "2px";
+    EditMissionLuaC.style.borderLeftWidth = "2px";
+    EditMissionLuaC.style.borderRightWidth = "2px";
+    EditMissionLuaC.style.borderLeftColor = "#ffffff";
+    EditMissionLuaC.style.borderRightColor = "#d4d0c8";
+    EditMissionLuaC.style.borderBottomColor= "#d4d0c8";
+    EditMissionLuaC.style.borderLeftColor = "#ffffff";
+    EditMissionLuaC.style.borderRightColor = "#d4d0c8";
+    EditMenu.style.borderTopStyle = "inset";
+    EditMenu.style.borderLeftStyle = "inset";
+    EditMenu.style.borderRightStyle = "inset";
+    EditMenu.style.borderTopWidth= "1px";
+    EditMenu.style.borderLeftWidth = "1px";
+    EditMenu.style.borderRightWidth = "2px";
+    EditMenu.style.borderLeftColor = "#d4d0c8";
+    EditMenu.style.borderRightColor = "#ffffff";
+    EditMenu.style.borderTopColor= "#d4d0c8";
+    EditMenu.style.borderLeftColor = "#d4d0c8";
+    EditMenu.style.borderRightColor = "#ffffff";
+    NewProject.style.visibility = "hidden";
+    ProjectMenu.style.borderStyle = "none";
+    OpenProject.style.visibility = "hidden";
+    Projects.style.visibility = "hidden";
+
+}
+else{
+    EditMenuOptions.style.visibility = "hidden";
+    EditMenu.style.borderStyle = "none";
+    EditSky.style.visibility = "hidden";
+    EditWorldReq.style.visibility = "hidden";
+    EditMissionLuaA.style.visibility = "hidden";
+    EditMissionLuaC.style.visibility = "hidden";
+    
+
+
+}
+}
+
+</script>
+<SCRIPT language="VBScript">
+Function WriteNewFile(strFileName, strContent)
+'On Error Resume Next
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+If Err.Number = 0 Then
+    Set objFile = objFSO.CreateTextFile(strFileName, True)
+End If
+    If Err.Number = 0 Then objFile.WriteLine strContent
+    If Err.Number = 0 Then objFile.Close
+    If Err.Number = 0 Then WriteNewFile = True
+End Function
+
+function ActivateSearchProjects()
+Dim filesys, appfile, bfbuilderfolder
+Set filesys = CreateObject("Scripting.FileSystemObject")
+Set appfile = filesys.GetFile("bfbuilder.hta")
+bfbuilderfolder = appfile.ParentFolder & "\"
+'MsgBox bfbuilderfolder
+Dim demofolder, subfol, folcoll, folist
+Set demofolder = filesys.GetFolder(bfbuilderfolder)
+Set folcoll = demofolder.SubFolders
+For Each subfol in folcoll
+    folist = folist & subfol.Name & vbCr
+Next
+'MsgBox folist
+Dim re, s
+Set re = New RegExp
+re.IgnoreCase=True
+re.Pattern = "Data\w.*\rD[^a]"
+s = folist
+Set colMatches = re.Execute(s)
+sMsg=""
+For Each ObjMatch in colMatches
+sMsg = sMsg & objMatch.Value
+Next
+toremove = Right(sMsg, 2)
+'MsgBox sMsg
+'sMsg = Replace(sMsg, sMsg, sMsg&";")
+sMsg = Replace(sMsg,vbCr&toremove, "")
+sMsg = Replace(sMsg,vbCr&"DataTEMPLATE", "")
+sMsg = Replace(sMsg,vbCr&"dataTEMPLATE", "")
+sMsg = Replace(sMsg,vbCr&"DataTemplate", "")
+sMsg = Replace(sMsg,vbCr&"Datatemplate", "")
+sMsg = Replace(sMsg,vbCr, ",")
+'sMsg = Replace(sMsg,",", "</div>"&vbCr&"<div id=>)
+'MsgBox sMsg
+
+dim aryProjects
+'dim aryProjectFiles
+aryProjects = Split(sMsg,",")
+'aryProjectFiles =
+'MsgBox IsArray(aryProjects)
+aryProjectsUB = UBOUND(aryProjects)
+'MsgBox aryProjectsUB
+
+dim rei
+rei=0
+
+dim orei
+dim MProject, NProject
+Projects.innerHTML = ""
+Do While rei <= aryProjectsUB
+    MProject = aryProjects(rei)
+    NProject = Replace(Mproject, "Data","")
+    Projects.innerHTML = Projects.innerHTML & "<div style="&Chr(34)&"width:140px;"&Chr(34)&" id="& MProject &" name="& MProject &" value="& MProject &" onmouseover=" & Chr(34) & "style.cursor ='default';style.backgroundColor='#0c266c';style.color='#ffffff'" & Chr(34) & " onmouseout=" & Chr(34) & "style.backgroundColor='#d4d0c8';style.color='#000000';" & Chr(34) & " onMousedown=" & Chr(34) & "ActivateOpenProject("& MProject &".value)" & Chr(34) & ">"& NProject &"&nbsp;</div>"
+    'MsgBox MProject
+    'MsgBox aryProjects(rei)
+    rei=rei+1
+Loop
+ActivateOpen()
+End Function
+
+
+
+
+Function NewWorld()
+'Create new mod from template
+
+
+dim modnamelong
+dim modnametitle
+dim modnameshort
+dim modnameshortn
+dim modnameshortdata
+
+
+modnametitle = vmodnametitle.value
+
+modnameshortn = vmodnameshortn.value
+modnameshort = vmodnameshortn.value
+modnamelong = vmodnameshortn.value
+modnameshortdata = "Data"&modnamelong
+
+dim fso
+set fso=CreateObject("Scripting.FileSystemObject")
+If fso.FolderExists(modnameshortdata) Then
+MsgBox "Folder Already Exists"
+Else
+    MsgBox "Create Directory "&modnameshortdata&"?", vbYesNo
+    fso.CopyFolder "dataTemplate", modnameshortdata
+
+' =========Soundmunge.bat
+dim edit1path, edit1write
+edit1path = modnameshortdata &"\soundmunge.bat"
+'MsgBox edit1path
+set edit1write = fso.GetFile(edit1path)
+edit1write.Attributes = edit1write.Attributes + 31
+'MsgBox edit1write
+
+Const ForReading=1, ForWriting=2, ForAppending=8
+dim edit1, edit1content
+set edit1 = fso.OpenTextFile(edit1path, ForReading, True)
+'MsgBox edit1
+edit1content = edit1.ReadAll
+'MsgBox edit1content
+edit1content = Replace(edit1content, "mod",modnameshort)
+'MsgBox edit1content
+WriteNewFile edit1path, edit1content
+edit1.close
+
+'==========_build_pc\clean.bat
+dim edit2path, edit2write
+edit2path = modnameshortdata &"\_build_pc\clean.bat"
+'MsgBox edit2path
+set edit2write = fso.GetFile(edit2path)
+edit2write.Attributes = edit2write.Attributes + 31
+'MsgBox edit2write
+
+dim edit2, edit2content
+set edit2 = fso.OpenTextFile(edit2path, ForReading, True)
+'MsgBox edit2
+edit2content = edit2.ReadAll
+'MsgBox edit2content
+edit2content = Replace(edit2content, "MOD",modnameshort)
+'MsgBox edit2content
+WriteNewFile edit2path, edit2content
+edit2.close
+
+'==========_build_pc\munge.bat
+dim edit3path, edit3write
+edit3path = modnameshortdata &"\_build_pc\munge.bat"
+'MsgBox edit3path
+set edit3write = fso.GetFile(edit3path)
+edit3write.Attributes = edit3write.Attributes + 31
+'MsgBox edit3write
+
+dim edit3, edit3content
+set edit3 = fso.OpenTextFile(edit3path, ForReading, True)
+'MsgBox edit3
+edit3content = edit3.ReadAll
+'MsgBox edit3content
+edit3content = Replace(edit3content, "MOD",modnameshort)
+edit3content = Replace(edit3content, "Mod1",modnameshortn)
+'MsgBox edit3content
+WriteNewFile edit3path, edit3content
+edit3.close
+
+'==========_build_pc\sound\clean.bat
+dim edit4path, edit4write
+edit4path = modnameshortdata &"\_build_pc\sound\clean.bat"
+'MsgBox edit4path
+set edit4write = fso.GetFile(edit4path)
+edit4write.Attributes = edit4write.Attributes + 31
+'MsgBox edit4write
+
+dim edit4, edit4content
+set edit4 = fso.OpenTextFile(edit4path, ForReading, True)
+'MsgBox edit4
+edit4content = edit4.ReadAll
+'MsgBox edit4content
+edit4content = Replace(edit4content, "mod",modnameshort)
+'MsgBox edit4content
+WriteNewFile edit4path, edit4content
+edit4.close
+
+'==========_build_pc\worlds\clean.bat
+dim edit5path, edit5write
+edit5path = modnameshortdata &"\_build_pc\worlds\clean.bat"
+'MsgBox edit5path
+set edit5write = fso.GetFile(edit5path)
+edit5write.Attributes = edit5write.Attributes + 31
+'MsgBox edit5write
+
+dim edit5, edit5content
+set edit5 = fso.OpenTextFile(edit5path, ForReading, True)
+'MsgBox edit5
+edit5content = edit5.ReadAll
+'MsgBox edit5content
+edit5content = Replace(edit5content, "MOD",modnameshort)
+'MsgBox edit5content
+WriteNewFile edit5path, edit5content
+edit5.close
+
+'==========_build_pc\uninstall_from_pc.bat
+dim edit6path, edit6write
+edit6path = modnameshortdata &"\_build_pc\uninstall_from_pc.bat"
+'MsgBox edit6path
+set edit6write = fso.GetFile(edit6path)
+edit6write.Attributes = edit6write.Attributes + 31
+'MsgBox edit6write
+
+dim edit6, edit6content
+set edit6 = fso.OpenTextFile(edit6path, ForReading, True)
+'MsgBox edit6
+edit6content = edit6.ReadAll
+'MsgBox edit6content
+edit6content = Replace(edit6content, "Mod1",modnameshortn)
+'MsgBox edit6content
+WriteNewFile edit6path, edit6content
+edit6.close
+
+'==========_build_pc\worlds\Mod\munge.bat
+dim edit7path, edit7write
+edit7path = modnameshortdata &"\_build_pc\worlds\mod\munge.bat"
+'MsgBox edit7path
+set edit7write = fso.GetFile(edit7path)
+edit7write.Attributes = edit7write.Attributes + 31
+'MsgBox edit7write
+
+dim edit7, edit7content
+set edit7 = fso.OpenTextFile(edit7path, ForReading, True)
+'MsgBox edit7
+edit7content = edit7.ReadAll
+'MsgBox edit7content
+edit7content = Replace(edit7content, "MOD",modnameshort)
+edit7content = Replace(edit7content, "Modification",modnamelong)
+'MsgBox edit7content
+WriteNewFile edit7path, edit7content
+edit7.close
+
+'==========_build_pc\worlds\MOD
+Set fld = fso.GetFolder (modnameshortdata &"\_build_pc\worlds\MOD")
+fld.Name = modnameshort
+
+'==========_BUILD_PC\sound\worlds\mod
+Set fldb = fso.GetFolder (modnameshortdata &"\_build_pc\sound\worlds\MOD")
+fldb.Name = modnameshort
+
+'==========_lvl_pc\MOD
+Set fld2 = fso.GetFolder (modnameshortdata &"\_lvl_pc\MOD")
+fld2.Name = modnameshort
+
+'==========_lvl_pc\movies\mod1.mvs
+dim edit8path, edit8write
+edit8path = modnameshortdata &"\_lvl_pc\movies\mod1.mvs"
+'MsgBox edit8path
+set edit8write = fso.GetFile(edit8path)
+edit8write.Attributes = edit8write.Attributes + 31
+'MsgBox edit8write
+edit8write.Name = modnameshortn&".mvs"
+
+
+'==========_source_pc\Shell\Movies\mod1.mlst
+dim edit9path, edit9write
+edit9path = modnameshortdata &"\_source_pc\Shell\Movies\mod1.mlst"
+'MsgBox edit9path
+set edit9write = fso.GetFile(edit9path)
+edit9write.Attributes = edit9write.Attributes + 31
+'MsgBox edit9write
+edit9write.Name = modnameshortn&".mlst"
+
+
+'==========\addme\addme.lua
+dim edit10path, edit10write
+edit10path = modnameshortdata &"\addme\addme.lua"
+'MsgBox edit10path
+set edit10write = fso.GetFile(edit10path)
+edit10write.Attributes = edit10write.Attributes + 31
+'MsgBox edit10write
+
+dim edit10, edit10content
+set edit10 = fso.OpenTextFile(edit10path, ForReading, True)
+'MsgBox edit10
+edit10content = edit10.ReadAll
+'MsgBox edit10content
+edit10content = Replace(edit10content, "MOD1",modnameshortn)
+edit10content = Replace(edit10content, "MOD MAP 1",modnametitle)
+'MsgBox edit10content
+WriteNewFile edit10path, edit10content
+edit10.close
+
+'==========\Common\mission.req
+dim edit11path, edit11write
+edit11path = modnameshortdata &"\Common\mission.req"
+'MsgBox edit11path
+set edit11write = fso.GetFile(edit11path)
+edit11write.Attributes = edit11write.Attributes + 31
+'MsgBox edit11write
+
+dim edit11, edit11content
+set edit11 = fso.OpenTextFile(edit11path, ForReading, True)
+'MsgBox edit11
+edit11content = edit11.ReadAll
+'MsgBox edit11content
+edit11content = Replace(edit11content, "mod1",modnameshortn)
+'MsgBox edit11content
+WriteNewFile edit11path, edit11content
+edit11.close
+
+'==========\Common\Mission\mod1a.req
+dim edit12path, edit12write
+edit12path = modnameshortdata &"\Common\Mission\mod1a.req"
+'MsgBox edit12path
+set edit12write = fso.GetFile(edit12path)
+edit12write.Attributes = edit12write.Attributes + 31
+'MsgBox edit12write
+
+dim edit12, edit12content
+set edit12 = fso.OpenTextFile(edit12path, ForReading, True)
+'MsgBox edit12
+edit12content = edit12.ReadAll
+'MsgBox edit12content
+edit12content = Replace(edit12content, "mod1",modnameshortn)
+'MsgBox edit12content
+WriteNewFile edit12path, edit12content
+edit12.close
+edit12write.Name = modnameshortn&"a.req"
+
+'==========\Common\Mission\mod1c.req
+dim edit13path, edit13write
+edit13path = modnameshortdata &"\Common\Mission\mod1c.req"
+'MsgBox edit13path
+set edit13write = fso.GetFile(edit13path)
+edit13write.Attributes = edit13write.Attributes + 31
+'MsgBox edit13write
+
+dim edit13, edit13content
+set edit13 = fso.OpenTextFile(edit13path, ForReading, True)
+'MsgBox edit13
+edit13content = edit13.ReadAll
+'MsgBox edit13content
+edit13content = Replace(edit13content, "mod1",modnameshortn)
+'MsgBox edit13content
+WriteNewFile edit13path, edit13content
+edit13.close
+edit13write.Name = modnameshortn&"c.req"
+
+'==========\Common\Scripts\MOD\mod1a.lua
+dim edit14path, edit14write
+edit14path = modnameshortdata &"\Common\Scripts\MOD\mod1a.lua"
+'MsgBox edit14path
+set edit14write = fso.GetFile(edit14path)
+edit14write.Attributes = edit14write.Attributes + 31
+'MsgBox edit14write
+
+dim edit14, edit14content
+set edit14 = fso.OpenTextFile(edit14path, ForReading, True)
+'MsgBox edit14
+edit14content = edit14.ReadAll
+'MsgBox edit14content
+edit14content = Replace(edit14content, "MOD",modnameshort)
+edit14content = Replace(edit14content, "mod1",modnameshortn)
+'MsgBox edit14content
+WriteNewFile edit14path, edit14content
+edit14.close
+edit14write.Name = modnameshortn&"a.lua"
+
+'==========\Common\Scripts\MOD\mod1c.lua
+dim edit15path, edit15write
+edit15path = modnameshortdata &"\Common\Scripts\MOD\mod1c.lua"
+'MsgBox edit15path
+set edit15write = fso.GetFile(edit15path)
+edit15write.Attributes = edit15write.Attributes + 31
+'MsgBox edit15write
+
+dim edit15, edit15content
+set edit15 = fso.OpenTextFile(edit15path, ForReading, True)
+'MsgBox edit15
+edit15content = edit15.ReadAll
+'MsgBox edit15content
+edit15content = Replace(edit15content, "MOD",modnameshort)
+edit15content = Replace(edit15content, "mod1",modnameshortn)
+'MsgBox edit15content
+WriteNewFile edit15path, edit15content
+edit15.close
+edit15write.Name = modnameshortn&"c.lua"
+
+'==========Common\Scripts\MOD
+Set fld3 = fso.GetFolder (modnameshortdata &"\Common\Scripts\MOD")
+fld3.Name = modnameshort
+
+
+'==========\Shell\Movies\mod1.mcfg
+dim edit16path, edit16write
+edit16path = modnameshortdata &"\Shell\Movies\mod1.mcfg"
+'MsgBox edit16path
+set edit16write = fso.GetFile(edit16path)
+edit16write.Attributes = edit16write.Attributes + 31
+'MsgBox edit16write
+
+dim edit16, edit16content
+set edit16 = fso.OpenTextFile(edit16path, ForReading, True)
+'MsgBox edit16
+edit16content = edit16.ReadAll
+'MsgBox edit16content
+edit16content = Replace(edit16content, "mod1",modnameshortn)
+'MsgBox edit16content
+WriteNewFile edit16path, edit16content
+edit16.close
+edit16write.Name = modnameshortn&".mcfg"
+
+'==========Sound\worlds\mod\mod1.asfx
+dim edit17path, edit17write
+edit17path = modnameshortdata &"\Sound\worlds\mod\mod1.asfx"
+'MsgBox edit17path
+set edit17write = fso.GetFile(edit17path)
+edit17write.Attributes = edit17write.Attributes + 31
+'MsgBox edit17write
+edit17write.Name = modnameshortn&".asfx"
+
+'==========Sound\worlds\mod\mod1cw.req
+dim edit18path, edit18write
+edit18path = modnameshortdata &"\Sound\worlds\mod\mod1cw.req"
+'MsgBox edit18path
+set edit18write = fso.GetFile(edit18path)
+edit18write.Attributes = edit18write.Attributes + 31
+'MsgBox edit18write
+edit18write.Name = modnameshortn&"cw.req"
+
+'==========Sound\worlds\mod\mod1gcw.req
+dim edit19path, edit19write
+edit19path = modnameshortdata &"\Sound\worlds\mod\mod1gcw.req"
+'MsgBox edit19path
+set edit19write = fso.GetFile(edit19path)
+edit19write.Attributes = edit19write.Attributes + 31
+'MsgBox edit19write
+edit19write.Name = modnameshortn&"gcw.req"
+
+'==========Sound\worlds\mod\mod.req
+dim edit20path, edit20write
+edit20path = modnameshortdata &"\Sound\worlds\mod\mod.req"
+'MsgBox edit20path
+set edit20write = fso.GetFile(edit20path)
+edit20write.Attributes = edit20write.Attributes + 31
+'MsgBox edit20write
+edit20write.Name = modnameshort&".req"
+
+'==========Sound\worlds\mod
+Set fld4 = fso.GetFolder (modnameshortdata &"\Sound\worlds\mod")
+fld4.Name = modnameshort
+
+'==========\Worlds\Modification\mod1.req
+dim edit21path, edit21write
+edit21path = modnameshortdata &"\Worlds\Modification\mod1.req"
+'MsgBox edit21path
+set edit21write = fso.GetFile(edit21path)
+edit21write.Attributes = edit21write.Attributes + 31
+'MsgBox edit21write
+
+dim edit21, edit21content
+set edit21 = fso.OpenTextFile(edit21path, ForReading, True)
+'MsgBox edit21
+edit21content = edit21.ReadAll
+'MsgBox edit21content
+edit21content = Replace(edit21content, "Mod1",modnameshortn)
+'MsgBox edit21content
+WriteNewFile edit21path, edit21content
+edit21.close
+edit21write.Name = modnameshortn&".req"
+
+'==========\Shell\shell.req
+dim edit22path, edit22write
+edit22path = modnameshortdata &"\Shell\shell.req"
+'MsgBox edit22path
+set edit22write = fso.GetFile(edit22path)
+edit22write.Attributes = edit22write.Attributes + 31
+'MsgBox edit22write
+
+dim edit22, edit22content
+set edit22 = fso.OpenTextFile(edit22path, ForReading, True)
+'MsgBox edit22
+edit22content = edit22.ReadAll
+'MsgBox edit22content
+edit22content = Replace(edit22content, "mod1",modnameshortn)
+'MsgBox edit22content
+WriteNewFile edit22path, edit22content
+edit22.close
+
+'==========\Worlds\Modification\world1\mod1.wld
+dim edit23path, edit23write
+edit23path = modnameshortdata &"\Worlds\Modification\World1\Mod1.wld"
+'MsgBox edit23path
+set edit23write = fso.GetFile(edit23path)
+edit23write.Attributes = edit23write.Attributes + 31
+'MsgBox edit23write
+
+dim edit23, edit23content
+set edit23 = fso.OpenTextFile(edit23path, ForReading, True)
+edit23content = edit23.ReadAll
+'MsgBox edit23content
+edit23content = Replace(edit23content, "Mod1",modnameshortn)
+edit23content = Replace(edit23content, "mod1",modnameshortn)
+'MsgBox edit23content
+WriteNewFile edit23path, edit23content
+edit23.close
+edit23write.Name = modnameshortn&".wld"
+
+'==========\Worlds\Modification\world1\Mod1.ter.option
+dim edit24path, edit24write
+edit24path = modnameshortdata &"\Worlds\Modification\world1\Mod1.ter.option"
+'MsgBox edit24path
+set edit24write = fso.GetFile(edit24path)
+edit24write.Attributes = edit24write.Attributes + 31
+edit24write.Name = modnameshortn&".ter.option"
+
+'==========\Worlds\Modification\world1\Mod1.ter
+dim edit25path, edit25write
+edit25path = modnameshortdata &"\Worlds\Modification\world1\Mod1.ter"
+'MsgBox edit25path
+set edit25write = fso.GetFile(edit25path)
+edit25write.Attributes = edit25write.Attributes + 31
+edit25write.Name = modnameshortn&".ter"
+
+'==========\Worlds\Modification\world1\Mod1.sky
+dim edit26path, edit26write
+edit26path = modnameshortdata &"\Worlds\Modification\world1\Mod1.sky"
+'MsgBox edit26path
+set edit26write = fso.GetFile(edit26path)
+edit26write.Attributes = edit26write.Attributes + 31
+edit26write.Name = modnameshortn&".sky"
+
+'==========\Worlds\Modification\world1\Mod1.rgn
+dim edit27path, edit27write
+edit27path = modnameshortdata &"\Worlds\Modification\world1\Mod1.rgn"
+'MsgBox edit27path
+set edit27write = fso.GetFile(edit27path)
+edit27write.Attributes = edit27write.Attributes + 31
+edit27write.Name = modnameshortn&".rgn"
+
+'==========\Worlds\Modification\world1\Mod1.pth
+dim edit28path, edit28write
+edit28path = modnameshortdata &"\Worlds\Modification\world1\Mod1.pth"
+'MsgBox edit28path
+set edit28write = fso.GetFile(edit28path)
+edit28write.Attributes = edit28write.Attributes + 31
+edit28write.Name = modnameshortn&".pth"
+
+'==========\Worlds\Modification\world1\Mod1.pln
+dim edit29path, edit29write
+edit29path = modnameshortdata &"\Worlds\Modification\world1\Mod1.pln"
+'MsgBox edit29path
+set edit29write = fso.GetFile(edit29path)
+edit29write.Attributes = edit29write.Attributes + 31
+edit29write.Name = modnameshortn&".pln"
+
+'==========\Worlds\Modification\world1\Mod1.ldx
+dim edit30path, edit30write
+edit30path = modnameshortdata &"\Worlds\Modification\world1\Mod1.ldx"
+'MsgBox edit30path
+set edit30write = fso.GetFile(edit30path)
+edit30write.Attributes = edit30write.Attributes + 31
+edit30write.Name = modnameshortn&".ldx"
+
+'==========\Worlds\Modification\world1\Mod1.hnt
+dim edit31path, edit31write
+edit31path = modnameshortdata &"\Worlds\Modification\world1\Mod1.hnt"
+'MsgBox edit31path
+set edit31write = fso.GetFile(edit31path)
+edit31write.Attributes = edit31write.Attributes + 31
+edit31write.Name = modnameshortn&".hnt"
+
+'==========\Worlds\Modification\world1\Mod1.grp
+dim edit32path, edit32write
+edit32path = modnameshortdata &"\Worlds\Modification\world1\Mod1.grp"
+'MsgBox edit32path
+set edit32write = fso.GetFile(edit32path)
+edit32write.Attributes = edit32write.Attributes + 31
+edit32write.Name = modnameshortn&".grp"
+
+'==========\Worlds\Modification\world1\Mod1.cus
+dim edit33path, edit33write
+edit33path = modnameshortdata &"\Worlds\Modification\world1\Mod1.cus"
+'MsgBox edit33path
+set edit33write = fso.GetFile(edit33path)
+edit33write.Attributes = edit33write.Attributes + 31
+edit33write.Name = modnameshortn&".cus"
+
+'==========\Worlds\Modification\world1\Mod1.bnd
+dim edit34path, edit34write
+edit34path = modnameshortdata &"\Worlds\Modification\world1\Mod1.bnd"
+'MsgBox edit34path
+set edit34write = fso.GetFile(edit34path)
+edit34write.Attributes = edit34write.Attributes + 31
+edit34write.Name = modnameshortn&".bnd"
+
+'==========\Worlds\Modification\world1\Mod1.bar
+dim edit35path, edit35write
+edit35path = modnameshortdata &"\Worlds\Modification\world1\Mod1.bar"
+'MsgBox edit35path
+set edit35write = fso.GetFile(edit35path)
+edit35write.Attributes = edit35write.Attributes + 31
+edit35write.Name = modnameshortn&".bar"
+
+'==========Worlds\Modification
+Set fld5 = fso.GetFolder (modnameshortdata &"\Worlds\Modification")
+fld5.Name = modnamelong
+
+'==========_SOURCE_PC\Common\Localize\english.cfg
+dim edit36path, edit36write
+edit36path = modnameshortdata &"\_SOURCE_PC\Common\Localize\english.cfg"
+set edit36write = fso.GetFile(edit36path)
+edit36write.Attributes = edit36write.Attributes + 31
+'MsgBox edit7write
+
+dim edit36, edit36content
+set edit36 = fso.OpenTextFile(edit36path, ForReading, True)
+edit36content = edit36.ReadAll
+'MsgBox edit36content
+edit36content = Replace(edit36content, "Mod1",modnameshortn)
+edit36content = Replace(edit36content, "mod1",modnameshortn)
+'MsgBox edit36content
+WriteNewFile edit36path, edit36content
+edit36.close
+
+CreateNew.style.visibility = "hidden"
+MsgBox "Done"
+ActivateOpenProject(modnameshortdata)
+End If
+set fso = nothing
+End Function
+
+
+
+
+Function ActivateOpenProject(project)
+'MsgBox project
+EditMenu.Style.Visibility = "visible"
+Projects.style.visibility = "hidden"
+NewProject.style.visibility = "hidden"
+OpenProject.style.visibility = "hidden"
+ProjectMenu.style.borderStyle = "none"
+dim openprojectname, modid
+openprojectname = project
+modid=Replace(openprojectname, "Data","")
+document.title = "Project: "& modid
+activeproject.style.visibility = "visible"
+activeproject.innerHTML = "<button id=zerobutton name=zerobutton value=" & Chr(34) & modid & Chr(34) & "onmouseover=" & Chr(34) & "style.cursor ='default';" & Chr(34) & " onmouseout=" & Chr(34) & "style.backgroundColor='#d4d0c8';style.color='#000000'" & Chr(34) & " onClick=" & Chr(34) & "EditWorld('"& openprojectname &"','zeroeditor.exe')" & Chr(34) & ">Edit "& modid &"</button><button id=localizeproject name=localizeproject value=" & Chr(34) & modid & Chr(34) & "onmouseover=" & Chr(34) & "style.cursor ='default';" & Chr(34) & " onmouseout=" & Chr(34) & "style.backgroundColor='#d4d0c8';style.color='#000000'" & Chr(34) & " onClick=" & Chr(34) & "Launch('"& openprojectname &"','edit_pc_addon_localize.bat')" & Chr(34) & ">Localize "&modid&"</button><button id=mungebutton name=mungebutton value=" & Chr(34) & modid & Chr(34) & "onmouseover=" & Chr(34) & "style.cursor ='default';" & Chr(34) & " onmouseout=" & Chr(34) & "style.backgroundColor='#d4d0c8';style.color='#000000'" & Chr(34) & " onClick=" & Chr(34) & "Launch('"& openprojectname &"','munge.bat')" & Chr(34) & ">Munge "&modid&"</button><button id=cleanbutton name=cleanbutton value=" & Chr(34) & openprojectname & Chr(34) & "onmouseover=" & Chr(34) & "style.cursor ='default';" & Chr(34) & " onmouseout=" & Chr(34) & "style.backgroundColor='#d4d0c8';style.color='#000000'" & Chr(34) & " onClick=" & Chr(34) & "Launch('"& openprojectname &"','clean.bat')" & Chr(34) & ">Clean "&modid&"</button>"
+EditMenuOptions.innerHTML = "<div id=EditSky name=EditSky style=" & Chr(34) & "position:absolute;font-size:12px;top:18px;left:50px;height:18px;width:165px;background-color:#D4D0C8;visibility:hidden;" & Chr(34) & " onmouseover=" & Chr(34) & "style.cursor ='default';style.backgroundColor='#0c266c';style.color='#ffffff'" & Chr(34) & " onmouseout=" & Chr(34) & "style.backgroundColor='#d4d0c8';style.color='#000000'" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Worlds\\"&modid&"\\World1\\"&modid&".sky')" & Chr(34) & ">&nbsp;"&modid&" Sky File&nbsp;</div><div id=EditWorldReq name=EditWorldReq style=" & Chr(34) & "position:absolute;font-size:12px;top:36px;left:50px;height:18px;width:165px;background-color:#D4D0C8;visibility:hidden;" & Chr(34) & " onmouseover=" & Chr(34) & "style.cursor ='default';style.backgroundColor='#0c266c';style.color='#ffffff'" & Chr(34) & " onmouseout=" & Chr(34) & "style.backgroundColor='#d4d0c8';style.color='#000000'" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Worlds\\"&modid&"\\"&modid&".req')"& Chr(34) &">&nbsp;"&modid&" Req File&nbsp;</div><div id=EditMissionLuaA name=EditMissionLuaA style=" & Chr(34) & "position:absolute;font-size:12px;top:52px;left:50px;height:18px;width:165px;background-color:#D4D0C8;visibility:hidden;" & Chr(34) & " onmouseover=" & Chr(34) & "style.cursor ='default';style.backgroundColor='#0c266c';style.color='#ffffff'" & Chr(34) & " onmouseout=" & Chr(34) & "style.backgroundColor='#d4d0c8';style.color='#000000'" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Common\\Scripts\\"&modid&"\\"&modid&"a.lua')" & Chr(34) & ">&nbsp;GCW Era Mission LUA&nbsp;</div><div id=EditMissionLuaC name=EditMissionLuaC style=" & Chr(34) & "position:absolute;font-size:12px;top:68px;left:50px;height:18px;width:165px;background-color:#D4D0C8;visibility:hidden;" & Chr(34) & " onmouseover=" & Chr(34) & "style.cursor ='default';style.backgroundColor='#0c266c';style.color='#ffffff'" & Chr(34) & " onmouseout=" & Chr(34) & "style.backgroundColor='#d4d0c8';style.color='#000000'" & Chr(34) & " onMousedown=" & Chr(34) & "LaunchNotePad('"& openprojectname &"','"&openprojectname&"\\Common\\Scripts\\"&modid&"\\"&modid&"c.lua')" & Chr(34) & ">&nbsp;CW Era Mission LUA&nbsp;</div>"
+End Function
+
+dim appProject, appMod, app
+Function Launch(appProject,app)
+appProject = appProject &"\"
+Set objApp = CreateObject("WScript.Shell") 
+'objApp.Run "cmd /C CD C:\ & Program Files & SomeFolder & SETUP" 
+'MsgBox appProject & app
+objApp.Run "cmd /K CD "& appProject & " && "& app &" && exit"
+set objApp = nothing
+End Function
+
+Function EditWorld(appProject,app)
+dim fso
+set fso=CreateObject("Scripting.FileSystemObject")
+appMod = Replace(appProject, "Data","")
+appMod = appMod &".wld"
+app = "zeroeditor.exe"
+dim wldpath, wldspath, wldfldr, wldfile
+wldfilepath = appProject &".wld"
+'MsgBox wldfilepath
+Set objApp = CreateObject("WScript.Shell") 
+'objApp.Run "cmd /C CD C:\ & Program Files & SomeFolder & SETUP" 
+'MsgBox appProject & vbCr & app & vbCr & appMod
+objApp.Run "cmd /K CD "& appProject &" && "& app & " "& appMod &" && exit"
+set objApp = nothing
+End Function
+
+Function LaunchNotePad(appProject,appProjectFile)
+'MsgBox appProject & vbCr & appProjectFile
+dim fso, appMod
+Set objApp = CreateObject("WScript.Shell") 
+objApp.Run "notepad "& appProjectFile
+EditSky.style.visibility = "hidden"
+EditWorldReq.style.visibility = "hidden"
+EditMissionLuaA.style.visibility = "hidden"
+EditMissionLuaC.style.visibility = "hidden"
+EditMenu.style.borderStyle = "none"
+NewProject.style.visibility = "hidden"
+ProjectMenu.style.borderStyle = "none"
+OpenProject.style.visibility = "hidden"
+Projects.style.visibility = "hidden"
+set objApp = nothing
+End Function
+
+</SCRIPT>
+<body id=body scroll=no bgcolor='#999999' link=menutext alink='#c60000' vlink=menutext style='overflow:hidden;'>
+<div style="position:absolute;border:1px;border-color:#D4D0C8;border-style:solid;border-bottom-style:inset;border-bottom-width:2px;border-bottom-color:#808080;top:0px;left:0px;height:21px;width:110%;background-color:#D4D0C8;"></div>
+<div id=EditMenuInactive name=EditMenuInactive style="position:absolute;font-size:12px;border:1px;border-style:solid;border-color:#D4D0C8;top:1px;left:50px;height:18px;width:33px;background-color:#D4D0C8;">&nbsp;<font color=graytext>Edit</font>&nbsp;</div>
+
+<div id=quickguides name=quickguides style="position:absolute;width:130px;height:145px;top:62px;left:10px;border-top-width:2px;border-left-width:2px;border-left-color:white;border-top-color:white;border-style:outset;border-right-width:2px;border-bottom-width:2px;border-bottom-color:#808080;border-right-color:#808080;background-color:#d4d0c8;">
+<table bgcolor=window width=124 height=139 border=0 cellpadding=0 cellspacing=0>
+<tr><td height=18 bgcolor=activecaption><font color=white><b>&nbsp;Quick Guides</b></font></td>
+</tr>
+<tr><td>
+&nbsp;<a href="Documentation\newworld.htm" target="new">Editing New Worlds</a><br>
+&nbsp;<a href="Documentation\zeroedit.htm" target="new">Zeroeditor Reference</a><br>
+&nbsp;<a href="Documentation\sky.htm" target="new">Editing the Sky</a><br>
+&nbsp;<a href="Documentation\started.htm" target="new">Getting Started</a><br>
+&nbsp;<a href="Documentation\luaguide.htm" target="new">Mission LUA Guide</a><br>
+&nbsp;<a href="Documentation\odfguide.htm" target="new">ODF Guide</a><br>
+&nbsp;<a href="Documentation\artguide.htm" target="new">Art Design Guide</a><br>
+&nbsp;<a href="Documentation\aniguide.htm" target="new">Animation Guide</a></td>
+</tr>
+</table>
+</div>
+<div id=advguides name=advguides style="position:absolute;width:130px;top:210px;left:10px;height:40px;border-top-width:2px;border-left-width:2px;border-left-color:white;border-top-color:white;border-style:outset;border-right-width:2px;border-bottom-width:2px;border-bottom-color:#808080;border-right-color:#808080;background-color:#d4d8c0;">
+<table bgcolor=white width=124 height=34 border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td height=18 bgcolor=activecaption><font color=white><b>&nbsp;Advanced Guide</b></font></td>
+</tr>
+<tr><td height=16>&nbsp;<a href="Documentation\mod1tut.htm" target="new">Mod1 Tutorial</a></td>
+</tr>
+</table></div>
+<div id=quickstart name=quickstart style="position:absolute;top:253px;width:550px;height:195px;left:10px;border-top-width:2px;border-left-width:2px;border-left-color:white;border-top-color:white;border-style:outset;border-right-width:2px;border-bottom-width:2px;border-bottom-color:#808080;border-right-color:#808080;background-color:#d4d0c8;visibility:visible;">
+<table bgcolor=window width=544 height=99% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=18 bgcolor=activecaption><font color=white><b>&nbsp;Quick Start</b></font></td>
+</tr>
+<tr><td>
+&nbsp;<b>Creating and Running a New World in 10 Easy Steps</b><br>
+&nbsp;1. Doubleclick on BFBuilder\BFBuilder.hta to launch the helper application.<br>
+&nbsp;2. Select PROJECT -> NEW PROJECT from the toolbar menus<br>
+&nbsp;3. Fill in the fields following the instructions<br>
+&nbsp;4. Click the CREATE NEW WORLD button and then Yes to create the new directory<br>
+&nbsp;5. Wait for the message box that says "Done"<br>
+&nbsp;6. The new world will be opened automatically, or can be opened manually on start<br>
+&nbsp;7. Click Munge world to compile the world.<br>
+&nbsp;8. Open the BFBuilder\AddOn folder to find the compiled mod folder<br>
+&nbsp;9. Copy the compiled mod folder to the Gamedata\AddOn folder where the game is installed<br>
+&nbsp;10. Run the game and select your mission from the list<br>
+</td></tr></table></div>
+<div id=CreateNew name=CreateNew style="position:absolute;border:2px;border-style:outset;border-color:#D4D0C8;background-color:#D4D0C8;top:45px;left:170px;width:280px;height:200px;visibility:hidden;">
+<table border=0 cellpadding=0 cellspacing=0 width=274 height=100%>
+<tr>
+    <td align=left height=18 bgcolor="activecaption"><b><font style="font-size:12px;" color=white>&nbsp;Create New World</font></b></td>
+</tr>
+<tr>
+    <td align=center>
+    <table border=0 cellpadding=1 cellspacing=1>
+    <tr>
+        <td align=right valign=top><b>Map Title:</b></td><td><INPUT TYPE="text" Size=27 maxlegnth=27 Name="vmodnametitle"><br>To appear in map list<br> ex: "Tatooine: Dune Sea"</td>
+    </tr>
+    <tr>
+        <td align=right valign=top><b>Mod Id:</b></td><td><INPUT TYPE="text" Size=12 maxlength=12 Name="vmodnameshortn"><br>Mod abbreviation,<br>ex: "mod1", "Mod2Sample"<p></td>
+    </tr>
+    <tr>
+        <td align=center colspan=2><button onclick=NewWorld() style="width:120px;"><b>Create New World</b></button>&nbsp;&nbsp;&nbsp;<button onClick=ActivateCreateNew() style="width:80px;"><b>Cancel</b></button></td>
+    </tr>
+    </table>
+    </td>
+</tr>
+</table>
+</div>
+<div id="activeproject" name="activeproject" style="position:absolute;background:none;top:20px;left:1px;padding:1px;visibility:hidden;"></div>
+<div id=ProjectMenu name=ProjectMenu style="position:absolute;font-size:12px;border:1px;border-style:solid;border-color:#D4D0C8;top:1px;left:1px;height:18px;width:45px;background-color:#D4D0C8;" onmouseover="style.cursor ='default';style.borderRightColor='#808080';style.borderTopColor='#ffffff';style.borderLeftColor='#ffffff';style.borderBottomColor='#808080';" onmouseout="style.borderRightColor='#D4D0C8';style.borderBottomColor='#D4D0C8';style.borderTopColor='#D4D0C8';style.borderLeftColor='#D4D0C8'" onMousedown=ActivateFile()>&nbsp;Project&nbsp;</div>
+<div id=NewProject name=NewProject style="position:absolute;font-size:12px;top:18px;left:1px;height:18px;width:82px;background-color:#D4D0C8;visibility:hidden;" onmouseover="style.cursor ='default';style.backgroundColor='#0c266c';style.color='#ffffff'" onmouseout="style.backgroundColor='#d4d0c8';style.color='#000000'" onMousedown="ActivateCreateNew()">&nbsp;New Project&nbsp;</div>
+<div id=OpenProject name=OpenProject style="position:absolute;font-size:12px;top:36px;left:1px;height:18px;width:82px;background-color:#D4D0C8;visibility:hidden;" onmouseover="style.cursor ='default';style.backgroundColor='#0c266c';style.color='#ffffff'" onmouseout="style.backgroundColor='#d4d0c8';style.color='#000000'" onMousedown="ActivateSearchProjects()">&nbsp;Open Project&nbsp;</div>
+
+<div id=EditMenu name=EditMenu style="position:absolute;font-size:12px;border:1px;border-style:solid;border-color:#D4D0C8;top:1px;left:50px;height:18px;width:33px;background-color:#D4D0C8;visibility:hidden;" onmouseover="style.cursor ='default';style.borderRightColor='#808080';style.borderTopColor='#ffffff';style.borderLeftColor='#ffffff';style.borderBottomColor='#808080';" onmouseout="style.borderRightColor='#D4D0C8';style.borderBottomColor='#D4D0C8';style.borderTopColor='#D4D0C8';style.borderLeftColor='#D4D0C8';" onMousedown=ActivateEdit()>&nbsp;Edit&nbsp;</div>
+<div id=EditMenuOptions name=EditMenuOptions></div>
+<div id=Projects name=Projects style="width:130px;"></div>
+
+
+</body>
+</html>
+
+

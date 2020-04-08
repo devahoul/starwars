@@ -1,0 +1,26 @@
+[OrdnanceClass]
+ClassLabel 		= "bolt"
+
+[Properties]
+LaserTexture		= "redlaser_D"
+LaserLength			= "2.0"
+LaserWidth			= "0.15"
+LaserGlowColor		= "254 6 18 100"
+LightColor              	= "254 6 18 200"
+LightRadius             	= "5.0"
+
+
+ExplosionName		= "com_weap_bldg_gunturret_exp"
+ExplosionImpact		= "com_weap_bldg_gunturret_exp"
+
+LifeSpan 			= "1.5"
+Velocity 			= "80.0"
+Gravity			= "1.0"
+Rebound			= "0.0"
+
+MaxDamage 		= "100.0"
+VehicleScale		= "1.1"
+PersonScale 		= "1.0"
+DroidScale 		= "1.0"
+BuildingScale		= "0.1"
+AnimalScale		= "1.0"

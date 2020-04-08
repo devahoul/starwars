@@ -1,0 +1,37 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"geofighter_icon"
+		"hud_geo_fighter_icon"
+	}
+	REQN
+	{
+		"model"
+		"cis_fly_geofighter"
+	}
+	REQN
+	{
+		"class"
+		"cis_fly_geofighter_exp"
+		"cis_weap_fly_geofighter_cannon"
+	}
+	REQN
+	{
+		"config"
+		"vehiclespark"
+		"vehiclesmoke"
+	}
+	REQN
+	{
+		"zaabin"
+		"drive"
+	}
+	REQN
+	{
+		"zafbin"
+		"drive"
+	}
+}

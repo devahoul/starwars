@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_orbital_strike_icon"
+	}
+	REQN
+	{
+		"class"
+		"imp_weap_inf_orbital_attack_salvo_ord"
+	}
+}

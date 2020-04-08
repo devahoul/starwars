@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"atat_finalexplosion"
+		"mediumsmoketrail"
+	}
+	REQN
+	{
+		"model"
+		"com_mediumchunk1"
+	}
+}

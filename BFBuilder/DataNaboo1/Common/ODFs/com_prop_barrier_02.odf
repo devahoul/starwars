@@ -1,0 +1,14 @@
+[GameObjectClass]		
+ClassLabel		= "destructablebuilding"
+GeometryName		= "com_prop_barrier_02.msh"
+
+
+[Properties]		
+MapTexture 		= "turret_icon"
+MapScale 		= "1.2"
+GeometryName		= "com_prop_barrier_02"
+UnbuiltGeometryName	= "com_prop_buildzone"
+ExplosionName		= "com_weap_bldg_gunturret_exp"
+MaxHealth 		= "300.0"
+
+UnbuiltHoloOdf = "com_holo_wall"

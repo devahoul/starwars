@@ -1,0 +1,27 @@
+ucft
+{
+	REQN
+	{
+		"lvl"
+		"all_droid_r2d2"
+		"all_fly_kwing"
+		"all_fly_moncalamari_dome"
+		"all_fly_snowspeeder"
+		"all_fly_xwing"
+		"all_fly_ywing"
+		"all_hover_combatspeeder"
+		"all_hover_hovernaut"
+		"all_inf_basic"
+		"all_inf_basicdesert"
+		"all_inf_basicurban"
+		"all_inf_basicjungle"
+		"all_inf_basicsnow"
+		"all_inf_lukeskywalker"
+		"all_inf_lukeskywalkersnow"
+		"all_inf_smuggler"
+		"all_inf_smugglersnow"
+		"all_walk_tauntaun"
+		"imp_hover_speederbike"
+		"tat_hover_landspeeder"
+	}
+}

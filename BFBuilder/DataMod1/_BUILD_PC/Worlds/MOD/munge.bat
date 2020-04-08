@@ -1,0 +1,1 @@
+@call ..\munge_world.bat Modification1 MOD

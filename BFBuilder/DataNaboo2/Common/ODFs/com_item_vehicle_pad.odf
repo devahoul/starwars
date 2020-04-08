@@ -1,0 +1,25 @@
+[GameObjectClass]
+classLabel = "vehiclepad"
+geometryName = "item_pointer.msh"	//hack for now
+geometryScale = 0.8
+
+[Properties]
+
+[InstanceProperties]
+ControlZone = ""
+SpawnTime = 15.0
+ExpireTimeEnemy = 20.0
+ExpireTimeField = 40.0
+DecayTime = 10.0
+ClassAllATK = ""
+ClassCISATK = ""
+ClassImpATK = ""
+ClassRepATK = ""
+ClassLocATK = ""
+ClassHisATK = ""
+ClassAllDEF = ""
+ClassCISDEF = ""
+ClassImpDEF = ""
+ClassRepDEF = ""
+ClassLocATK = ""
+ClassHisATK = ""

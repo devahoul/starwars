@@ -1,0 +1,25 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_rifle_icon"
+		"hud_weap_semiauto"
+	}
+	REQN
+	{
+		"zaabin"
+		"lightsabre"
+	}
+	REQN
+	{
+		"zafbin"
+		"lightsabre"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_inf_forcepull_ord"
+	}
+}

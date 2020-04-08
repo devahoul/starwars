@@ -1,0 +1,42 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"watersplash_md"
+		"watersplash_wade"
+	}
+	REQN
+	{
+		"texture"
+		"rep_gunner_icon"
+		"troop_icon"
+		"rep_inf_sharpshooter"
+	}
+	REQN
+	{
+		"model"
+		"rep_inf_trooper"
+		"rep_inf_trooper_low1"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_inf_snowtrooper"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_inf_snowtrooper"
+	}
+	REQN
+	{
+		"class"
+		"rep_weap_inf_sniperrifle"
+		"rep_weap_inf_pistol"
+		"rep_weap_inf_thermaldetonator"
+		"rep_weap_inf_powerup_dispenser"
+	}
+}

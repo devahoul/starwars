@@ -1,0 +1,25 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_powerup_icon"
+	}
+	REQN
+	{
+		"zaabin"
+		"grenade"
+	}
+	REQN
+	{
+		"zafbin"
+		"grenade"
+	}
+	REQN
+	{
+		"class"
+		"imp_weap_inf_equip_med"
+		"com_item_powerup_dual"
+	}
+}

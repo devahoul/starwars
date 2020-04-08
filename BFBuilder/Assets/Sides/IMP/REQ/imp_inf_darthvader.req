@@ -1,0 +1,14 @@
+ucft
+{
+	REQN
+	{
+		"zafbin"
+		"imp_darthvader"
+	}
+	
+	REQN
+	{
+		"class"
+		"imp_inf_darthvader"
+	}
+}

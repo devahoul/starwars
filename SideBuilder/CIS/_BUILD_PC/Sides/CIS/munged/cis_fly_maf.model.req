@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_maf_lowrez"
+		"cis_maf"
+		"cis_maf_bump"
+	}
+}

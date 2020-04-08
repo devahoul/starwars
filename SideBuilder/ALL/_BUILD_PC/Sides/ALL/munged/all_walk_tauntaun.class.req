@@ -1,0 +1,27 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"tauntaun_kaadu_icon"
+		"hud_all_tauntaun_icon"
+	}
+	REQN
+	{
+		"model"
+		"all_walk_tauntaun"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_walk_tauntaun"
+		"ride"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_walk_tauntaun"
+		"ride"
+	}
+}

@@ -1,0 +1,41 @@
+\BFBuilder\DataTEMPLATE\ - copy and rename folder
+\BFBuilder\Data%COPY%\soundmunge.bat - edit mod references if necessary
+\BFBuilder\Data%COPY%\_BUILD_PC\clean.bat - edit mod reference if necessary
++\BFBuilder\Data%COPY%\_BUILD_PC\munge.bat - edit mod and mod1 references (mod1 defines addon folder name)
+\BFBuilder\Data%COPY%\_BUILD_PC\sound\clean.bat - edit mod reference if neccesary
+\BFBuilder\Data%COPY%\_BUILD_PC\Worlds\clean.bat - edit mod reference if neccesary
+\BFBuilder\Data%COPY%\_BUILD_PC\Worlds\MOD\ - rename folder if neccesary
++\BFBuilder\Data%COPY%\_BUILD_PC\uninstall_from_pc.bat - edit mod1 references (mod1 defines addon folder name)
+\BFBuilder\Data%COPY%\_BUILD_PC\Worlds\MOD\munge.bat - edit Modification and mod references if neccesary
+\BFBuilder\Data%COPY%\_LVL_PC\MOD\ - rename folder if neccesary
+\BFBuilder\Data%COPY%\_LVL_PC\Movies\mod1.mvs - replace file and rename if neccesary
++\BFBuilder\Data%COPY%\_SOURCE_PC\Shell\Movies\mod1.mlst rename file (must) and edit mod1 ref if necessary
++\BFBuilder\Data%COPY%\addme\addme.lua - edit mod1 references and map name for maplist
++\BFBuilder\Data%COPY%\Common\mission.req - edit mod1 references
++\BFBuilder\Data%COPY%\Common\Mission\mod1a.req - rename file and edit mod1 references
++\BFBuilder\Data%COPY%\Common\Mission\mod1c.req - reneame file and edit mod1 references
++\BFBuilder\Data%COPY%\Common\Scripts\MOD\mod1a.lua - rename file, edit mod1 references
++\BFBuilder\Data%COPY%\Common\Scripts\MOD\mod1c.lua - rename file, edit mod1 references
+\BFBuilder\Data%COPY%\Common\Scripts\MOD\ - rename folder if neccessary
++\BFBuilder\Data%COPY%\Shell\Movies\mod1.mcfg - rename file (must) and edit mod1 references if necessary
++\BFBuilder\Data%COPY%\Sound\worlds\mod\mod1.asfx - rename file
++\BFBuilder\Data%COPY%\Sound\worlds\mod\mod1cw.req - rename file
++\BFBuilder\Data%COPY%\Sound\worlds\mod\mod1gcw.req - rename file
+\BFBuilder\Data%COPY%\Sound\worlds\mod\mod.req - rename folder and file if necessary
++\BFBuilder\Data%COPY%\Shell\shell.req
+\BFBuilder\Data%COPY%\Worlds\Modification\ - rename folder
++\BFBuilder\Data%COPY%\Worlds\Modification\mod1.req - rename file and edit mod1 references
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\mod1.wld
+
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.ter.option - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.TER - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.sky - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.RGN - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.PTH - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.PLN - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.LDX - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.HNT - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.GRP - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.CUS - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.BND - renamed, made writable
+\BFBuilder\Data%COPY%\Worlds\Modification\world1\Mod1.BAR - renamed, made writable

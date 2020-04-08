@@ -1,0 +1,11 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"cis_1st_cockpit_fx"
+		"cis_1st_cockpit_starfighter"
+		"cis_1st_cockpit_aat"
+	}
+}

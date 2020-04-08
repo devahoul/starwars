@@ -1,0 +1,15 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"greenlaser_d"
+	}
+	REQN
+	{
+		"config"
+		"ord_explosion"
+		"watersplash_ord"
+	}
+}

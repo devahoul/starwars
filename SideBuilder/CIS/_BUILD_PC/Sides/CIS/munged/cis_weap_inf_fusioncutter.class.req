@@ -1,0 +1,36 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"imp_fusioncutter_icon"
+		"hud_weap_repair"
+	}
+	REQN
+	{
+		"config"
+		"repairkit"
+	}
+	REQN
+	{
+		"model"
+		"cis_weap_inf_fusioncutter"
+		"cis_1st_weap_inf_fusioncutter"
+	}
+	REQN
+	{
+		"zaabin"
+		"tool"
+	}
+	REQN
+	{
+		"zafbin"
+		"tool"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_equip_med"
+	}
+}

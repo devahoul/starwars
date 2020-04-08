@@ -1,0 +1,14 @@
+ucft
+{
+	REQN
+	{
+		"zafbin"
+		"tat_inf_jawa"
+		"tat_inf_jawa_lowres"
+	}
+	REQN
+	{
+		"class"
+		"tat_inf_jawa"
+	}
+}

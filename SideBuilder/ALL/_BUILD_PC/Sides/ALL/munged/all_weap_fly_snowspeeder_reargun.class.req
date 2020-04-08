@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_all_lascannon_icon"
+		"reticule_sniper"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_fly_snowspeeder_reargun_ord"
+		"vehicle_equip"
+	}
+}

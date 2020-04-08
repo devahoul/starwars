@@ -1,0 +1,9 @@
+[ExplosionClass]
+ClassLabel = "explosion"
+
+[Properties]
+
+Effect = "ord_explosion"
+Decal		= "decal_explosion"
+
+//SoundProperty	= "imp_weap_ord_exp defer"

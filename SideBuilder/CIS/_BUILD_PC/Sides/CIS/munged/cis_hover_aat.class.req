@@ -1,0 +1,42 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"waterwake_lg"
+		"dirtspray"
+		"mediumsmoketrail"
+		"smokeplume"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+	}
+	REQN
+	{
+		"texture"
+		"aat_icon"
+		"hud_cis_aat_icon"
+	}
+	REQN
+	{
+		"model"
+		"cis_hover_aat"
+		"cis_hover_att_chunk1"
+		"cis_hover_att_chunk2"
+		"cis_hover_att_chunk3"
+		"cis_hover_att_chunk4"
+	}
+	REQN
+	{
+		"class"
+		"cis_hover_aat_exp"
+		"cis_weap_hover_aat_cannon"
+		"cis_weap_hover_aat_launcher"
+		"collisionmesh"
+		"p_sidegun1"
+		"p_sidegun2"
+		"p_barrel"
+		"p_turret"
+	}
+}

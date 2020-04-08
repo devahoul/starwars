@@ -1,0 +1,40 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"watersplash_md"
+		"watersplash_wade"
+	}
+	REQN
+	{
+		"texture"
+		"troop_icon"
+	}
+	REQN
+	{
+		"model"
+		"cis_inf_countdooku"
+		"cis_inf_countdooku_low1"
+		"cis_inf_countdooku_cape"
+	}
+	REQN
+	{
+		"zaabin"
+		"all_inf_snowtrooper"
+		"cis_inf_dooku_cape"
+	}
+	REQN
+	{
+		"zafbin"
+		"all_inf_snowtrooper"
+		"cis_inf_dooku_cape"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_lightsaber"
+	}
+}

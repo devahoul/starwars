@@ -1,0 +1,16 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_md"
+		"protontorpedo"
+	}
+	REQN
+	{
+		"class"
+		"cis_weap_inf_rocketlauncher_exp"
+		"com_weap_inf_ord_hum_rocket"
+	}
+}

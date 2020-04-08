@@ -1,0 +1,24 @@
+ucft
+{
+	REQN
+	{
+		"lvl"
+		"imp_fly_destroyer_dome"
+		"imp_fly_tiebomber"
+		"imp_fly_tiefighter"
+		"imp_fly_trooptrans"
+		"imp_hover_fightertank"
+		"imp_hover_speederbike"
+		"imp_inf_basic"
+		"imp_inf_basicsnow"
+		"imp_inf_basic_tie"		
+		"imp_inf_dark_trooper"
+		"imp_inf_dark_troopersnow"
+		"imp_inf_darthvader"
+		"imp_walk_atat"
+		"imp_walk_atst"
+		"imp_walk_atst_jungle"
+		"imp_walk_atst_snow"
+		"imp_droid_probe"
+	}
+}

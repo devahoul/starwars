@@ -1,0 +1,51 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"waterwake_lg"
+		"vehiclespark"
+		"vehiclesmoke"
+		"vehicleflame"
+		"dirtspray"
+		"mediumsmoketrail"
+		"smokeplume"
+	}
+	REQN
+	{
+		"texture"
+		"combatspeeder_icon"
+		"hud_lukelandspeeder_icon"
+	}
+	REQN
+	{
+		"model"
+		"tat_hover_landspeeder"
+		"tat_hover_landspeeder_chunk1"
+		"tat_hover_landspeeder_chunk2"
+		"tat_hover_landspeeder_chunk3"
+	}
+	REQN
+	{
+		"class"
+		"all_hover_combatspeeder_exp"
+		"p_collision1"
+		"p_collision2"
+		"p_collision3"
+		"p_collision4"
+		"p_collision5"
+		"p_collision6"
+		"p_collision7"
+	}
+	REQN
+	{
+		"zaabin"
+		"drive"
+	}
+	REQN
+	{
+		"zafbin"
+		"drive"
+	}
+}

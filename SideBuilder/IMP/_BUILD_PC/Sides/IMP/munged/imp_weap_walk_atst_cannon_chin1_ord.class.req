@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_sm"
+		"med_cannon_impacts"
+	}
+	REQN
+	{
+		"class"
+		"imp_weap_walk_atst_cannon_chin1_exp"
+		"com_weap_inf_ord_hum_lg"
+	}
+	REQN
+	{
+		"texture"
+		"redlaser_d"
+	}
+}

@@ -1,0 +1,14 @@
+
+ucft
+{
+	REQN
+	{
+		"texture"
+		"hud_shield_icon"
+	}
+	REQN
+	{
+		"config"
+		"droidekashield"
+	}
+}

@@ -1,0 +1,67 @@
+ucft
+{
+    REQN
+    {
+        "config"
+    }
+
+    REQN
+    {
+        "class"
+    }
+
+    REQN
+    {
+        "texture"
+        "Tatooine1_map"
+    }
+
+
+    REQN
+    {
+        "texture"
+        "platform=pc"
+
+    }
+
+    REQN
+    {
+        "path"
+        "Tatooine1"
+    }
+    REQN
+    {
+        "congraph"
+        "Tatooine1"
+    }
+    REQN
+    {
+        "envfx"
+      --  "Tatooine1"
+    }
+    REQN
+    {
+        "world"
+        "Tatooine1"
+    }
+    REQN
+    {
+        "prop"
+     --   "Tatooine1"
+    }
+    REQN
+    {
+        "boundary"
+        "Tatooine1"
+    }
+    REQN
+    {
+        "config"
+    --    "flyerspray"
+    --    "walkerstomp"
+    --    "hailfire_wake"
+    --    "dustwake"
+    }
+
+}
+

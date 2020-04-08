@@ -1,0 +1,9 @@
+[GameObjectClass]       
+
+ClassLabel      =   "prop"
+GeometryName    =   "tat3_bldg_jabba_pal_crates.msh"
+
+
+[Properties]        
+
+GeometryName    =   "tat3_bldg_jabba_pal_crates"

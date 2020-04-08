@@ -1,0 +1,11 @@
+ucft
+{
+	REQN
+	{
+		"class"
+		"cis_inf_battledroid"
+		"cis_inf_assault"
+		"cis_inf_assassindroid"
+		"cis_inf_pilotdroid"
+	}
+}

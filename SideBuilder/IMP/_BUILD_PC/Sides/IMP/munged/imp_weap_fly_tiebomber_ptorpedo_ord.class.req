@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"model"
+		"com_weap_missile"
+	}
+	REQN
+	{
+		"config"
+		"large_cannon_impacts"
+		"watersplash_lg"
+		"protontorpedo"
+	}
+	REQN
+	{
+		"class"
+		"imp_weap_hover_fightertank_missile_exp"
+	}
+}

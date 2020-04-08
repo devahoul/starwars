@@ -1,0 +1,21 @@
+
+ucft
+{
+	REQN
+	{
+		"config"
+		"watersplash_md"
+		"smoketrail"
+	}
+	REQN
+	{
+		"model"
+		"com_weap_missile"
+	}
+	REQN
+	{
+		"class"
+		"all_weap_hover_combatspeeder_missile_exp"
+		"com_weap_inf_ord_hum_rocket"
+	}
+}
